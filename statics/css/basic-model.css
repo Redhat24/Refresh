@@ -3,7 +3,7 @@
 *{margin:0;padding:0;}
 body{font-family:"微软雅黑";color:#444;font-size:12px;}
 ul{list-style:none;}
-a{color:#333;text-decoration:none;}
+a{color:#333;text-decoration:none;-webkit-transition:color 0.4s ease;-moz-transition:color 0.4s ease;-o-transition:color 0.4s ease;transition:color 0.4s ease;}
 a:hover{color:#f60;text-decoration:none;}
 img{border:none;}
 .clear3{clear:both;height:3px;}
