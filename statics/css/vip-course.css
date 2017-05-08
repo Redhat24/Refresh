@@ -1,0 +1,102 @@
+@charset "utf-8";
+/* CSS Document */
+/*精品课程单页部分*/
+.teach-pic{height:532px;background:url(http://sf.yxcps.cn/sy/images/duyehuagjk/03/bann1.jpg) no-repeat top center;position: relative;}
+.bg1{background: url(../images/vip-course/course-bg1.png);background-size:auto 100%;}
+.bg2{background: url(../images/vip-course/course-bg2.png);background-size:auto 100%;}
+.full-section{width:100%;margin:0px auto;text-align:center;color:#351e04;font-size:1em;line-height:1.5;overflow:hidden;}
+.full-section p{line-height:1.5;}
+.space{height:50px; clear:both;}
+.section{width:1200px;height:auto;margin:40px auto;position:relative;color:#fff;font-size:20px;overflow:hidden;}
+.section .h2{font-size:38px;margin:40px auto;background:#e4d857\9;background: -moz-linear-gradient(top,#e4d857,#fff8a9,#e4d857);background:-webkit-gradient(linear,top,from(#e4d857),color-stop(0.5,#fff8a9),to(#e4d857));background:-webkit-linear-gradient(top,#e4d857,#fff8a9,#ded357);background: -o-linear-gradient(top,#e4d857,#fff8a9,#e4d857);width:250px;height:75px;line-height:75px;border-radius:10px;text-align:center;color:#072547;}
+.section .h2.wider{width:350px;}
+.section .h2 b{display:block;position:absolute;top:-80px;}
+/*讲师介绍*/
+.teach-intro{border:2px solid #fff;}
+.teach-intro div{overflow:hidden;padding:30px 0;}
+.teach-intro h2{color:#E4D857;}
+.teach-intro p{width:470px;float:left;margin:30px 0 0 70px;padding:25px 0;text-align:left;}
+.teach-intro .p1{margin-left:90px;background:rgba(255, 255, 255, 0.09);background:#2e2d76\9;padding:25px;}
+.fixed-nav{height:70px;width:1200px;margin:0px auto;position:relative;}
+.fixed-nav .content{z-index:2;position:absolute;top:0;width:1200px;height:70px;line-height:70px;background:#069;}
+.fixed-nav .content a{display:block;width:20%;float:left;text-align:center;color:#fff;font-size:20px;}
+.fixed-nav .content a:hover{background-color:#E4D857;}
+/*课程亮点*/
+.specify div{width:233px;float:left;background:rgba(255, 255, 255, 0.09);background:#31234c\9;padding:20px;text-align:left;}
+.specify div+div{margin-left:35px;}
+.specify div img{width:80px;margin:0 0 15px 75px;}
+/*核心知识点比较*/
+table{border-collapse:collapse;}
+.bijiao>table{width:1196px;}
+.bijiao table table{width:100%;}
+.bijiao ul{list-style:disc inside;padding:15px 0 15px 50px;text-align:left;}
+.bijiao th{background:#E4D857;height:50px;font-size:25px;color:#072547;border:2px solid #E4D857;}
+.bijiao td{border:2px solid #E4D857;vertical-align:top;}
+.bijiao table table td{border:none;}
+/*开课时间*/
+.course-time .info{float:left;margin-left:120px;text-align:left;margin-bottom:20px;}
+.course-time .info p{line-height:2.5;}
+.course-time .info img{width:30px;vertical-align:middle;padding-right:10px;}
+.course-time .detail{clear:both;border:1px solid #072547;padding:20px 40px;font-size:25px;}
+.course-time .btn{width:216px;height:62px;position:absolute;top:200px;left:814px;border:4px solid #9e9e9e;}
+.course-time .btn a{display:block;width:216px;height:62px;font-size:26px;font-weight:600;background-color:#E4D857;line-height:62px;}
+
+/*私人订制部分*/
+.banner{background:url(../images/vip-course/dingzhi.gif) no-repeat top center;background-size:100% 500px;height:500px; background-color:#000;}
+.wrap{width:100%;}
+.dz-bg1,.dz-bg4{background:#000;}
+.dz-bg2,.dz-bg5{background:#1a1a1a;}
+.dz-bg3{background:url(../images/vip-course/more2.gif) no-repeat top center;background-size:100% 556px;}
+.wrap .content{ width:960px;height:auto;margin:0 auto;}
+.item1{position:relative;}
+.item1 .item11{width:900px;height:100px;margin:0 auto;background:#AB9E2E;color:#fff;position:absolute;top:-100px;left:30px;}
+.item1 .item11 .price{font-size:20px;position:absolute;top:32px;left:50px;}
+.item1 .item11 .price span{font-size:36px;}
+.item1 .item11 .tel{width:580px;text-align:right;font-size:20px;position:absolute;top:35px;right:60px;}
+.item1 .item11 .tel span{font-size:32px;font-weight:bold;}
+.item1 .item12{height:240px; padding-top:50px;}
+.item1 .item12 .title{width:518px;margin:30px auto 45px; height:58px;border:2px solid #E4E275;font-size:28px; color:#E4E275;text-align:center; line-height:58px;}
+.item1 .item12 h2{color:#f9e04f;text-align:center;font-size:28px;padding-bottom:30px;font-weight:400;}
+.item1 .item12 .text{color:#fff;font-size:16px;width:960px;margin:0 auto;background:url(../images/vip-course/borderdot.jpg) repeat-x left center;}
+.item1 .item12 .text p{width:420px;margin:0 auto;text-align:center;background:#000;}
+.item1 .item13{padding-bottom:50px; margin-top:10px;overflow:hidden;}
+.item1 .item13 li{float:left;height:450px;width:210px;padding-bottom:10px;background:#AD9D2E;}
+.item1 .item13 li+li{margin-left:40px;}
+.item1 .item13 li h2{text-align:center;margin-top:10px;font-size:12px;}
+.item1 .item13 li span{text-align:center;color: #fff;display: block;width:100%;margin-bottom:10px;}
+.item1 .item13 li p{font-size:12px;line-height:20px;color:#fff;text-indent:1em;padding:10px 12px 0px;background:#AD9D2E;}
+
+.item2{ padding-bottom:20px;overflow:hidden;}
+.item2 h2{text-align:center;font-size:30px;color:#ECE163;font-weight:normal;padding-top:30px;}
+.item2 div{float:left;width:33%;height:200px;position:relative;margin-top:20px;}
+.item2 div img{height: 200px;width:320px;}
+.item2 div p{width:100%;text-align:center;color:#ECE163;font-size:16px;position:absolute;left:0;bottom:0;}
+
+.item3{text-align:center;color:#D5C941;padding-bottom:25px;}
+.item3 .img-div1{}
+.item3 .img-div2 img{width:500px;}
+.item3 h2{font-size:30px;font-weight:400;}
+.item3 p{font-size:18px;line-height:28px;}
+
+.item4{padding-top:25px;color: #ECE163;}
+.item4 .prefer1,.item4 .prefer2{padding-bottom:20px;overflow:hidden;}
+.item4 h2{font-size:30px;text-align:center;font-weight:400;}
+.item4 .prefer1{background:url(../images/vip-course/prefer1.jpg) no-repeat 10% 15px;}
+.item4 .prefer2{background:url(../images/vip-course/prefer2.jpg) no-repeat 90% 15px;}
+.item4 p{float: left;width: 600px;text-indent: 2em;font-size: 18px;line-height: 28px;padding:30px 0;}
+.item4 .prefer1 p{margin-left:250px;_margin-left:125px;}
+.item4 .prefer2 p{margin-left:120px;_margin-left:60px;}
+
+.item5{overflow:hidden;padding-bottom:60px; position:relative;}
+.item5 h2{text-align:center;color:#ECE163;font-size:30px;padding-top:30px;padding-bottom:38px;font-weight:400;}
+.item5>div{width:240px;float:left;}
+.item5 .img-div{ background:#AD9B2F;width:65px;height:65px; border-radius:50%;margin:0 88px;}
+.item5 .img-div img{width:45px;padding:10px;}
+.item5 .down{margin:5px 100px 10px;}
+.item5 .down img{width:40px;}
+.item5 span{ display:block;width:150px;font-size:18px;color:#fff; background:#AD9B2F;height:38px; line-height:38px;text-align:center;border-radius:5px; margin:0 45px;}
+.item5 .right{ position:absolute;top:125px;}
+.item5 .right img{width:170px;}
+.item5 .r1{left:156px;}
+.item5 .r2{left:396px;}
+.item5 .r3{left:636px;}

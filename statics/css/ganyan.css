@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+.main{width:1200px;margin:0 auto;}
+.student-word-title{ background: url(../images/heiban.jpg) no-repeat;height:180px; background-size:100% 100%; margin:5px 0; padding:30px 0 0 50px;font-size:20px;  font-weight:600;color:#fff;}
+.student-word{margin:10px 0}
+.student-word li{height: auto;overflow: hidden;background: #f0f0f0;box-shadow: 2px 2px 2px #aaa;margin: 0 2px 20px 0;padding: 20px;}
+.student-word li img{float:left;width:200px;height:200px;}
+.student-word li .student{ margin-left:220px;}
+.student-word li .student .name{font-size: 14px;font-weight: bold;color:#e63636;height: 36px;line-height: 36px;}
+.student-word li .student .word{font-size: 14px;line-height: 1.8;text-indent:2em;}
+#s3{display:none;}

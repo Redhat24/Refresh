@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+body{background:#f0f0f0;}
+h2,h3{text-align:center;}
+.banner{height:350px;background:url(../images/vip-course/banner.jpg) no-repeat top center;}
+.main{width:1200px;margin:0 auto;}
+/*介绍栏*/
+.introduce{width:100%;height:100px;background:#fff;}
+.introduce ul li{float:left;width:25%;height:auto;}
+.introduce img{float:left;margin:24px 20px;width:52px;height:52px;}
+.introduce ul li p{float:left;font-size:18px;color:#000;line-height:100px;}
+.introduce ul li span{float:right;width:2px;height:30px;background:#e4e4e4;margin:35px 10px;}
+/*左右交替内容区*/
+.wrap-lr{background:#fff;margin-top:10px;}
+.wrap-lr .content{height:500px; line-height:2}
+.wrap-lr .content>div{width:600px;}
+.wrap-lr .content img{padding:0 39px;}
+.wrap-lr .content .text{width:530px;padding-left:70px;padding-top:20px;}
+.wrap-lr .content h2{text-align:left;color:#0B98DE;font-weight:400;font-size:26px;}
+.wrap-lr .content p{font-size:16px;}
+.wrap-lr .content p span{font-size:18px;}
+.wrap-lr .left>div+div{}
+.wrap-lr .right>div+div{}
+.wrap-lr .left>div{float:left;}
+.wrap-lr .right>div{float:right;}
+.wrap-lr .content ul{font-size:14px;line-height:2;padding:10px;overflow:hidden;}
+.wrap-lr .content ul li{width:245px;float:left;margin:6px 0;}
+.wrap-lr .content .button{clear:both;background:#0B98DE;font-size:18px;width:102px;padding:5px 15px;border-radius:13px;margin-left:10px;margin-top:10px;}
+.wrap-lr .content .button a{color:#fff;}
+.red{color:red;}
+.blue{color:#0B98DE;}
+/*全方位服务*/
+.service{width:100%;height:500px;background:url(../images/vip-course/service2.png) no-repeat center center; background-color:#0383bb;}
+.service .content{width:1200px;margin:0 auto;color:#fff;line-height:1.5;}
+.service .content h2{height: 80px;font-size:28px;line-height: 65px;padding-top:30px; background:url(../images/vip-course/title.png) no-repeat center bottom;}
+.service .content>div{width:135px;float:left;}
+.service .content>div+div{margin-left:110px;}
+.service .content .div1{margin-top:55px;margin-left:50px;}
+.service .content .div2{margin-top:70px;}
+.service .content .div3{margin-top:130px;}
+.service .content .div4{margin-top:65px;}
+.service .content .div5{margin-top:60px;}
+.service .content .image-div{width:110px;height:110px;border-radius:50%;background:#fdd25d;margin:0 9px;}
+.service .content .image-div img{width:60px;padding:25px;height:60px;}
+.service .content h3{font-size:18px;margin:20px 0 8px;}
+.service .content p{font-size:16px;text-align:justify;}
+/*360°服务*/
+.service360{background:#fff;padding:30px 0;overflow:hidden;}
+.service360 h2{font-size:40px; padding:30px;}
+.gradient-bg1{background:#44a7d2\9;background: -moz-linear-gradient(top,#ffffff,#cfeaf1);background:-webkit-gradient(linear,top,from(#ffffff),to(#cfeaf1));background:-webkit-linear-gradient(top,#ffffff,#cfeaf1);background: -o-linear-gradient(top,#ffffff,#cfeaf1);}
+.gradient-bg2{background:#44a7d2\9;background: -moz-linear-gradient(top,#cfeaf1,#ffffff);background:-webkit-gradient(linear,top,from(#cfeaf1),to(#ffffff));background:-webkit-linear-gradient(top,#cfeaf1,#ffffff);background: -o-linear-gradient(top,#cfeaf1,#ffffff);}
+.service360 .content>div{width:160px;height:238px;float:left;padding:20px;margin-top:8px;}
+.service360 .content>div img{width:70px; padding:20px 45px 5px;}
+.service360 .content>div h3{font-size:18px;padding: 0 20px 5px;}
+.service360 .content>div p{font-size:16px; text-align:justify;}
+/*VIP尊享特权*/
+.vip-service{ background:url(../images/vip-course/vip-bg.png) no-repeat top center;height:540px;width:100%;padding-top:60px;color:white;}
+.vip-service .content{ width:1200px; margin:0 auto;}
+.vip-service .content h2{font-size:32px;}
+.vip-service .content p{text-align:center;font-size:16px;line-height:30px;letter-spacing:1px;}
+.vip-service .content ul{padding-top:40px;}
+.vip-service .content li{width:25%;float:left;text-align:center;padding:15px;box-sizing:border-box;}
+.vip-service .content li img{vertical-align:middle;}
+.vip-service .content li p{margin-top:20px;}
