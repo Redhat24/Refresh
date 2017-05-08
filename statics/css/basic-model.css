@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;}
+body{font-family:"微软雅黑";color:#444;font-size:12px;}
+ul{list-style:none;}
+a{color:#333;text-decoration:none;}
+a:hover{color:#f60;text-decoration:none;}
+img{border:none;}
+.clear3{clear:both;height:3px;}
+/*顶部*/
+.headerbg{width:100%;background:#f5f5f5;border-bottom:1px solid #e5e5e5;}
+.headerbg .content{height:35px;background-color:#f5f5f5;width:1170px;margin:0 auto;}
+.headerbg ul li{float:left;color:#666;height:35px;line-height:35px;zoom:1;list-style:none;}
+.headerbg ul li a{border-right:1px solid #ddd;padding:0 12px;}
+.headerbg ul li .a1{margin-left:5px;}
+.headerbg ul li a img{width:14px;height:14px;position:relative;top:2px;right:2px;}
+.headerbg .login-in{float:right;}
+.headerbg .login-in span{float:right;color:#004499;}
+/*头部：logo，搜索，顶部导航*/
+.head-wrap{overflow:hidden;background:#F0F0F0;height:113px;padding-top:20px;}
+.header{width:1170px;margin:0 auto;}
+.header .logo{float:left;background-position:right -10px;background-repeat:no-repeat;padding-right:20px;height:70px; text-align:center;*font-size:40px;}
+.header .logo a{display:table-cell;vertical-align:middle;text-align:center;*display:block;height:70px;float:left}
+.header .search{float:right;width:430px;_width:auto;height:60px;position:relative;margin-top:-5px;}
+.lanren-search-form{width:430px;overflow:hidden;}
+.lanren-search-form .search-bd{height:25px;}
+.lanren-search-form .search-bd li{font-size:12px;width:60px;height:25px;line-height:25px;text-align:center;float:left;cursor:pointer;background-color:#eee;color:#666;}
+.lanren-search-form .search-bd li.selected{color:#fff;font-weight:700;background-color:#2b98d0;}
+.lanren-search-form .search-hd{height:34px;background-color:#2b98d0;padding:3px;position:relative;}
+.lanren-search-form .search-hd .search-input{width:360px;height:22px;line-height:22px;padding:6px 0;background:none;text-indent:10px;border:0;outline:none;position:relative;left:3px;top:0;z-index:5;#margin-left:-10px;}
+.lanren-search-form .search-hd .search-input .text{width:345px;height:22px;line-height:22px;background:none;border:0;outline:none;}
+.lanren-search-form .search-hd .btn-search{width:70px;height:34px;line-height:34px;position:absolute;top:2px;border:0;z-index:6;cursor:pointer;font-size:12px;color:#fff;font-weight:700;background:none;outline:none;}
+.lanren-search-form .search-hd .s2,.lanren-search-form .search-hd #s2{display:none;}
+.lanren-search-form .search-bg{width:360px;height:34px;background-color:#fff;position:absolute;left:3px;top:3px;z-index: 1;}
+.header .search .button{ white-space:nowrap;background:url(../images/search.png) no-repeat;border:0;width:40px;height: 41px;cursor:pointer;}
+.nav-bar{width:100%;height:40px;line-height:40px;text-align:center;font-size:16px;background:#2b98d0;clear:both;}
+.nav1170{width:1170px;margin:0 auto;}
+.nav-red{background:#e63636;}
+.nav-grey{background:#797979;}
+.nav-bar ul{width:1170px;margin:0 auto;}
+.nav-bar li{float:left;list-style:none;}
+.nav-bar li.home-page{width:115px;}
+.nav-bar li.nav-list{width:125px;}
+.nav-bar li.nav-seperate{margin-left:150px;}
+.nav-bar li span{color:#fff;}
+.nav-bar a{display:block;text-decoration:none;color:#FFF;}
+.nav-bar a img{width:18px;margin:0 5px -3px 0;}
+.nav-bar a:hover{color:#fef600;text-decoration:none;}
+/*footer*/
+.footer{height:312px;width:100%;background-color:#333;margin:0 auto;}
+.footer .footer-wrap{width:1000px;height: 194px;margin: 0 auto;padding-top: 58px;}
+.footer .footer-wrap>.footer-left{display: inline-block;float: left;width: 462px;height: 172px;border-right: solid 1px #555555;}
+.footer .footer-wrap .footer-column{display: inline-block;width: 150px;height: 105px;vertical-align: top;padding-top: 10px;}
+.footer .footer-wrap .footer-column .title{ color: #ffffff; padding-bottom: 20px; font-size: 14px; font-weight: 500; }
+.footer .footer-wrap .footer-column a{ display: block; color: #9b9b9b; padding-bottom: 10px; font-size: 12px; cursor: default; }
+.footer .footer-wrap>.footer-right{ display: inline-block; float: right; width: 494px; height: 172px; margin-left: 40px; }
+.footer .footer-wrap>.footer-right .footer-column{ width: 180px; }
+.footer .footer-wrap .footer-column{ display: inline-block; width: 150px; height: 105px; vertical-align: top; padding-top: 10px; cursor: pointer; }
+.footer .footer-wrap .footer-right i{ width: 22px; height: 22px; padding-bottom: 12px; background: url('../images/tell.png') no-repeat -550px 0; display: block; }
+.footer .footer-wrap>.footer-right h3{ color: #ffffff; font-size: 14px; font-weight: 500; padding-bottom: 10px; }
+.footer .footer-wrap>.footer-right span{ position: relative; top: 46px; color: #ffffff; font-size: 14px; font-weight: 500; padding-bottom: 8px; }
+.footer .footer-wrap>.footer-right .phone-notice{ padding-top: 43px; }
+.footer .footer-wrap>.footer-right .footer-column:nth-child(3){ width: 120px; }
+.footer .footer-wrap>.footer-right .quickmark-icon{ width: 100px; height: 100px; background: url('../images/xl.png') no-repeat; }
+.footer .footer-wrap>.footer-right .quickmark-icon1{ width: 100px; height: 100px; background: url('../images/wx.jpg') no-repeat; }
+.footer .footer-wrap>.footer-right .webcat-notice{ padding-top: 8px; width: 100px; color: #ffffff; text-align: center; font-size: 12px; font-weight: 500; }
+.footer .footer-split-line { width: 860px; margin: 0 auto !important; border-top: solid 1px #555555; }
+.footer .footer-box { width: 365px; color: #9b9b9b; margin: 0 auto !important; line-height: 56px; overflow: hidden; font-size: 12px; }
+.footer .footer-wrap>.footer-right .phone-notice{padding-top: 43px;}
+.footer .footer-wrap>.footer-right p{color: #9b9b9b; margin-top: 12px; font-size: 12px;}
+.footer .footer-wrap>.footer-left .footer-notice{width: 402px;}
+.footer .footer-wrap>.footer-left .footer-notice h3{color: #ffffff; font-size: 14px; font-weight: 500; padding-bottom: 10px;}
+.footer .footer-wrap>.footer-left .footer-notice p{color: #9b9b9b; font-size: 12px; line-height: 16px;}
+.footer-box img{ vertical-align: sub;}
+/*返回顶部*/
+.back-to-top{position:fixed;bottom:30px;right:15px;display:none;cursor:pointer;}

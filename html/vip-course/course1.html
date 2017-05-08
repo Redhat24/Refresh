@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="applicable-device"content="pc,mobile">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>课程单页</title>
+<link rel="shortcut icon" href="../../favicon.ico">
+<link href="../../statics/css/vip-course.css" rel="stylesheet" type="text/css" />
+<link href="../../statics/css/basic-model.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="http://www.51niutu.com/statics/js/jquery.min.js"></script>
+</head>
+<body>
+<!--头部开始-->
+<div class="headerbg">
+	<div class="content">
+    	<ul>
+			<li><a href="../"><img src="http://www.51niutu.com/statics/images/VIP/v1.png">首页</a></li>
+			<li><a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=89"><img src="http://www.51niutu.com/statics/images/VIP/v2.png">全部课程</a></li>
+			<li style="background:url(http://www.51niutu.com/statics/images/VIP/v3.gif) no-repeat left center;margin-left:10px;"><a href="javascript:void()" class="a1">白金会员</a></li>
+			<li style="background:url(http://www.51niutu.com/statics/images/VIP/mobile.png) no-repeat left center;margin-left:10px;"><a href="javascript:void()" class="a1">移动学习</a></li>
+    	</ul>
+		<div class="login-in">
+			<span>
+				<script type="text/javascript">document.write('<iframe src="http://www.51niutu.com/index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid=1" allowTransparency="true"  width="300" height="24" frameborder="0" scrolling="no"></iframe>')</script>
+			</span>
+		</div>
+    </div>
+</div>
+<div class="head-wrap">
+    <div class="header">
+        <div class="logo">
+            <a href="http://www.51niutu.com/"><img src="http://www.51niutu.com/statics/images/logo3.png" /></a> 
+        </div>
+        <div class="search">
+            <div class="lanren-search-form">
+                <div id="search-bd" class="search-bd">
+                    <ul>
+                        <li class="selected">视频</li>
+                        <li>课程</li>
+                        <li>文章</li>						
+                    </ul>
+                </div>
+                <div id="search-hd" class="search-hd">
+                    <div class="search-bg"></div>
+                    <form action="http://www.51niutu.com/index.php" method="get" target="_blank" id="s1" class="search-input">
+                        <input type="hidden" name="m" value="search"/>
+                        <input type="hidden" name="c" value="index"/ >
+                        <input type="hidden" name="a" value="init"/>
+                        <input type="hidden" name="typeid" value="128" id="typeid"/>
+                        <input type="hidden" name="siteid" value="1" id="siteid"/>
+                        <input type="text" class="text" name="q" id="q" placeholder="请输入您想查找的视频名称">
+                        <button id="submit" class="btn-search" value="搜索">搜索</button>
+                    </form>
+                    <form action="http://www.51niutu.com/index.php" method="get" target="_blank" id="s2" class="search-input">
+                        <input type="hidden" name="m" value="search"/>
+                        <input type="hidden" name="c" value="index1"/ >
+                        <input type="hidden" name="a" value="init"/>
+                        <input type="hidden" name="siteid" value="1" id="siteid"/>
+                        <input type="text" class="text" name="q" id="q" placeholder="请输入您想查找的课程名称">
+                        <button id="submit" class="btn-search" value="搜索">搜索</button>
+                    </form>
+                    <form action="http://www.51niutu.com/index.php" method="get" target="_blank" id="s3" class="search-input">
+                        <input type="hidden" name="m" value="search"/>
+                        <input type="hidden" name="c" value="index"/ >
+                        <input type="hidden" name="a" value="init"/>
+                        <input type="hidden" name="typeid" value="1" id="typeid"/>
+                        <input type="hidden" name="siteid" value="1" id="siteid"/>
+                        <input type="text" class="text" name="q" id="q" placeholder="请输入您想查找的文章">
+                        <button id="submit" class="btn-search" value="搜索">搜索</button>
+                    </form>
+                </div>
+            </div>
+            <script>
+                $(function(){
+                    //通用头部搜索切换
+                    $('#search-hd .search-input').on('input propertychange',function(){
+                        var val = $(this).val();
+                        if(val.length > 0){
+                            $('#search-hd .pholder').hide(0);
+                        }else{
+                            var index = $('#search-bd li.selected').index();
+                            $('#search-hd .pholder').eq(index).show().siblings('.pholder').hide(0);
+                        }
+                    })
+                    $('#search-bd li').click(function(){
+                        var index = $(this).index();
+                        $('#search-hd .pholder').eq(index).show().siblings('.pholder').hide(0);
+                        $('#search-hd .search-input').eq(index).show().siblings('.search-input').hide(0);
+                        $(this).addClass('selected').siblings().removeClass('selected');
+                        $('#search-hd .search-input').val('');
+                    });
+                })
+            </script>    
+        </div>
+        <div class="clear3"></div>  
+    </div>
+    <!--导航菜单开始-->
+    <div class="nav-bar">
+        <ul>
+            <li class="home-page"><a href="http://www.51niutu.com/">首&nbsp;&nbsp;&nbsp;页</a></li>
+            <li><span>|</span></li>
+            <li class="nav-list"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/zhibo.png"/>股市直播</a></li>
+            <li class="nav-list"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/anli.png"/>案例精讲</a></li>
+            <li class="nav-list"><a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=103"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/wenda.png"/>互动问答</a></li>
+            <li class="nav-list"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/xueyuan.png"/>学员感言</a></li>
+            <li class="nav-list"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/shouhou.png"/>售后服务</a></li>
+            <li class="nav-list nav-seperate"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/jingpin.png"/>精品课</a></li>
+            <li class="nav-list"><a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=54"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/vip.png"/>开通VIP会员</a></li>
+        </ul>
+    </div>
+    <!--导航菜单结束-->
+</div>
+<!--头部结束-->
+<!--导师大图-->
+<div class="teach-pic"></div>
+<!--导师师介绍-->
+<div class="bg1 full-section">
+    <div class="section teach-intro">
+        <div>
+        	<h2>———————— 牛途无忧首席导师都业华 ————————</h2>
+            <p class="p1">上海交通大学高金MBA，模拟炒股大赛冠军导师，长期担任第一财经、中央人民广播电台《经济之声》频道、香港中文电台等多个财经栏目特邀嘉宾，现任牛途无忧首席导师。</p>
+            <p>上海交通大学高金MBA，模拟炒股大赛冠军导师，长期担任第一财经，上海交通大学高金MBA，模拟炒股大赛冠军导师，长期担任第一财经，</p>
+        </div>
+    </div>
+</div>
+<!--内容导航-->
+<div class="bg2 full-section">
+	<div class="fixed-nav">
+    	<div class="content">
+    	<a href="#kecheng" class="cur">课程亮点</a>
+      	<a href="#bijiao">知识点比较</a>
+      	<a href="#course-time">开课时间</a>
+      	<a href="#good-anli">经典案例</a>
+      	<a href="#stu-judge">学员评价</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		$(window).scroll(function() {
+			if($(window).scrollTop()>1000)
+				$(".fixed-nav .content").css({"position":"fixed"});
+        	else
+          		$(".fixed-nav .content").css({"position":"absolute"});
+		});
+	});
+</script>
+<!--课程亮点-->
+<div class="bg2 full-section">
+	<div class="section">
+    	<h2 class="h2"><b id="kecheng"></b>课程亮点</h2>
+    	<div class="specify">
+        	<div>
+            	<img src="../../statics/images/vip-course/specify-icon1.png"/>
+            	<p>每个交易日文字接盘，一种树理论战法结局详情，熟练战法的同事，带你梳理市场。</p>
+            </div>
+            <div>
+            	<img src="../../statics/images/vip-course/specify-icon2.png" />
+            	<p>首次小班授课，精品小班授课，学习气氛更好，互动性更强，人人都有一对一面对名师的机会</p>
+            </div>
+            <div>
+            	<img src="../../statics/images/vip-course/specify-icon3.png" />
+            	<p>每个交易日文字接盘，一种树理论战法结局详情，熟练战法的同事，带你梳理市场。</p>
+            </div>
+            <div>
+            	<img src="../../statics/images/vip-course/specify-icon4.png" />
+            	<p>每个交易日文字接盘，一种树理论战法结局详情，熟练战法的同事，带你梳理市场。</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--核心知识点比较-->
+<div class="bg1 full-section">
+	<div class="section bijiao">
+    	<h2 class="h2 wider"><b id="bijiao"></b>核心知识点比较</h2>
+        <table border="0">
+        	<tr>
+    			<th>公开课</th>
+    			<th>半年课</th>
+  			</tr>
+  			<tr>
+   				<td>
+                	<ul>
+                    	<li>近似笔</li>
+                        <li>中枢简析</li>
+                        <li>近似笔</li>
+                        <li>中枢简析</li>
+                        <li>近似笔</li>
+                        <li>中枢简析</li>
+                        <li>近似笔</li>
+                    </ul>
+                </td>
+    			<td>
+                	<table border="0">
+                    	<tr>
+                        	<td>
+                            	<ul>
+                    				<li>近似笔</li>
+                        			<li>中枢简析</li>
+                        			<li>近似笔</li>
+                        			<li>中枢简析</li>
+                        			<li>近似笔</li>
+                        			<li>中枢简析</li>
+                        			<li>近似笔</li>
+                                    <li>近似笔</li>
+                                    <li>近似笔</li>
+                                    <li>近似笔</li>
+                    			</ul>
+                            </td>
+                            <td>
+                            	<ul>
+                    				<li>近似笔</li>
+                        			<li>中枢简析</li>
+                        			<li>近似笔</li>
+                        			<li>中枢简析</li>
+                        			<li>近似笔</li>
+                        			<li>中枢简析</li>
+                        			<li>近似笔</li>
+                                    <li>中枢简析</li>
+                        			<li>近似笔</li>
+                        			<li>中枢简析</li>
+                    			</ul>
+                            </td>
+                            <td>
+                            	<ul>
+                    				<li>近似笔</li>
+                        			<li>中枢简析</li>
+                        			<li>近似笔</li>
+                        			<li>中枢简析</li>
+                        			<li>近似笔</li>
+                        			<li>中枢简析</li>
+                        			<li>近似笔</li>
+                                    <li>中枢简析</li>
+                        			<li>近似笔</li>
+                        			<li>中枢简析</li><li>中枢简析</li>
+                        			<li>近似笔</li>
+                        			<li>中枢简析</li>
+                    			</ul>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+  			</tr>
+        </table>
+    </div>
+</div>
+<!--开课时间-->
+<div class="bg2 full-section">
+	<div class="section course-time">
+    	<h2 class="h2"><b id="course-time"></b>开课时间</h2>
+        <div class="info">
+        	<p><img src="../../statics/images/vip-course/time-icon1.png" />课程时长：半年，每周1次，每次2小时，合计56小时</p>
+            <p><img src="../../statics/images/vip-course/time-icon2.png" />开课时间：2017年5月30日起，每周三9:00</p>
+            <p><img src="../../statics/images/vip-course/time-icon3.png" />报名热线：12345678</p>
+        </div>
+        <div class="btn"><a href="#">立即报名</a></div>
+        <div class="detail">半年课毕业可享受通过系统的学习，有效掌握某某只是，掌握什么什么，了解什么，能够怎样怎样，最终如何如何</div>
+    </div>
+</div>
+<!--经典案例-->
+<div class="bg1 full-section">
+	<div class="section good-anli">
+    	<h2 class="h2"><b id="good-anli"></b>经典案例</h2>
+        <img src="../../statics/images/vip-course/anli1.jpg" />
+    </div>
+</div>
+<!--学员评价-->
+<div class="bg1 full-section">
+	<div class="section stu-judge">
+    	<h2 class="h2"><b id="stu-judge"></b>学员评价</h2>
+        <img src="../../statics/images/vip-course/main8.png" />
+    </div>
+</div>
+<!--footer S-->
+<div class="footer">
+	<div class="footer-wrap">
+		<div class="footer-left">
+			<div class="footer-column">
+				<a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=2" target="_blank" class="title">关于我们</a> 
+                <a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=3" target="_blank">联系方式</a>
+                <a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=4" target="_blank">版权声明</a>
+			</div>
+			<div class="footer-column">
+            	<a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=5" target="_blank" class="title">招聘信息</a> 
+                <a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=53" target="_blank">加入我们</a>
+                <a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=56" target="_blank">合作加盟</a>
+           	</div>
+			<div class="footer-column">
+            	<a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=58" target="_blank" class="title">课程制作</a> 
+               	<a href="http://www.51niutu.com/index.php?m=link" target="_blank">友情链接</a>
+			</div>
+			<div class="footer-notice">
+				<h3>网站备案</h3>
+				<p>豫ICP备15006858号-1</p>
+			</div>
+		</div>
+		<div class="footer-right">
+			<div class="footer-column">
+				<i class="phone-icon"></i>
+				<h3>0371-56781218</h3>
+				<span>公司地址</span>
+				<p class="phone-notice">郑州市高新区国家大学科技园</p>
+			</div>
+			<div class="footer-column">
+				<div class="quickmark-icon common-icons-quickmark"></div>
+				<h4 class="webcat-notice">新浪微博关注</h4>
+			</div>
+			<div class="footer-column">
+				<div class="quickmark-icon1 common-icons-quickmark"></div>
+				<h4 class="webcat-notice">关注微信</h4>
+			</div>
+		</div>
+	</div>
+	<div class="footer-split-line"></div>
+	<div class="footer-box">
+		Powered by 牛途无忧网 &copy; 2016 <a href="http://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd=51niutu.com%E7%99%BE%E5%BA%A6%E4%BF%A1%E8%AA%89%E6%A1%A3%E6%A1%88&oq=%E7%99%BE%E5%BA%A6%E4%BF%A1%E8%AA%89%E6%A1%A3%E6%A1%88&rsv_pq=93b9ffb50000c06b&rsv_t=c1a44G7MN9S%2BWRyDTSdSfzc7RlSjDbB3RQmTa9I%2FsMNZC12Y%2BjAQ%2BBKrL60&rsv_enter=0&inputT=1094&rsv_sug3=7&rsv_sug1=6&bs=%E7%99%BE%E5%BA%A6%E4%BF%A1%E8%AA%89%E6%A1%A3%E6%A1%88#vmp-rz
+" target="_blank"><img src="http://www.51niutu.com/statics/images/bd_xy.png" height="25"></a>
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+			document.write(unescape("%3Cspan id='cnzz_stat_icon_3539230'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/stat.php%3Fid%3D3539230%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+	</div>
+</div>
+<!--footer E-->
+
+<div class="back-to-top">
+	<img src="../../statics/images/vip-course/top.png" />
+</div>
+<script type="text/javascript">
+	$(function(){
+		$(".back-to-top").click(function() {
+			$('html,body').animate({ scrollTop: 0},"slow");
+			return false;
+    	});
+		$(window).scroll(function() {
+			if($(window).scrollTop()>100)
+				$(".back-to-top").fadeIn(1000);
+        	else
+          		$(".back-to-top").fadeOut(1000);
+		});
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="applicable-device"content="pc,mobile">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>售后服务</title>
+<link rel="shortcut icon" href="../../favicon.ico">
+<link href="../../statics/css/vip-course.css" rel="stylesheet" type="text/css" />
+<link href="../../statics/css/basic-model.css" rel="stylesheet" type="text/css"/>
+<link href="../../statics/css/shouhou.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://www.51niutu.com/statics/js/jquery.min.js"></script>
+</head>
+<body>
+<!--头部开始-->
+<div class="headerbg">
+	<div class="content">
+    	<ul>
+			<li><a href="../"><img src="http://www.51niutu.com/statics/images/VIP/v1.png">首页</a></li>
+			<li><a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=89"><img src="http://www.51niutu.com/statics/images/VIP/v2.png">全部课程</a></li>
+			<li style="background:url(http://www.51niutu.com/statics/images/VIP/v3.gif) no-repeat left center;margin-left:10px;"><a href="javascript:void()" class="a1">白金会员</a></li>
+			<li style="background:url(http://www.51niutu.com/statics/images/VIP/mobile.png) no-repeat left center;margin-left:10px;"><a href="javascript:void()" class="a1">移动学习</a></li>
+    	</ul>
+		<div class="login-in">
+			<span>
+				<script type="text/javascript">document.write('<iframe src="http://www.51niutu.com/index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid=1" allowTransparency="true"  width="300" height="24" frameborder="0" scrolling="no"></iframe>')</script>
+			</span>
+		</div>
+    </div>
+</div>
+<div class="head-wrap">
+    <div class="header">
+        <div class="logo">
+            <a href="http://www.51niutu.com/"><img src="http://www.51niutu.com/statics/images/logo3.png" /></a> 
+        </div>
+        <div class="search">
+            <div class="lanren-search-form">
+                <div id="search-bd" class="search-bd">
+                    <ul>
+                        <li class="selected">视频</li>
+                        <li>课程</li>
+                        <li>文章</li>						
+                    </ul>
+                </div>
+                <div id="search-hd" class="search-hd">
+                    <div class="search-bg"></div>
+                    <form action="http://www.51niutu.com/index.php" method="get" target="_blank" id="s1" class="search-input">
+                        <input type="hidden" name="m" value="search"/>
+                        <input type="hidden" name="c" value="index"/ >
+                        <input type="hidden" name="a" value="init"/>
+                        <input type="hidden" name="typeid" value="128" id="typeid"/>
+                        <input type="hidden" name="siteid" value="1" id="siteid"/>
+                        <input type="text" class="text" name="q" id="q" placeholder="请输入您想查找的视频名称">
+                        <button id="submit" class="btn-search" value="搜索">搜索</button>
+                    </form>
+                    <form action="http://www.51niutu.com/index.php" method="get" target="_blank" id="s2" class="search-input">
+                        <input type="hidden" name="m" value="search"/>
+                        <input type="hidden" name="c" value="index1"/ >
+                        <input type="hidden" name="a" value="init"/>
+                        <input type="hidden" name="siteid" value="1" id="siteid"/>
+                        <input type="text" class="text" name="q" id="q" placeholder="请输入您想查找的课程名称">
+                        <button id="submit" class="btn-search" value="搜索">搜索</button>
+                    </form>
+                    <form action="http://www.51niutu.com/index.php" method="get" target="_blank" id="s3" class="search-input">
+                        <input type="hidden" name="m" value="search"/>
+                        <input type="hidden" name="c" value="index"/ >
+                        <input type="hidden" name="a" value="init"/>
+                        <input type="hidden" name="typeid" value="1" id="typeid"/>
+                        <input type="hidden" name="siteid" value="1" id="siteid"/>
+                        <input type="text" class="text" name="q" id="q" placeholder="请输入您想查找的文章">
+                        <button id="submit" class="btn-search" value="搜索">搜索</button>
+                    </form>
+                </div>
+            </div>
+            <script>
+                $(function(){
+                    //通用头部搜索切换
+                    $('#search-hd .search-input').on('input propertychange',function(){
+                        var val = $(this).val();
+                        if(val.length > 0){
+                            $('#search-hd .pholder').hide(0);
+                        }else{
+                            var index = $('#search-bd li.selected').index();
+                            $('#search-hd .pholder').eq(index).show().siblings('.pholder').hide(0);
+                        }
+                    })
+                    $('#search-bd li').click(function(){
+                        var index = $(this).index();
+                        $('#search-hd .pholder').eq(index).show().siblings('.pholder').hide(0);
+                        $('#search-hd .search-input').eq(index).show().siblings('.search-input').hide(0);
+                        $(this).addClass('selected').siblings().removeClass('selected');
+                        $('#search-hd .search-input').val('');
+                    });
+                })
+            </script>    
+        </div>
+        <div class="clear3"></div>  
+    </div>
+    <!--导航菜单开始-->
+    <div class="nav-bar">
+        <ul>
+            <li class="home-page"><a href="http://www.51niutu.com/">首&nbsp;&nbsp;&nbsp;页</a></li>
+            <li><span>|</span></li>
+            <li class="nav-list"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/zhibo.png"/>股市直播</a></li>
+            <li class="nav-list"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/anli.png"/>案例精讲</a></li>
+            <li class="nav-list"><a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=103"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/wenda.png"/>互动问答</a></li>
+            <li class="nav-list"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/xueyuan.png"/>学员感言</a></li>
+            <li class="nav-list"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/shouhou.png"/>售后服务</a></li>
+            <li class="nav-list nav-seperate"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/jingpin.png"/>精品课</a></li>
+            <li class="nav-list"><a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=54"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/vip.png"/>开通VIP会员</a></li>
+        </ul>
+    </div>
+    <!--导航菜单结束-->
+</div>
+<!--头部结束-->
+<!--顶部banner-->
+<div class="banner"></div>
+<!--main开始-->
+<div class="main">
+	<!--图标介绍-->
+	<div class="introduce">
+		<ul>
+            <li>
+                <img src="../../statics/images/vip-course/intro-icon1.png"/>
+                <p>网站视频永久免费</p>
+                <span></span>
+            </li>
+            <li>
+                <img src="../../statics/images/vip-course/intro-icon2.png"/>
+                <p>划分等级定制课程</p>
+                <span></span>
+            </li>
+            <li>
+                <img src="../../statics/images/vip-course/intro-icon3.png"/>
+                <p>实况直播同步学习</p>
+                <span></span>
+            </li>
+            <li>
+                <img src="../../statics/images/vip-course/intro-icon4.png"/>
+                <p>在线社区交流互动</p>
+            </li>
+		</ul>
+	</div>
+    <div class="clear"></div>
+    <!--左右交替内容开始-->
+    <div class="wrap-lr">
+        <div class="content left">
+            <div><img src="../../statics/images/vip-course/vip01.jpg" /></div>
+            <div class="text">
+                <h2>汇盈操盘软件【VIP版】</h2>
+                <p><b>汇盈软件携手通达信软件<span class="red">20年荣耀巨献</span></b></p>
+                <p><b><span class="red">行业首选、20年实战验证、30万股民首推</span></b></p>
+                <p><b>国内唯一一款集数据研判，技术分析、个性化服务为一体的金融终端系统！</b></p>
+                <p><b><span class="red">名师战法汇聚 助您稳夺先机</span></b></p>
+                <ul>
+                    <li><b><span class="red">●</span> 【黄金顶底】大盘分析的必杀技</b></li>
+                    <li><b><span class="red">●</span> 【特色选股】发现牛股的透视镜</b></li>
+                    <li><b><span class="red">●</span> 【汇盈决策】买卖决策3秒搞定</b></li>
+                    <li><b><span class="red">●</span> 【汇盈资金】主力资金的跟踪器</b></li>
+                </ul>
+                <div class="button"><a href="#">加入VIP尊享</a></div>
+            </div>
+        </div>
+        <div class="content right">
+            <div><img src="../../statics/images/vip-course/vip02.jpg" /></div>
+            <div class="text">
+                <h2>VIP尊享系统性培训服务</h2>
+                <p><span class="red">国内首家股票知识在线直播培训的网站</span></p>
+                <p>汇富网多年来致力打造成为全国首家股票知识在线培训教育平台，一站式的全方位的在线培训教育服务，至今已成为广大投资者投资学习首选及推崇的股票在线学习平台。</p>
+                <ul>
+                	<li><b><span class="blue">●</span> 【在线讲师】全网第一</b></li>
+                    <li><b><span class="blue">●</span> 【讲师实力】全网第一</b></li>
+                    <li><b><span class="blue">●</span> 【课程体系】全网第一</b></li>
+                    <li><b><span class="blue">●</span> 【学员口碑】全网第一</b></li>
+                    <li><b><span class="blue">●</span> 【实战结果】全网第一</b></li>
+                    <li><b><span class="blue">●</span> 【价格最惠】全网第一</b></li>
+                </ul>
+                <div class="button"><a href="#">加入VIP尊享</a></div>
+            </div>
+        </div>
+        <div class="content left">
+            <div><img src="../../statics/images/vip-course/vip03.jpg" /></div>
+            <div class="text">
+                <h2>VIP尊属一对一的零距离服务</h2>
+                <p>特为VIP用户开通专属服务绿道，一对一的零距离贴身服务，在您遇到疑难时给与最及时，最专业解答，同时的与您配备了一位VIP专属的投资顾问，全面保障到您在使用的过程中能拥有VIP尊享般的星级服务质量</p>
+                <ul>
+                    <li><b><span class="red">●</span> 【最快捷的处理】</b></li>
+                    <li><b><span class="red">●</span> 【最专业的服务】</b></li>
+                    <li><b><span class="red">●</span> 【最贴心的接待】</b></li>
+                </ul>
+                <div class="button"><a href="#">加入VIP尊享</a></div>
+            </div>
+        </div>
+        <div class="content right">
+            <div><img src="../../statics/images/vip-course/vip04.jpg" /></div>
+            <div class="text">
+                <h2>VIP尊享汇盈投资月刊</h2>
+                <p>每月提前分析市场走势、投资热点。客服专员在线提供各种服务：早盘提示、盘中交流、软件学习、行情变化通知...</p>
+                <p>我们随时都在您身边，为您的安全投资保驾护航！</p>
+                <ul>
+                	<li><b><span class="blue">●</span> 【每日早盘提示】</b></li>
+                    <li><b><span class="blue">●</span> 【市场掘金题材】</b></li>
+                    <li><b><span class="blue">●</span> 【名师投资战法】</b></li>
+                </ul>
+                <div class="button"><a href="#">加入VIP尊享</a></div>
+            </div>
+        </div>
+        <div class="content left">
+            <div><img src="../../statics/images/vip-course/vip05.jpg" /></div>
+            <div class="text">
+                <h2>VIP特属聊天专区</h2>
+                <p>汇盈VIP聊天室是我们为VIP用户打造的专属交流专区，为用户搭建了一个即使沟通交流的空间专享，每天最新的，早盘提示、盘前消息汇总、盘中事件曝光、实时个股交流、盘后点评等，让投资变得更快乐，更有效！</p>
+                <ul>
+                    <li><b><span class="red">●</span> 【名师在线】</b></li>
+                    <li><b><span class="red">●</span> 【盘前消息汇总】</b></li>
+                    <li><b><span class="red">●</span> 【盘中事件曝光】</b></li>
+                    <li><b><span class="red">●</span> 【盘中点评】</b></li>
+                    <li><b><span class="red">●</span> 【实时操盘交流】</b></li>
+                    <li><b><span class="red">●</span> 【盘后交流】</b></li>
+                </ul>
+                <div class="button"><a href="#">加入VIP尊享</a></div>
+            </div>
+        </div>
+        <div class="content right">
+            <div><img src="../../statics/images/vip-course/vip06.jpg" /></div>
+            <div class="text">
+                <h2>VIP尊享汇盈回馈活动</h2>
+                <p>只要成为了我们的VIP会员后，我们会在线不定期的推出一系列只属VIP专享的体验，夺豪礼、送积分、大抽奖、名精品、名师全国巡讲、VIP股票沙龙活动等，只属VIP特享的相关超值体验…….期待您的加入！</p>
+                <div class="button"><a href="#">加入VIP尊享</a></div>
+            </div>
+        </div>
+    </div>
+    <!--左右交替内容结束-->
+</div>
+<!--main结束-->
+<!--全方位服务-->
+<div class="service">
+	<div class="content">
+    	<h2>全方位服务</h2>
+        <div class="div1">
+        	<div class="image-div"><img src="../../statics/images/vip-course/service-icon1.png" /></div>
+            <h3>明星导师</h3>
+            <p>首席导师亲身授课，一流教学内容，一流教学管理</p>
+        </div>
+        <div class="div2">
+        	<div class="image-div"><img src="../../statics/images/vip-course/service-icon2.png" /></div>
+            <h3>系统课程</h3>
+            <p>我们为您提供的是系列课程内容，让您的学习更全面</p>
+        </div>
+        <div class="div3">
+        	<div class="image-div"><img src="../../statics/images/vip-course/service-icon3.png" /></div>
+            <h3>精品内容</h3>
+            <p>导师亲历海量实例，实盘讲解学得更好</p>
+        </div>
+        <div class="div4">
+        	<div class="image-div"><img src="../../statics/images/vip-course/service-icon4.png" /></div>
+            <h3>使用技巧</h3>
+            <p>十年实战，磨砺而出，全面、简单、细致，提前布局，制胜获利</p>
+        </div>
+        <div class="div5">
+        	<div class="image-div"><img src="../../statics/images/vip-course/service-icon5.png" /></div>
+            <h3>优质服务</h3>
+            <p>一站式服务，交流群跟踪服务，掌握知识更牢固</p>
+        </div>
+    </div>
+</div>
+<!--全方位服务结束-->
+<!--又一个main-->
+<div class="main">
+	<!--360度体验式服务-->
+    <div class="service360">
+        <h2>360°体验式服务-高级课学员专享</h2>
+        <div class="content">
+            <div class="gradient-bg1">
+                <div><img src="../../statics/images/vip-course/wechat.png" /></div>
+                <h3>每日高级班微信服务</h3>
+                <p>每日收盘点评、知识应用、操作策略、要点等</p>
+            </div>
+            <div class="gradient-bg2">
+                <div><img src="../../statics/images/vip-course/kecheng.png" /></div>
+                <h3>每周高级班课程</h3>
+                <p>课程内容、教学案例（含模拟练习）及作业布置和点评，常见问题及解答，盘面综合点评、下周操作策略等</p>
+            </div>
+            <div class="gradient-bg1">
+                <div><img src="../../statics/images/vip-course/wechat.png" /></div>
+                <h3>每日高级班微信服务</h3>
+                <p>每日收盘点评、知识应用、操作策略、要点等</p>
+            </div>
+            <div class="gradient-bg2">
+                <div><img src="../../statics/images/vip-course/kecheng.png" /></div>
+                <h3>每周高级班课程</h3>
+                <p>课程内容、教学案例（含模拟练习）及作业布置和点评，常见问题及解答，盘面综合点评、下周操作策略等</p>
+            </div>
+            <div class="gradient-bg1">
+                <div><img src="../../statics/images/vip-course/wechat.png" /></div>
+                <h3>每日高级班微信服务</h3>
+                <p>每日收盘点评、知识应用、操作策略、要点等</p>
+            </div>
+            <div class="gradient-bg2">
+                <div><img src="../../statics/images/vip-course/kecheng.png" /></div>
+                <h3>每周高级班课程</h3>
+                <p>课程内容、教学案例（含模拟练习）及作业布置和点评，常见问题及解答，盘面综合点评、下周操作策略等</p>
+            </div>
+            <div class="gradient-bg1">
+                <div><img src="../../statics/images/vip-course/wechat.png" /></div>
+                <h3>每日高级班微信服务</h3>
+                <p>每日收盘点评、知识应用、操作策略、要点等</p>
+            </div>
+            <div class="gradient-bg2">
+                <div><img src="../../statics/images/vip-course/kecheng.png" /></div>
+                <h3>每周高级班课程</h3>
+                <p>课程内容、教学案例（含模拟练习）及作业布置和点评，常见问题及解答，盘面综合点评、下周操作策略等</p>
+            </div>
+            <div class="gradient-bg1">
+                <div><img src="../../statics/images/vip-course/wechat.png" /></div>
+                <h3>每日高级班微信服务</h3>
+                <p>每日收盘点评、知识应用、操作策略、要点等</p>
+            </div>
+            <div class="gradient-bg2">
+                <div><img src="../../statics/images/vip-course/kecheng.png" /></div>
+                <h3>每周高级班课程</h3>
+                <p>课程内容、教学案例（含模拟练习）及作业布置和点评，常见问题及解答，盘面综合点评、下周操作策略等</p>
+            </div>
+            <div class="gradient-bg1">
+                <div><img src="../../statics/images/vip-course/wechat.png" /></div>
+                <h3>每日高级班微信服务</h3>
+                <p>每日收盘点评、知识应用、操作策略、要点等</p>
+            </div>
+            <div class="gradient-bg2">
+                <div><img src="../../statics/images/vip-course/kecheng.png" /></div>
+                <h3>每周高级班课程</h3>
+                <p>课程内容、教学案例（含模拟练习）及作业布置和点评，常见问题及解答，盘面综合点评、下周操作策略等</p>
+            </div>
+        </div>
+    </div>
+    <!--360度体验式服务结束-->
+</div>
+<!--又一个main结束-->
+<!--vip核心服务-->
+<div class="vip-service">
+	<div class="content">
+    	<h2>VIP四大核心服务</h2>
+        <p>操盘人生,十年护航共抵辉煌彼岸</p>
+        <ul>
+        	<li>
+            	<img src="../../statics/images/vip-course/vip-icon1.png">
+                <p>学员支付的费用可转可退</p>
+            </li>
+            <li>
+            	<img src="../../statics/images/vip-course/vip-icon2.png">
+                <p>买线上直播课程一年，可获赠该老师高级体系课程一期。</p>
+            </li>
+            <li>
+            	<img src="../../statics/images/vip-course/vip-icon3.png">
+                <p>学员可随时申请转课，但需扣除该学员已学过的课程费用，但需补课程差价。</p>
+            </li>
+            <li>
+            	<img src="../../statics/images/vip-course/vip-icon4.png">
+                <p>学员可随时申请退费，但需扣除改学员已学过的课程费用。</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--vip核心服务结束-->
+<!--footer S-->
+<div class="footer">
+	<div class="footer-wrap">
+		<div class="footer-left">
+			<div class="footer-column">
+				<a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=2" target="_blank" class="title">关于我们</a> 
+                <a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=3" target="_blank">联系方式</a>
+                <a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=4" target="_blank">版权声明</a>
+			</div>
+			<div class="footer-column">
+            	<a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=5" target="_blank" class="title">招聘信息</a> 
+                <a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=53" target="_blank">加入我们</a>
+                <a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=56" target="_blank">合作加盟</a>
+           	</div>
+			<div class="footer-column">
+            	<a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=58" target="_blank" class="title">课程制作</a> 
+               	<a href="http://www.51niutu.com/index.php?m=link" target="_blank">友情链接</a>
+			</div>
+			<div class="footer-notice">
+				<h3>网站备案</h3>
+				<p>豫ICP备15006858号-1</p>
+			</div>
+		</div>
+		<div class="footer-right">
+			<div class="footer-column">
+				<i class="phone-icon"></i>
+				<h3>0371-56781218</h3>
+				<span>公司地址</span>
+				<p class="phone-notice">郑州市高新区国家大学科技园</p>
+			</div>
+			<div class="footer-column">
+				<div class="quickmark-icon common-icons-quickmark"></div>
+				<h4 class="webcat-notice">新浪微博关注</h4>
+			</div>
+			<div class="footer-column">
+				<div class="quickmark-icon1 common-icons-quickmark"></div>
+				<h4 class="webcat-notice">关注微信</h4>
+			</div>
+		</div>
+	</div>
+	<div class="footer-split-line"></div>
+	<div class="footer-box">
+		Powered by 牛途无忧网 &copy; 2016 <a href="http://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&tn=baidu&wd=51niutu.com%E7%99%BE%E5%BA%A6%E4%BF%A1%E8%AA%89%E6%A1%A3%E6%A1%88&oq=%E7%99%BE%E5%BA%A6%E4%BF%A1%E8%AA%89%E6%A1%A3%E6%A1%88&rsv_pq=93b9ffb50000c06b&rsv_t=c1a44G7MN9S%2BWRyDTSdSfzc7RlSjDbB3RQmTa9I%2FsMNZC12Y%2BjAQ%2BBKrL60&rsv_enter=0&inputT=1094&rsv_sug3=7&rsv_sug1=6&bs=%E7%99%BE%E5%BA%A6%E4%BF%A1%E8%AA%89%E6%A1%A3%E6%A1%88#vmp-rz
+" target="_blank"><img src="http://www.51niutu.com/statics/images/bd_xy.png" height="25"></a>
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+			document.write(unescape("%3Cspan id='cnzz_stat_icon_3539230'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/stat.php%3Fid%3D3539230%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+	</div>
+</div>
+<!--footer E-->
+<!--返回顶部-->
+<div class="back-to-top">
+	<img src="../../statics/images/vip-course/top.png" />
+</div>
+<script type="text/javascript">
+	$(function(){
+		$(".back-to-top").click(function() {
+			$('html,body').animate({ scrollTop: 0},"slow");
+			return false;
+    	});
+		$(window).scroll(function() {
+			if($(window).scrollTop()>100)
+				$(".back-to-top").fadeIn(1000);
+        	else
+          		$(".back-to-top").fadeOut(1000);
+		});
+	});
+</script>
+</body>
+</html>
