@@ -47,7 +47,7 @@ table{border-collapse:collapse;}
 .dz-bg1,.dz-bg4{background:#000;}
 .dz-bg2,.dz-bg5{background:#1a1a1a;}
 .dz-bg3{background:url(../images/vip-course/more2.gif) no-repeat top center;background-size:100% 556px;}
-.wrap .content{ width:960px;height:auto;margin:0 auto;}
+.wrap .content{width:960px;height:auto;margin:0 auto;}
 .item1{position:relative;}
 .item1 .item11{width:900px;height:100px;margin:0 auto;background:#AB9E2E;color:#fff;position:absolute;top:-100px;left:30px;}
 .item1 .item11 .price{font-size:20px;position:absolute;top:32px;left:50px;}

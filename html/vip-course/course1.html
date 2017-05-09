@@ -6,9 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=7" />
 <title>课程单页</title>
-<link rel="shortcut icon" href="../../favicon.ico">
+<meta name="keywords" content="讲师介绍,精品课程,牛途无忧">
+<meta name="description" content="牛途无忧网,专注于为股市爱好者提供专业的股票培训班和系统的操盘手培训辅导,为学员打造投资者教育成长园地。">
 <link href="../../statics/css/vip-course.css" rel="stylesheet" type="text/css" />
 <link href="../../statics/css/basic-model.css" rel="stylesheet" type="text/css"/>
+<link href="http://www.51niutu.com/statics/css/niutu.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="../../favicon.ico">
 <script type="text/javascript" src="http://www.51niutu.com/statics/js/jquery.min.js"></script>
 </head>
 <body>
@@ -104,8 +107,8 @@
             <li class="nav-list"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/zhibo.png"/>股市直播</a></li>
             <li class="nav-list"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/anli.png"/>案例精讲</a></li>
             <li class="nav-list"><a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=103"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/wenda.png"/>互动问答</a></li>
-            <li class="nav-list"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/xueyuan.png"/>学员感言</a></li>
-            <li class="nav-list"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/shouhou.png"/>售后服务</a></li>
+            <li class="nav-list"><a href="../ganyan/index.html"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/xueyuan.png"/>学员感言</a></li>
+            <li class="nav-list"><a href="../shouhou/index.html"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/shouhou.png"/>售后服务</a></li>
             <li class="nav-list nav-seperate"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/jingpin.png"/>精品课</a></li>
             <li class="nav-list"><a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=54"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/vip.png"/>开通VIP会员</a></li>
         </ul>
@@ -324,7 +327,53 @@
 	</div>
 </div>
 <!--footer E-->
-
+<!--右侧客服区开始-->
+<div id="box-kefu">
+    <div class="kefu-close"></div>
+    <div class="kefu-open">
+        <div>
+        	<ul>
+            	<li><a href="http://wpa.qq.com/msgrd?v=3&uin=918595590&site=qq&menu=yes" title="点击这里给我发消息" target="_blank"><i class="qq"></i>网站导航</a></li>
+            	<li><a href="http://wpa.qq.com/msgrd?v=3&uin=918662627&site=qq&menu=yes" title="点击这里给我发消息" target="_blank"><i class="qq"></i>投诉建议</a></li>
+           		<li><a href="http://wpa.qq.com/msgrd?v=3&uin=918669270&site=qq&menu=yes" title="点击这里给我发消息" target="_blank"><i class="qq"></i>售后服务</a></li>
+        	</ul>
+        </div>
+        <a href="javascript:;" class="close">关闭</a>
+    </div>
+</div>
+<script>var online= new Array();</script>
+<script src="http://webpresence.qq.com/getonline?Type=1&918595590:918662627:918669270:"></script>
+<script>
+	//在线客服 
+	(function(tt){
+		for(var i=0; i<online.length; i++){
+			if(!online[i]) jQuery("#box-kefu .qq").eq(i).addClass("online");
+		}
+		var _open = tt("#box-kefu").find(".kefu-open"),
+			_close = tt("#box-kefu").find(".kefu-close");
+		_open.find("a").hover(function(){
+			$(this).stop(true,true).animate({paddingLeft:20},200).find("i").stop(true,true).animate({left:75},200);
+		},function(){
+			$(this).stop(true,true).animate({paddingLeft:35},200).find("i").stop(true,true).animate({left:10},200);
+		});
+		_close.click(function(){
+			_close.animate({width:44},200,function(){
+				_close.animate({width:0},200,function(){
+					_open.animate({width:138},200);
+				});
+			});
+		});
+		 _open.find(".close").click(function(){
+			_open.animate({width:148},200,function(){
+				_open.animate({width:0},200,function(){
+					_close.animate({width:80},200);
+				});
+			});
+		});
+	})(jQuery)
+</script>
+<!--右侧客服区结束-->
+<!--回到顶部-->
 <div class="back-to-top">
 	<img src="../../statics/images/vip-course/top.png" />
 </div>

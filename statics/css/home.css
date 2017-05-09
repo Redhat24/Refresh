@@ -19,8 +19,8 @@
 .section-title p a:hover{color:#F60;}
 /*左侧导航开始*/
 .leftnav{float:left;width:115px;}
-.leftnav li{height:94px;background-color:#FEE4DA;border-bottom:1px #BF8787 dashed;width:115px;float:left;}
-.leftnav li:last-child{border-bottom:none;}
+.leftnav li{height:94px;background-color:#FEE4DA;width:115px;float:left;-webkit-transition:background 0.4s ease;-moz-transition:background 0.4s ease;-o-transition:background 0.4s ease;transition:background 0.4s ease;}
+.leftnav li+li{border-top:1px #BF8787 dashed;}
 .leftnav li:hover{background-color:#F16A6A;}
 .leftnav li a{color:#A90000;display:block;text-align:center;}
 .leftnav li a img{width:40px;padding:15px 0 5px;}

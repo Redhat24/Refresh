@@ -1,17 +1,77 @@
 @charset "utf-8";
 /* CSS Document */
 /*单页公共区*/
-.wrap1200,.main{width:1200px;margin:0 auto;position:relative;}
-
-/*股民学校开始*/
 .section{width:100%;}
+.wrap1200,.main{width:1200px;margin:0 auto;position:relative;}
+/**********************************************/
+/*售后服务*/
+.shouhou-banner{height:350px;background:url(../images/single-page/shouhou-banner.jpg) no-repeat top center;}
+.red{color:red;}
+.blue{color:#0B98DE;}
+.bg3{background:#f0f0f0;}
+/*介绍栏*/
+.introduce{height:100px;background:#fff;}
+.introduce ul li{float:left;width:25%;height:auto;}
+.introduce img{float:left;margin:24px 20px;width:52px;height:52px;}
+.introduce ul li p{float:left;font-size:18px;color:#000;line-height:100px;}
+.introduce ul li span{float:right;width:2px;height:30px;background:#e4e4e4;margin:35px 10px;}
+/*左右交替内容区*/
+.wrap-lr{background:#fff;}
+.wrap-lr .content{height:500px;line-height:2}
+.wrap-lr .content>div{width:600px;}
+.wrap-lr .content img{padding:0 39px;}
+.wrap-lr .content .text{width:530px;padding-left:70px;padding-top:20px;}
+.wrap-lr .content h2{text-align:left;color:#0B98DE;font-weight:400;font-size:26px;}
+.wrap-lr .content p{font-size:16px;}
+.wrap-lr .content p span{font-size:18px;}
+.wrap-lr .left>div{float:left;}
+.wrap-lr .right>div{float:right;}
+.wrap-lr .content ul{font-size:14px;line-height:2;padding:10px;overflow:hidden;}
+.wrap-lr .content ul li{width:245px;float:left;margin:6px 0;}
+.wrap-lr .content .button{clear:both;background:#0B98DE;font-size:18px;width:102px;padding:5px 15px;border-radius:13px;margin-left:10px;margin-top:10px;}
+.wrap-lr .content .button a{color:#fff;}
+/*全方位服务*/
+.service{width:100%;height:500px;background:url(../images/single-page/service.png) no-repeat center center; background-color:#0383bb;}
+.service .content{width:1200px;margin:0 auto;color:#fff;line-height:1.5;}
+.service .content h2{height: 80px;font-size:28px;line-height: 65px;padding-top:30px; background:url(../images/single-page/title.png) no-repeat center bottom;text-align:center;}
+.service .content>div{width:135px;float:left;}
+.service .content>div+div{margin-left:110px;}
+.service .content .div1{margin-top:55px;margin-left:50px;}
+.service .content .div2{margin-top:70px;}
+.service .content .div3{margin-top:130px;}
+.service .content .div4{margin-top:65px;}
+.service .content .div5{margin-top:60px;}
+.service .content .image-div{width:110px;height:110px;border-radius:50%;background:#fdd25d;margin:0 9px;}
+.service .content .image-div img{width:60px;padding:25px;height:60px;}
+.service .content h3{font-size:18px;margin:20px 0 8px;text-align:center;}
+.service .content p{font-size:16px;text-align:justify;}
+/*360°服务*/
+.service360{background:#fff;padding:30px 0;overflow:hidden;}
+.service360 h2{font-size:40px; padding:30px;text-align:center;}
+.gradient-bg1{background:#44a7d2\9;background: -moz-linear-gradient(top,#ffffff,#cfeaf1);background:-webkit-gradient(linear,top,from(#ffffff),to(#cfeaf1));background:-webkit-linear-gradient(top,#ffffff,#cfeaf1);background: -o-linear-gradient(top,#ffffff,#cfeaf1);}
+.gradient-bg2{background:#44a7d2\9;background: -moz-linear-gradient(top,#cfeaf1,#ffffff);background:-webkit-gradient(linear,top,from(#cfeaf1),to(#ffffff));background:-webkit-linear-gradient(top,#cfeaf1,#ffffff);background: -o-linear-gradient(top,#cfeaf1,#ffffff);}
+.service360 .content>div{width:160px;height:238px;float:left;padding:20px;margin-top:8px;}
+.service360 .content>div img{width:70px; padding:20px 45px 5px;}
+.service360 .content>div h3{font-size:18px;padding: 0 20px 5px;text-align:center;}
+.service360 .content>div p{font-size:16px; text-align:justify;}
+/*VIP尊享特权*/
+.vip-service{ background:url(../images/single-page/vip-bg.png) no-repeat top center;height:540px;width:100%;padding-top:60px;color:white;}
+.vip-service .content{ width:1200px; margin:0 auto;}
+.vip-service .content h2{font-size:32px;text-align:center;}
+.vip-service .content p{text-align:center;font-size:16px;line-height:30px;letter-spacing:1px;}
+.vip-service .content ul{padding-top:40px;}
+.vip-service .content li{width:25%;float:left;text-align:center;padding:15px;box-sizing:border-box;}
+.vip-service .content li img{vertical-align:middle;}
+.vip-service .content li p{margin-top:20px;}
+/**********************************************/
+/*股民学校开始*/
+.school-banner{ background:url(../images/single-page/school-banner.gif) no-repeat center center;width:100%;height:200px;}
+.bg1{background:url(../images/single-page/jiantou.png) no-repeat center center;background-color:#F0F0F0;height:268px;}
+.bg2{background:#f5f5f5;}
 .wrap1200 h2{padding:35px 0 0 110px;font-size:30px;font-weight:400;color:#968969;}
 .wrap1200 h2 b{display:block;position:absolute;top:-80px;}
 .wrap1200::before{content:"";width:0;height:100%;border-right:6px solid #b4b4b4;position:absolute;left:37px;top:0;z-index:10;}
 .wrap1200::after{content:"";width:80px;overflow:hidden;height:80px;position:absolute;left:0;top:15px;z-index:12;}
-.school-banner{ background:url(../images/single-page/banner.gif) no-repeat center center;width:100%;height:200px;}
-.bg1{background:url(../images/single-page/jiantou.png) no-repeat center center;background-color:#F0F0F0;height:268px;}
-.bg2{background:#f5f5f5;}
 /*股民成长路线*/
 .item1{height:268px;}
 .item1 p{padding-left:120px;font-size:16px;}
@@ -62,7 +122,7 @@ padding-top:14px;height:38px;}
 .item6::after{background: url(../images/single-page/school-icon6.png) no-repeat;}
 /*侧边导航*/
 .school-guid{width:122px;height:360px;background:url(../images/single-page/jiantou-left1.png) no-repeat center center;position:fixed;left:50%;margin-left:580px;top:369px;}
-.school-guid a{position:absolute;width:20px;line-height:1;font-size:18px;font-family:黑体;text-shadow:#333 3px 0px 5px;position:absolute;}
+.school-guid a{position:absolute;width:20px;line-height:1;font-size:18px;font-family:黑体;text-shadow:#888 3px 0px 5px;position:absolute;}
 .school-guid a:hover{text-shadow:#008bdd 5px 0px 5px;color:#008bdd;}
 .school-guid .guid0{top:172px;left:25px;}
 .school-guid .guid1{top:266px;left:28px;}
@@ -72,10 +132,10 @@ padding-top:14px;height:38px;}
 .school-guid .top{margin-top:360px;margin-left:-12px;width:80px;font-size:18px;font-family:黑体;text-shadow:#333 0px 3px 5px;cursor:pointer;display:none;}
 .school-guid .top:hover{text-shadow:#008bdd 0px 5px 5px;color:#008bdd;}
 /*股民学校结束*/
-
+/**********************************************/
 /*学员感言开始*/
 .student-banner{background:#137f60;border:15px solid #723720;border-left-width:20px;border-right-width:20px;height:180px;margin:3px 0;text-indent:1em;font-size:20px;font-weight:600;color:#fff;line-height:80px;}
-.student-left{float:left;width:236px;background:url(../images/single-page/square1.png) no-repeat left top;padding: 18px 0 0 23px;}
+.student-left{float:left;width:236px;background:url(../images/single-page/square.png) no-repeat left top;padding: 18px 0 0 23px;}
 .student-left .ul{margin:5px 0;}
 .student-left .ul h3{font-size:18px;border-bottom:1px solid #fff;height:32px;font-weight:400;line-height:32px;padding-left:10px;}
 .student-left .ul li{font-size:14px;line-height:2;border-radius:3px;padding:0 15px;-webkit-transition:background 0.4s ease;-moz-transition:background 0.4s ease;-o-transition:background 0.4s ease;transition:background 0.4s ease;}

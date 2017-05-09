@@ -6,6 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=7" />
 <title>学员感言</title>
+<meta name="keywords" content="学员感言,牛途无忧">
+<meta name="description" content="牛途无忧网,专注于为股市爱好者提供专业的股票培训班和系统的操盘手培训辅导,为学员打造投资者教育成长园地。">
 <link href="../../statics/css/basic-model.css" rel="stylesheet" type="text/css"/>
 <link href="../../statics/css/single-page.css" rel="stylesheet" type="text/css"/>
 <link href="http://www.51niutu.com/statics/css/niutu.css" rel="stylesheet" type="text/css">
@@ -105,8 +107,8 @@
             <li class="nav-list"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/zhibo.png"/>股市直播</a></li>
             <li class="nav-list"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/anli.png"/>案例精讲</a></li>
             <li class="nav-list"><a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=103"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/wenda.png"/>互动问答</a></li>
-            <li class="nav-list"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/xueyuan.png"/>学员感言</a></li>
-            <li class="nav-list"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/shouhou.png"/>售后服务</a></li>
+            <li class="nav-list"><a href="../ganyan/index.html"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/xueyuan.png"/>学员感言</a></li>
+            <li class="nav-list"><a href="../shouhou/index.html"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/shouhou.png"/>售后服务</a></li>
             <li class="nav-list nav-seperate"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/jingpin.png"/>精品课</a></li>
             <li class="nav-list"><a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=54"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/vip.png"/>开通VIP会员</a></li>
         </ul>
@@ -116,9 +118,11 @@
 <!--头部结束-->
 <!--main开始-->
 <div class="main">
+	<!--顶部banner-->
 	<div class="student-banner">
     	学员感言收录，持续更新中...
     </div>
+    <!--左侧导航区开始-->
     <div class="student-left">
         <div class="ul ul2">
         	<h3>学员专区</h3>
@@ -138,8 +142,11 @@
             </ul>
         </div>
     </div>
+    <!--左侧导航区结束-->
     <div class="student-right">
+    	<!--面包屑导航-->
     	<p>您所在的位置：<a href="#">首页</a>&gt;<a href="#">学员感言</a></p>
+        <!--主体-->
 		<ul>
             <li>
                 <div class="student">
@@ -187,6 +194,7 @@
                 </div>
             </li>
     	</ul>
+        <!--页码导航-->
         <div class="page-guid">
         	<span class="disable">前一页</span><span class="page now">1</span><span class="disable">后一页</span>
             <!--需要加页码时用span>a包裹页码，同时去掉下一页的disable类，并在span内加a链接-->
@@ -194,52 +202,6 @@
     </div>
 </div>
 <!--main结束-->
-<!--右侧悬浮开始-->
-<div id="box-kefu">
-    <div class="kefu-close"></div>
-    <div class="kefu-open">
-        <div>
-        	<ul>
-            	<li><a href="http://wpa.qq.com/msgrd?v=3&uin=918595590&site=qq&menu=yes" title="点击这里给我发消息" target="_blank"><i class="qq"></i>网站导航</a></li>
-            	<li><a href="http://wpa.qq.com/msgrd?v=3&uin=918662627&site=qq&menu=yes" title="点击这里给我发消息" target="_blank"><i class="qq"></i>投诉建议</a></li>
-           		<li><a href="http://wpa.qq.com/msgrd?v=3&uin=918669270&site=qq&menu=yes" title="点击这里给我发消息" target="_blank"><i class="qq"></i>售后服务</a></li>
-        	</ul>
-        </div>
-        <a href="javascript:;" class="close">关闭</a>
-    </div>
-</div>
-<script>var online= new Array();</script>
-<script src="http://webpresence.qq.com/getonline?Type=1&918595590:918662627:918669270:"></script>
-<script>
-	//在线客服 
-	(function(tt){
-		for(var i=0; i<online.length; i++){
-			if(online[i]) jQuery("#box-kefu .qq").eq(i).addClass("online");
-		}
-		var _open = tt("#box-kefu").find(".kefu-open"),
-			_close = tt("#box-kefu").find(".kefu-close");
-		_open.find("a").hover(function(){
-			$(this).stop(true,true).animate({paddingLeft:20},200).find("i").stop(true,true).animate({left:75},200);
-		},function(){
-			$(this).stop(true,true).animate({paddingLeft:35},200).find("i").stop(true,true).animate({left:10},200);
-		});
-		_close.click(function(){
-			_close.animate({width:44},200,function(){
-				_close.animate({width:0},200,function(){
-					_open.animate({width:138},200);
-				});
-			});
-		});
-		 _open.find(".close").click(function(){
-			_open.animate({width:148},200,function(){
-				_open.animate({width:0},200,function(){
-					_close.animate({width:80},200);
-				});
-			});
-		});
-	})(jQuery)
-</script>
-<!--右侧悬浮结束-->
 <!--footer S-->
 <div class="footer">
 	<div class="footer-wrap">
@@ -291,6 +253,52 @@
 	</div>
 </div>
 <!--footer E--> 
+<!--右侧客服区开始-->
+<div id="box-kefu">
+    <div class="kefu-close"></div>
+    <div class="kefu-open">
+        <div>
+        	<ul>
+            	<li><a href="http://wpa.qq.com/msgrd?v=3&uin=918595590&site=qq&menu=yes" title="点击这里给我发消息" target="_blank"><i class="qq"></i>网站导航</a></li>
+            	<li><a href="http://wpa.qq.com/msgrd?v=3&uin=918662627&site=qq&menu=yes" title="点击这里给我发消息" target="_blank"><i class="qq"></i>投诉建议</a></li>
+           		<li><a href="http://wpa.qq.com/msgrd?v=3&uin=918669270&site=qq&menu=yes" title="点击这里给我发消息" target="_blank"><i class="qq"></i>售后服务</a></li>
+        	</ul>
+        </div>
+        <a href="javascript:;" class="close">关闭</a>
+    </div>
+</div>
+<script>var online= new Array();</script>
+<script src="http://webpresence.qq.com/getonline?Type=1&918595590:918662627:918669270:"></script>
+<script>
+	//在线客服 
+	(function(tt){
+		for(var i=0; i<online.length; i++){
+			if(online[i]) jQuery("#box-kefu .qq").eq(i).addClass("online");
+		}
+		var _open = tt("#box-kefu").find(".kefu-open"),
+			_close = tt("#box-kefu").find(".kefu-close");
+		_open.find("a").hover(function(){
+			$(this).stop(true,true).animate({paddingLeft:20},200).find("i").stop(true,true).animate({left:75},200);
+		},function(){
+			$(this).stop(true,true).animate({paddingLeft:35},200).find("i").stop(true,true).animate({left:10},200);
+		});
+		_close.click(function(){
+			_close.animate({width:44},200,function(){
+				_close.animate({width:0},200,function(){
+					_open.animate({width:138},200);
+				});
+			});
+		});
+		 _open.find(".close").click(function(){
+			_open.animate({width:148},200,function(){
+				_open.animate({width:0},200,function(){
+					_close.animate({width:80},200);
+				});
+			});
+		});
+	})(jQuery)
+</script>
+<!--右侧客服区结束-->
 <div id="top"></div>
 <script type="text/javascript" src="../../statics/js/top.js"></script>
 <script type="text/javascript" src="http://www.51niutu.com/statics/js/cookie.js"></script>
