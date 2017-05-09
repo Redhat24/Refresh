@@ -1,8 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
+/*单页公共区*/
+.wrap1200,.main{width:1200px;margin:0 auto;position:relative;}
+
 /*股民学校开始*/
 .section{width:100%;}
-.wrap1200{width:1200px;margin:0 auto;position:relative;}
 .wrap1200 h2{padding:35px 0 0 110px;font-size:30px;font-weight:400;color:#968969;}
 .wrap1200 h2 b{display:block;position:absolute;top:-80px;}
 .wrap1200::before{content:"";width:0;height:100%;border-right:6px solid #b4b4b4;position:absolute;left:37px;top:0;z-index:10;}
@@ -71,6 +73,27 @@ padding-top:14px;height:38px;}
 .school-guid .top:hover{text-shadow:#008bdd 0px 5px 5px;color:#008bdd;}
 /*股民学校结束*/
 
+/*学员感言开始*/
+.student-banner{background:#137f60;border:15px solid #723720;border-left-width:20px;border-right-width:20px;height:180px;margin:3px 0;text-indent:1em;font-size:20px;font-weight:600;color:#fff;line-height:80px;}
+.student-left{float:left;width:236px;background:url(../images/single-page/square1.png) no-repeat left top;padding: 18px 0 0 23px;}
+.student-left .ul{background:#ffc0c0;margin:5px 0;}
+.student-left .ul h3{font-size:18px;border-bottom:1px solid #fff;height:32px;font-weight:400;line-height:32px;padding-left:10px;}
+.student-left .ul li{font-size:14px;line-height:2;border-radius:3px;padding:0 15px; transition:background 0.4s ease;}
+.student-left .ul li a{display:block;}
+.student-left .ul li span{padding-right:10px;}
+.student-left .ul li:hover{background:#f37676;}
+.student-left .ul.ul1 li:hover{background:#013976;}
+.student-left .ul li:hover a{color:#fff;}
+.ul.ul1{background:#6bb7d4;}
+.student-right{margin-left:270px;border:1px solid #0ab0ff;padding:10px;}
+
+.student-word{margin:10px 0}
+.student-word li{height: auto;overflow: hidden;background: #f0f0f0;box-shadow: 2px 2px 2px #aaa;margin: 0 2px 20px 0;padding: 20px;}
+.student-word li img{float:left;width:200px;height:200px;}
+.student-word li .student{ margin-left:220px;}
+.student-word li .student .name{font-size: 14px;font-weight: bold;color:#e63636;height: 36px;line-height: 36px;}
+.student-word li .student .word{font-size: 14px;line-height: 1.8;text-indent:2em;}
+#s3{display:none;}
 
 
 
