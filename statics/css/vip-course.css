@@ -1,30 +1,60 @@
 @charset "utf-8";
 /* CSS Document */
 /*精品课程单页部分*/
-.teach-pic{height:532px;background:url(http://sf.yxcps.cn/sy/images/duyehuagjk/03/bann1.jpg) no-repeat top center;position: relative;}
 .bg1{background: url(../images/vip-course/course-bg1.png);background-size:auto 100%;}
 .bg2{background: url(../images/vip-course/course-bg2.png);background-size:auto 100%;}
+.bg3{background: url(../images/vip-course/course-bg3.jpg) no-repeat;background-size:100% 100%;}
+.bg4{background: url(../images/vip-course/course-bg4.jpg) no-repeat;}
 .full-section{width:100%;margin:0px auto;text-align:center;color:#351e04;font-size:1em;line-height:1.5;overflow:hidden;}
 .full-section p{line-height:1.5;}
 .space{height:50px; clear:both;}
 .section{width:1200px;height:auto;margin:40px auto;position:relative;color:#fff;font-size:20px;overflow:hidden;}
 .section .h2{font-size:38px;margin:40px auto;background:#e4d857\9;background: -moz-linear-gradient(top,#e4d857,#fff8a9,#e4d857);background:-webkit-gradient(linear,top,from(#e4d857),color-stop(0.5,#fff8a9),to(#e4d857));background:-webkit-linear-gradient(top,#e4d857,#fff8a9,#ded357);background: -o-linear-gradient(top,#e4d857,#fff8a9,#e4d857);width:250px;height:75px;line-height:75px;border-radius:10px;text-align:center;color:#072547;}
+.bg4 .h2{background: -moz-linear-gradient(top,#289ba3,#26dfe3,#289ba3);background:-webkit-gradient(linear,top,from(#289ba3),color-stop(0.5,#26dfe3),to(#289ba3));background: -webkit-linear-gradient(top,#289ba3,#26dfe3,#289aa2);background: -o-linear-gradient(top,#289ba3,#26dfe3,#289ba3);}
+.bg3 .h2{background: -moz-linear-gradient(top,#24b2b5,#58fbff,#24b3b5);background:-webkit-gradient(linear,top,from(#24b2b5),color-stop(0.5,#58fbff),to(#24b2b5));background: -webkit-linear-gradient(top,#24b2b5,#58fbff,#24b3b5);background: -o-linear-gradient(top,#24b2b5,#58fbff,#24b3b5);}
 .section .h2.wider{width:350px;}
 .section .h2 b{display:block;position:absolute;top:-80px;}
+/*顶部banner*/
+.teach-pic{height:532px;background:url(http://sf.yxcps.cn/sy/images/duyehuagjk/03/bann1.jpg) no-repeat top center;position: relative;}
+.teach-pic{height:532px;background:url(../images/vip-course/teach-banner.png) no-repeat top center;}
+.teach-pic .section{margin:0 auto;}
+.teach-pic .teach-info{position:relative;width:400px;float:left;padding-top:400px;padding-left:20px;}
+.teach-pic .teach-info h3{font-size:22px;font-weight:400;padding-bottom:5px;}
+.teach-pic .teach-info p{color:#000;font-size:18px;background:rgba(255,255,255,0.37);background:#819fb4\9;padding-left:8px;width:284px;line-height:1.5;}
+.teach-pic .cours-info{position:relative;margin-left:400px;height:532px;}
+.teach-pic .cours-info h1{position:absolute;top:150px;font-size:80px;text-shadow:10px 5px 5px #585822;color:#ffc721;}
+.teach-pic .cours-info h2{position:absolute;top:280px;font-size:48px;left:170px;text-shadow:5px 10px 10px #271515;}
+.teach-pic .cours-info h3{position:absolute;font-size:30px;color:#1b304d;top:89px;left:10px;}
+.teach-pic .cours-info p{position:absolute;font-size:28px;font-weight:400;color:#1b304d;top:381px;left:115px;}
+.teach-pic .cours-info p span{position:absolute;width:60px;}
+.teach-pic .cours-info p span.label2{left:90px;}
+.teach-pic .cours-info p span.label3{left:180px;}
+.teach-pic .cours-info p span.label4{left:270px;}
+.teach-pic .cours-info p span.label5{left:360px;}
 /*讲师介绍*/
 .teach-intro{border:2px solid #fff;}
 .teach-intro div{overflow:hidden;padding:30px 0;}
 .teach-intro h2{color:#E4D857;}
 .teach-intro p{width:470px;float:left;margin:30px 0 0 70px;padding:25px 0;text-align:left;}
-.teach-intro .p1{margin-left:90px;background:rgba(255, 255, 255, 0.09);background:#2e2d76\9;padding:25px;}
+.teach-intro .p1{margin-left:90px;background:rgba(255,255,255,0.09);background:#2e2d76\9;padding:25px;}
+/*导航*/
 .fixed-nav{height:70px;width:1200px;margin:0px auto;position:relative;}
 .fixed-nav .content{z-index:2;position:absolute;top:0;width:1200px;height:70px;line-height:70px;background:#069;}
 .fixed-nav .content a{display:block;width:20%;float:left;text-align:center;color:#fff;font-size:20px;}
 .fixed-nav .content a:hover{background-color:#E4D857;}
+	/*page2*/
+.fixed-nav.page2 .content{background:#0B5961;}
+.fixed-nav.page2 .content a:hover{background-color:#052f33;}
 /*课程亮点*/
 .specify div{width:233px;float:left;background:rgba(255, 255, 255, 0.09);background:#31234c\9;padding:20px;text-align:left;}
 .specify div+div{margin-left:35px;}
 .specify div img{width:80px;margin:0 0 15px 75px;}
+	/*page2*/
+.specify2 div{width:250px;height:317px;float:left;background:url(../images/vip-course/light-bg2.png) no-repeat;text-align:left;color:#00615d;margin:0 15px;}
+.specify2 div+div{margin-left:40px;}
+.specify2 div h3{text-align:center;margin:20px 0;color:#fff;}
+.specify2 div ul{padding-left:30px;font-size:18px;padding-right: 10px;line-height: 1.7;}
+.specify2 div li span{padding-right:15px;}
 /*核心知识点比较*/
 table{border-collapse:collapse;}
 .bijiao>table{width:1196px;}
@@ -33,14 +63,23 @@ table{border-collapse:collapse;}
 .bijiao th{background:#E4D857;height:50px;font-size:25px;color:#072547;border:2px solid #E4D857;}
 .bijiao td{border:2px solid #E4D857;vertical-align:top;}
 .bijiao table table td{border:none;}
+	/*page2*/
+.bijiao.page2 th{background:#34bec7;border-color:#34bec7;}
+.bijiao.page2 td{border-color:#34bec7;}
+.bijiao.page2 ul{color:#aaf5f5;}
 /*开课时间*/
 .course-time .info{float:left;margin-left:120px;text-align:left;margin-bottom:20px;}
 .course-time .info p{line-height:2.5;}
 .course-time .info img{width:30px;vertical-align:middle;padding-right:10px;}
-.course-time .detail{clear:both;border:1px solid #072547;padding:20px 40px;font-size:25px;}
-.course-time .btn{width:216px;height:62px;position:absolute;top:200px;left:814px;border:4px solid #9e9e9e;}
+.course-time .detail{clear:both;border:1px solid #21446b;padding:20px 40px;font-size:25px;}
+.course-time .btn{width:216px;height:62px;position:absolute;top:200px;left:814px;border:4px solid #a0983b;}
 .course-time .btn a{display:block;width:216px;height:62px;font-size:26px;font-weight:600;background-color:#E4D857;line-height:62px;}
-
+	/*page2*/
+.course-time.page2 .btn{border-color:#1cb2b5;}
+.course-time.page2 .btn:hover{border-color:#18c6ca;}
+.course-time.page2 .btn a{background-color:#06e1e6;color:#333;}
+.course-time.page2 .btn:hover a{background-color:#36fbff;}
+.course-time.page2 .detail{border-color:#96bfc3;}
 /*私人订制部分*/
 .banner{background:url(../images/vip-course/dingzhi.gif) no-repeat top center;background-size:100% 500px;height:500px; background-color:#000;}
 .wrap{width:100%;}

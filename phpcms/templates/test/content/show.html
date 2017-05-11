@@ -1,0 +1,258 @@
+{template "content","header_show"}
+<style>
+#SOHUCS #SOHU_MAIN #powerby_sohu, #SOHUCS #SOHU_MAIN #powerby_sohu .section-service-w, #SOHUCS #SOHU_MAIN #powerby_sohu .section-service-w .service-wrap-w, #SOHUCS #SOHU_MAIN #powerby_sohu .section-service-w .service-wrap-w a {
+display: none!important;
+text-align: right!important;
+}
+.wumii-widget-title{color:#3a3a3a;font-size:18px;padding:25px 0 10px !important;}
+.wumii-image-block{padding:12px !important;}
+</style>
+<link  type="text/css" rel="stylesheet" href="{CSS_PATH}album_videolist.css">
+<link  type="text/css" rel="stylesheet" href="{CSS_PATH}index.css">
+<script src="{JS_PATH}tabpic.js"></script> 
+<div class="main" >
+    	<div class="crumbs" style="margin-top:15px;margin-bottom:15px;">{catpos($catid)}<a href="#">正文</a></div>
+		
+        <div id="Article">
+        	<h1>{$title}</h1>
+			<!-- <a target="_blank" href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=103" class="wytw">我要提问</a> -->
+			<div class="clear"></div>
+			<div class="content">
+			{if !$_groupid and $allow_visitor==1}
+				{$content}
+			{elseif $_groupid!=10 and $allow_visitor!=1}
+			
+				<!--内容关联投票-->
+					{if $voteid}<script language="javascript" src="{APP_PATH}index.php?m=vote&c=index&a=show&action=js&subjectid={$voteid}&type=2"></script>{/if}
+					
+					<div class="rel" style="position:relative;">
+					<div class="v"><img src="{IMG_PATH}icon/v.png" /></div>
+					<div style="position:absolute;;left:9px;z-index:1;filter:alpha(opacity=0); -moz-opacity:0; -khtml-opacity: 0; opacity: 0;width:660px;"><img src="{IMG_PATH}tm.jpg" /></div>
+					
+					{$content}
+					<span>该视频内容是VIP课程，请支付 {$readpoint} {if $paytype}牛币{else}点{/if}。<a href="{APP_PATH}index.php?m=content&c=readpoint&allow_visitor={$allow_visitor}"><font color="red">立即支付</font></a></span>
+					</div>
+			{else}
+				{$content}
+			{/if}
+			
+	<div class="player_footer">
+		<div class="fl">&nbsp;来源：<span class="cd">{if empty($copyfrom)} 暂无来源{/if}{$copyfrom}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+		时间：<span class="cd">{$inputtime}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+		</div>
+		<div class="fl">
+			<div class="fx"></div>    
+			<div class="bdsharebuttonbox" data-tag="share_1" style="float:left;margin:6px 0px 0px 3px;width:180px;"> 
+				<a class="bds_more" data-cmd="more"></a>
+				<a class="bds_mshare" data-cmd="mshare"></a>
+				<a class="bds_qzone" data-cmd="qzone" href="#"></a>
+				<a class="bds_tsina" data-cmd="tsina"></a>
+				<a class="bds_baidu" data-cmd="baidu"></a>
+				<a class="bds_renren" data-cmd="renren"></a>
+				<a class="bds_weixin" data-cmd="weixin"></a>	
+				<a class="bds_count" data-cmd="count"></a>	  		
+			
+			</div>
+			<div id='favorite' style="float:left;margin-left:10px;line-height:40px;" class="show_sc">
+			<a href="javascript:;" onclick="add_favorite('{addslashes($title)}');"><span style="color:#ddd;">收藏</span></a>
+			</div>
+		</div>
+		<script>
+		window._bd_share_config = {share : [{"bdSize" : 20}],slide : [{bdImg : 0,bdPos : "left",bdTop : 100}],
+								   image : [{viewType : 'list',viewPos : 'top',viewColor : 'black',viewSize : '50',viewList : ['qzone','tsina','huaban','tqq','renren']}],
+							 selectShare : [{"bdselectMiniList" : ['qzone','tqq','kaixin001','bdxc','tqf']}]
+								  }
+			with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+		</script>
+		
+		</div>
+			</div>
+			{pc:content action="relation" relation="$relation" id="$id" catid="$catid" num="5" keywords="$rs[keywords]" order="inputtime DESC"}
+              {if $data}
+                <div class="s_xiangguan">
+				  <div class="show_tit">
+                    <div class="s_v"><strong style="float:left;">热词搜索</strong><strong style="float:right;padding-right:20px;">相关视频</strong><br>
+						
+						{loop $keywords $keyword}
+							<a href="{APP_PATH}index.php?m=search&c=index&a=init&typeid=128&siteid=1&q={urlencode($keyword)}" class="s_keyword" title="{$keyword}">{$keyword}</a>
+						{/loop}
+					</div>
+			        
+				  </div>
+                  <div class="s_list">
+					<ul>
+						{loop $data $r}
+							<li onClick="this.style.backgroundColor='#000000';">
+								<a class="item_link" href="{$r[url]}" title="{$r[title]}">
+									<span class="s_img"><img class="s_pic" src="{thumb($r[thumb],105,60)}" width="105" height="60" /></span>
+									<span class="s_title">{$r[title]}</span>
+								</a>
+							</li>
+						{/loop}
+					</ul>
+				  </div>
+                </div>
+              {/if}
+          {/pc}
+				
+{if $titles}
+<fieldset>
+	<legend class="f14">本文导航</legend><ul class="list blue row-2">
+{loop $titles $r}
+	<li>{$n}、<a href="{$r[url]}">{$r[title]}</a></li>
+{/loop}
+</ul>
+</fieldset>
+{/if}
+			<!--<div id="pages" class="text-c">{$pages}</div>-->
+           <!--上一篇下一篇地方-->
+          
+          <div class="bk15"></div>
+		  
+      </div>
+	  <!--最新专辑 S-->
+	  <h2 class="zy-index-title"><p>2016</p>热门专辑</h2>
+	  <!--<div class="news_zj"> 
+		  {pc:get sql="select * from v959_album  order by id DESC" num="5" }
+				{loop $data $r}
+					<ul>
+					  <li> <a href="{$r['url']}" target="_blank"> <img src="{$r[thumb]}" width="189" height="130" title="{$r['title']}"> </a> </li>
+					  <li class="spym-cjzx1"> <a href="{$r['url']}" title="{$r['title']}" target="_blank">{$r['title']}</a> </li>
+					  <li class="spym-cjzx5"> <span class="spym-cjzx2">{date('m-d',$r[createtime])}</span><span class="spym-cjzx4">{pc:album action="content_list" siteid="$siteid" albumid="$r[id]"  listorder="2" num="100"}{count($data)}{/pc}个课时</span></li>
+					</ul>
+				{/loop}
+			{/pc} 
+		</div>	-->
+  <DIV class=main-wrap style="background:#fff;">
+    <DIV id=slide-box> <B class=corner></B>
+      <DIV id=J_slide>
+        <DIV class=wrap style="width:1032px;height:230px;">
+          <div class="ad_body"> 
+			{pc:get sql="select id,title,url,createtime,thumb from v959_album  where id in(99,349,276,297,383,384) order by id DESC limit 0,18--" return="data"}
+				{loop $data $r}
+				<ul style="width:220px;margin:10px 18px;height:200px;">
+				  <li style="width:220px;"> <a target="_self" href="{$r['url']}"> <img src="{$r[thumb]}" width="220" height="160" title="{$r['title']}"> </a> </li>
+				  <li class="spym-cjzx1" style="width:220px;"> <a href="{$r['url']}" title="{$r['title']}">{$r['title']}</a> </li>
+				  <li class="spym-cjzx5" style="width:220px;"> <span class="spym-cjzx2">{date('m-d',$r[createtime])}</span><span class="spym-cjzx4">{pc:album action="content_list" siteid="$siteid" albumid="$r[id]"  listorder="2"}{count($data)}{/pc}个课时</span></li>
+				</ul>
+				{/loop}
+            {/pc} 
+			</div>
+        </DIV>
+        <DIV class=ks-switchable-triggers> <A class=prev id=J_prev href="javascript:void(0);" style="top:60px;"> <B class=corner></B><SPAN>&#8249;</SPAN><B class=corner></B></A> <A class=next id=J_next href="javascript:void(0);" style="top:60px;"> <B class=corner></B><SPAN>&#8250;</SPAN><B class=corner></B></A> </DIV>
+      </DIV>
+      <B class=corner></B> </DIV>
+  </DIV>		
+		<!--最新专辑 E-->
+		<div style="margin-top:30px;margin-bottom:15px;"><script>QIHOO_UNION_SLOT={w:1000, h:90, ls:"s02922ca690"};</script><script src="http://s.lianmeng.360.cn/so/inlay.js" charset="utf-8"></script></div>
+		<div style="float:left;width:702px;margin-bottom:20px;">
+			<div class="bk10"></div>
+			<div style="margin: 0; border: none; padding: 20px 0 5px; _padding-top:10px; text-indent: 0; text-align: left; font-weight: bold; " class="wumii-widget-title highlight">猜你喜欢</div>
+			<script>QIHOO_UNION_SLOT={w:700, h:210, ls:"s18ce2cad97"};</script><script src="http://s.lianmeng.360.cn/so/inlay.js" charset="utf-8"></script>
+			
+			
+                <!-- 评论S -->
+					<iframe src="{APP_PATH}index.php?m=comment&c=index&a=init&commentid={id_encode("content_$catid",$id,$siteid)}&iframe=1" width="100%"  id="comment_iframe" frameborder="0" scrolling="no"></iframe>
+                <!-- 评论E -->
+			
+		</div>
+		<div class="col-auto"  style="float:left;width:250px;margin-left:47px;">
+			<h3 style="margin-top:30px;" class="title_a"><span class="highlight">热门标签</span></h3>
+			<script>QIHOO_UNION_SLOT={w:250, h:300, ls:"s344e2cac97"};</script><script src="http://s.lianmeng.360.cn/so/inlay.js" charset="utf-8"></script>
+		</div>
+	</div>
+<script type="text/javascript">
+
+<!--
+	function show_ajax(obj) {
+		var keywords = $(obj).text();
+		var offset = $(obj).offset();
+		var jsonitem = '';
+		$.getJSON("{APP_PATH}index.php?m=content&c=index&a=json_list&type=keyword&modelid={$modelid}&id={$id}&keywords="+encodeURIComponent(keywords),
+				function(data){
+				var j = 1;
+				var string = "<div class='point key-float'><div style='position:relative'><div class='arro'></div>";
+				string += "<a href='JavaScript:;' onclick='$(this).parent().parent().remove();' hidefocus='true' class='close'><span>关闭</span></a><div class='contents f12'>";
+				if(data!=0) {
+				  $.each(data, function(i,item){
+					j = i+1;
+					jsonitem += "<a href='"+item.url+"' target='_blank'>"+j+"、"+item.title+"</a><BR>";
+					
+				  });
+					string += jsonitem;
+				} else {
+					string += '没有找到相关的信息！';
+				}
+					string += "</div><span class='o1'></span><span class='o2'></span><span class='o3'></span><span class='o4'></span></div></div>";		
+					$(obj).after(string);
+					$('.key-float').mouseover(
+						function (){
+							$(this).siblings().css({"z-index":0})
+							$(this).css({"z-index":1001});
+						}
+					)
+					$(obj).next().css({ "left": +offset.left-100, "top": +offset.top+$(obj).height()+12});
+				});
+	}
+
+	function add_favorite(title) {
+		$.getJSON('{APP_PATH}api.php?op=add_favorite&thumb={$thumb}&title='+encodeURIComponent(title)+'&url='+encodeURIComponent(location.href)+'&'+Math.random()+'&callback=?', function(data){
+			if(data.status==1)	{
+				$("#favorite").html('已收藏');
+			} else {
+				alert('请登录');
+				location.href="{APP_PATH}index.php?m=member&c=index&a=logout&forward={urlencode($_GET['forward'])}&siteid={$siteid}";
+			}
+		});
+	}
+
+$(function(){
+	var title=encodeURIComponent('{addslashes($title)}');
+	
+	$.getJSON('{APP_PATH}api.php?op=learning_record&title='+title+'&url='+encodeURIComponent(location.href)+'&'+Math.random());
+	
+	$('#Article .content img').LoadImage(true, 660, 660,'{IMG_PATH}s_nopic.gif');    
+})
+//-->
+</script>
+<SCRIPT>
+
+
+	var D=YAHOO.util.Dom, E=YAHOO.util.Event;
+	KISSY().use("*", function(S) {
+		var el = D.get('J_slide'),
+			activeIndex = parseInt(el.getAttribute('data-active-index')) || 0;
+
+		var carousel = new S.Carousel(el, {
+			hasTriggers: false,
+			navCls: 'ks-switchable-nav',
+			contentCls: 'ad_body',
+			activeTriggerCls: 'current',
+			effect: "scrollx",
+			steps: 4,
+			viewSize: [1032],
+			activeIndex: activeIndex
+		});
+		E.on('J_prev', 'click', carousel.prev, carousel, true);
+		E.on('J_next', 'click', carousel.next, carousel, true);
+	});	
+	KISSY().use("*", function(S) {
+		var el = D.get('J_slides'),
+			activeIndex = parseInt(el.getAttribute('data-active-index')) || 0;
+
+		var carousel = new S.Carousel(el, {
+			hasTriggers: false,
+			navCls: 'ks-switchable-nav',
+			contentCls: 'ad_bodyy',
+			activeTriggerCls: 'current',
+			effect: "scrollx",
+			steps: 4,
+			viewSize: [1032],
+			activeIndex: activeIndex
+		});
+		E.on('J_prevv', 'click', carousel.prev, carousel, true);
+		E.on('J_nextt', 'click', carousel.next, carousel, true);
+	});	
+
+</SCRIPT> 
+{template "content","footer"}

@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<link href="{CSS_PATH}reset.css" rel="stylesheet" type="text/css" />
+<link href="{CSS_PATH}default_blue.css" rel="stylesheet" type="text/css">
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+<style>
+body{background:url(../../../../statics/images/abg.jpg) no-repeat scroll center 0px;}
+.body-topp {
+    height: 26px;
+    width: 1420px;
+    margin: 20px auto;
+    vertical-align: middle;
+	margin-bottom:170px;
+}
+.crumbs {
+    background: transparent url("../../../../statics/images/v9/icon.png") no-repeat scroll left -38px;
+    padding: 3px 0px 3px 18px;
+    font-family: "宋体";
+	width:100px;
+	height:30px;
+	float:left;
+	border:none;
+	font-size:12px;
+}
+.atitle{min-height: 560px;}
+.atitle h1{color:#D8D8D8;text-align:center;font-size:40px;font-family:"微软雅黑";margin-bottom:70px;}
+.acontent{text-align:left;color:#F0ECEC;font-family:"微软雅黑";text-indent:40px;font-size:20px;line-height:48px;font-weight:600;}
+.footer{width:880px;margin:0 auto;margin-top:220px;}
+.tuandui{width:330px;height:40px;color:#E7E2E2;font-family:"微软雅黑";font-size:20px;line-height:40px;float:right;text-align:right;}
+.main{width:880px;height:690px;overflow:hidden;}
+</style>
+</head>
+<body>
+<div class="body-topp">
+    <div class="content">
+        <div class="crumbs"><a href="{APP_PATH}">返回首页</a> >> 公告</div>
+		<div class="login lh24 blue">
+					<span class="rt">
+		<script type="text/javascript">document.write('<iframe src="{APP_PATH}index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid={get_siteid()}" allowTransparency="true"  width="250" height="24" frameborder="0" scrolling="no"></iframe>')</script>
+		</span>
+		</div>
+    </div>
+</div>
+</div>
+<!--main-->
+<div class="main">
+        <div class="atitle">
+        	<h1>{$title}</h1>
+			<div class="acontent">
+			  {$content}
+			</div>
+        </div>
+        <div class="tuandui">牛途无忧网客服中心<br>{$r[starttime]}</div>
+</div>
+
+	<div class="footer">
+	<p class="info">
+	{pc:content action="category" catid="1" num="15" siteid="$siteid" order="listorder ASC"}
+	{loop $data $r}
+	<a href="{$r[url]}" target="_blank">{$r[catname]}</a>  |   
+	{/loop}
+	{/pc}
+	<a href="{APP_PATH}index.php?m=link" target="_blank"> 友情链接</a>
+	<br />
+	公司地址：郑州市高新区创业中心 | 服务电话：0371-56781218 | 网站备案：豫ICP备15006858号-1<br/>
+
+	Powered by <strong><a href="http://www.51niutu.com" target="_blank">牛途无忧网</a></strong> &copy; 2015 <img src="{IMG_PATH}copyright.gif"/>
+	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_3539230'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/stat.php%3Fid%3D3539230%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+	{tjcode()}{php echo runhook('glogal_footer')}
+	</p>
+	</div>
