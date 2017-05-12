@@ -53,18 +53,17 @@
 .our-honor li h3{font-size:16px;margin-bottom:5px;font-weight:500; cursor:text;}
 /*在线客服部分*/
 .service{margin:15px 0;background:#e2e2e2;overflow:hidden;}
-.service .left{width:700px;color:#a40501;overflow:hidden;float:left;border-right:1px solid #fff;}
-.service .left .icon{width:160px;float:left;}
-.service .left .icon img{padding:45px 30px;}
-.service .left .text{margin-left:160px;width:540px;}
+.service .left{width:540px;color:#a40501;overflow:hidden;float:left;background:url(../images/qq1.png) no-repeat 30px 48px;padding-left:160px;line-height:22px;}
 .service .left .title{font-size:30px;font-weight:bold;text-align:center;margin:15px 0;}
-.service .left .number{font-size:18px;margin:3px 0;}
+.service .left .number{font-size:16px;margin:3px 0;}
 .service .left .number a{display:inline-block;width:160px;height:35px;background:#a40501;text-align:center;border-radius:5px;line-height:35px;color:#fff;margin:0 5px;}
 .service .left .number a:hover{background:#d40000;}
 .service .left .time{font-size:18px;text-align:center;margin-top:5px;}
-.service .right{width:470px;margin-left:700px;}
-.service .right .title{font-size:30px;font-weight:bold;text-align:center;margin:7px 0 10px;}
-.service .right .number{font-size:18px;line-height:35px;padding-left:10px;}
+.service .right{width:470px;margin-left:700px;height:203px;background:url(../images/hint-bg2.png) no-repeat;}
+.service .right .title{font-size:30px;font-weight:bold;text-align:center;color:#f20100;background:url(../images/hint4.png) no-repeat 140px 22px;padding-top:15px;padding-bottom:10px;}
+.service .right .number{font-size:18px;line-height:30px;padding-left:50px;}
+.service .right .number a{color:#fff;}
+.service .right .number a:hover{color:#f20100;}
 /*热门课程部分*/
 .hotcourse{ margin-top:20px; overflow:hidden;}
 .hotcourse li{position:relative;width:354px;float:left;margin-right:18px;margin-bottom:2px;border:1px solid transparent;padding:7px;}

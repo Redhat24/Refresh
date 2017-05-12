@@ -134,52 +134,20 @@ padding-top:14px;height:38px;}
 /*股民学校结束*/
 /**********************************************/
 /*学员感言开始*/
-.student-banner{background:#137f60;border:15px solid #723720;border-left-width:20px;border-right-width:20px;height:180px;margin:3px 0;text-indent:1em;font-size:20px;font-weight:600;color:#fff;line-height:80px;}
-.student-left{float:left;width:236px;background:url(../images/single-page/square.png) no-repeat left top;padding: 18px 0 0 23px;}
-.student-left .ul{margin:5px 0;}
-.student-left .ul h3{font-size:18px;border-bottom:1px solid #fff;height:32px;font-weight:400;line-height:32px;padding-left:10px;}
-.student-left .ul li{font-size:14px;line-height:2;border-radius:3px;padding:0 15px;-webkit-transition:background 0.4s ease;-moz-transition:background 0.4s ease;-o-transition:background 0.4s ease;transition:background 0.4s ease;}
-.student-left .ul li a{display:block;}
-.student-left .ul li span{padding-right:10px;}
-.student-left .ul li:hover a{color:#fff;}
-.student-left .ul.ul1{background:#6bb7d4;}
-.student-left .ul.ul1 li:hover{background:#013976;}
-.student-left .ul.ul2{background:#ffc0c0;}
-.student-left .ul.ul2 li:hover,.student-left .ul.ul2 li.hover{background:#f37676;}
-.student-right{margin-left:270px;padding:10px 0 0 10px; position:relative;}
-.student-right p{font-size:14px;line-height:1.5;}
-.student-right p a:hover{color:blue;text-decoration:underline;}
-.student-right ul{border:1px solid #abbfec;padding:10px;margin:5px 0; padding-bottom:40px;}
-.student-right li{margin:0 2px 10px 0;border-bottom:1px dashed #abbfec;}
-.student-right li .student{}
-.student-right li .student .name{font-size:14px;font-family:"宋体";font-weight:600;}
-.student-right li .student .name .time{font-size:14px;font-family:"微软雅黑";font-weight:400;color:#888;}
-.student-right li .student .word{font-size:14px;line-height:1.8;text-indent:2em;}
-.student-right .page-guid{position:absolute;bottom: 20px;
-    right: 5px;}
-.student-right .page-guid span{font-size:14px;padding:0 3px;border:1px solid #89aeff;color:#445bc5;margin:0 4px;}
-.student-right .page-guid span.disable{color:#969696;border-color:#969696;}
-.student-right .page-guid span.page{padding:0 6px;}
-.student-right .page-guid span.now{background:#1c68c0;color:#fff;}
-.student-right .page-guid span a{color:#445bc5;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.student-banner{height:400px;background:url(../images/single-page/stu-banner.jpg) no-repeat;width:100%;color:#2b98d0;font-weight:600;}
+.student-banner .content{width:1200px;margin:0 auto;}
+.student-banner .text1{text-indent:1em;font-size:40px;padding:90px 0px 20px;}
+.student-banner .text2{font-size:28px;text-indent:5em;}
+.student-banner .text3{font-size:32px;text-indent:7em;padding-top:20px;}
+.stu-section{width:100%;overflow:hidden;background:url(../images/single-page/stu-bg.jpg) no-repeat;}
+.stu-section .content{width:1160px;margin:20px auto;overflow:hidden;background:#fff;padding:20px;position:relative;-moz-transition:all 0.4s ease;-o-transition:all 0.4s ease;-webkit-transition:all 0.4s ease;transition:all 0.4s ease;}
+.stu-section .content:hover{-moz-transform:translate(0,-5px);-o-transform:translate(0,-5px);-webkit-transform:translate(0,-5px);transform:translate(0,-5px);}
+.stu-bg1 .content{-moz-box-shadow:4px 8px 8px #d4d2d2;-webkit-box-shadow:4px 8px 8px #d4d2d2;box-shadow:4px 8px 8px rgba(0,0,0,0.16);}
+.stu-bg1 .content:hover{box-shadow:4px 13px 13px rgba(0,0,0,0.26);}
+.stu-bg2 .content{box-shadow:4px 8px 8px rgba(0,0,0,0.16);}
+.stu-bg2 .content:hover{box-shadow:4px 13px 13px rgba(0,0,0,0.26);}
+.stu-section .pic{width:200px;float:left;}
+.stu-section .pic img{width:200px;}
+.stu-section .pic .name{text-align:center;font-size:18px;margin-top:10px;}
+.stu-section .text{margin-left:220px;font-size:16px;line-height:1.7;padding-top:20px; text-indent:2em;}
+.stu-section .text .time{position:absolute;bottom:20px;right:30px;font-size:14px;color:#888;}
