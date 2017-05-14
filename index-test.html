@@ -248,13 +248,13 @@
         <!--公告栏开始-->
     	<div class="announce">
         	<div class="announce-title">
-          		<img src="statics/images/new-message.png" /><span>最新消息</span>
+          		<img src="statics/images/new-message.png" /><span>最新公告</span>
             </div>
      		<div class="announce-box">
             	<ul>
-                	<li><a href="http://www.51niutu.com/index.php?m=announce&c=index&a=show&aid=9" title="网站全新改版，更多课程，更好体验！"><span>【全新改版】</span>网站全新改版，更多课程，更好体验！</a></li>
-                	<li><a href="http://www.51niutu.com/index.php?m=announce&c=index&a=show&aid=8" title="欢迎您向我们推荐想找想学的课程！"><span>【推荐课程】</span>欢迎您向我们推荐想找想学的课程！</a></li>
-                  	<li><a href="http://www.51niutu.com/index.php?m=announce&c=index&a=show&aid=6" title="更多问题咨询，请与QQ在线客服沟通！"><span>【问题咨询】</span>更多问题咨询，请与QQ在线客服沟通！</a></li>
+                	<li><a href="http://www.51niutu.com/index.php?m=announce&c=index&a=show&aid=9" title="【全新改版】近期网站换新装，更好访问体验！"><span>【全新改版】</span>近期网站换新装，更好访问体验！</a></li>
+                	<li><a href="http://www.51niutu.com/index.php?m=announce&c=index&a=show&aid=8" title="【课程建议】欢迎向我们推荐想找想学的课程！"><span>【课程建议】</span>欢迎向我们推荐想找想学的课程！</a></li>
+                  	<li><a href="http://www.51niutu.com/index.php?m=announce&c=index&a=show&aid=7" title="【手机观看】手机打开网页无法看视频怎么办？"><span>【手机观看】</span>手机打开网页无法看视频怎么办？</a></li>
             	</ul>
            	</div>
      	</div>
@@ -289,8 +289,6 @@
   	<!--直播 S-->        
     <div class="section-title"><p><img src="statics/images/section-icon/zhibo.png" />直播课程<span>资深导师面对面</span></p></div>
   	<div class="zhibo_index" id="zhibo_index">
-		<!--<h3><img src="http://www.51niutu.com/statics/images/zhibo/zhibo_index.png"> 明星投顾面对面</h3>-->
-
 		<div class="zhibo_main">
 			<div class="zhibo_left" id="zhibo_left"></div>
 			<div class="zhibo_right" id="zhibo_right"></div>
@@ -298,7 +296,7 @@
   	</div>
   	<script>
   		function getTime(){
-			var time1="9:15";	
+			var time1="9:30";	
 			var time2="11:30";	
 			var time3="13:00";	
 			var time4="15:00";	
@@ -321,14 +319,14 @@
      		e1.setHours (stre1[0]);
      		e1.setMinutes (stre1[1]);
 			if(n.getTime () - b.getTime () > 0 && n.getTime () - e.getTime () < 0 && week != '0' && week != '6'){
-				document.getElementById('zhibo_left').innerHTML='<a href="https://pingan.gensee.com/webcast/site/entry/join-876aab84b24e4b9aa6ea8a7c8b5c7f45?token=892469&nickName=%E8%AE%BF%E5%AE%A21449715363584&uid=1449715363584&k=0.5321708840532497" target="_blank" ><img src="http://www.51niutu.com/statics/images/zhibo/sw.jpg"><span class="zhibo_index-icon"></span><i class="player"></i></a><div class="z_name"><p><img src="http://www.51niutu.com/statics/images/zhibo/zc1.jpg" width="100" height="100"><img src="http://www.51niutu.com/statics/images/zhibo/jb1.jpg" width="100" height="100"></p><p class="zc_name"><span>主持人：刘梦瑶</span><span>嘉宾：刘晓明</span></p><p class="vidnew-time"><i>09:15</i><span class="sku-end">-11:30</span></p></div>';
+				document.getElementById('zhibo_left').innerHTML='<a><img src="http://www.51niutu.com/statics/images/zhibo/sw.jpg"><span class="zhibo_index-icon"></span><i class="player"></i></a><div class="z_name"><p><img src="statics/images/zhibo/zhuchi1.jpg" width="100" height="100"><img src="statics/images/zhibo/jiabin1.jpeg" width="100" height="100"></p><p class="zc_name"><span>主持人：</span><span>嘉宾：</span></p><p class="vidnew-time"><i>09:30</i><span class="sku-end">-11:30</span></p></div>';
 			}else{
-				document.getElementById('zhibo_left').innerHTML='<a href="https://pingan.gensee.com/webcast/site/vod/play-70e6fd5ab56b4a00a10d09897cac8851?token=892469" target="_blank" ><img src="http://www.51niutu.com/statics/images/zhibo/sw.jpg"><span class="zhibo_index-icon" style="background: url(http://www.51niutu.com/statics/images/zhibo/hf_index-icon.png) no-repeat;"></span><i class="player"></i></a><div class="z_name"><p><img src="http://www.51niutu.com/statics/images/zhibo/zc1.jpg" width="100" height="100"><img src="http://www.51niutu.com/statics/images/zhibo/jb1.jpg" width="100" height="100"></p><p class="zc_name"><span>主持人：刘梦瑶</span><span>嘉宾：刘晓明</span></p><p class="vidnew-time"><i>09:15</i><span class="sku-end">-11:30</span></p></div>';
+				document.getElementById('zhibo_left').innerHTML='<a><img src="http://www.51niutu.com/statics/images/zhibo/sw.jpg"><span class="zhibo_index-icon" style="background: url(http://www.51niutu.com/statics/images/zhibo/hf_index-icon.png) no-repeat;"></span><i class="player"></i></a><div class="z_name"><p><img src="statics/images/zhibo/zhuchi1.jpg" width="100" height="100"><img src="statics/images/zhibo/jiabin1.jpeg" width="100" height="100"></p><p class="zc_name"><span>主持人：</span><span>嘉宾：</span></p><p class="vidnew-time"><i>09:30</i><span class="sku-end">-11:30</span></p></div>';
 			}
 			if(n.getTime () - b1.getTime () > 0 && n.getTime () - e1.getTime () < 0 && week != '0' && week != '6'){
-				document.getElementById('zhibo_right').innerHTML='<a href="https://pingan.gensee.com/webcast/site/entry/join-f67723ba86434be78cff39bfb2a20b12?token=627109&nickName=%E8%AE%BF%E5%AE%A21449725598408&uid=1449725598408&k=0.648322083046154" target="_blank"><img src="http://www.51niutu.com/statics/images/zhibo/xw.jpg" ><span class="zhibo_index-icon"></span><i class="player"></i></a><div class="z_name"><p><img src="http://www.51niutu.com/statics/images/zhibo/zc2.jpg" width="100" height="100"><img src="http://www.51niutu.com/statics/images/zhibo/jb2.jpg" width="100" height="100"></p><p class="zc_name"><span>主持人：朱啸川</span><span>嘉宾：敖露</span></p><p class="vidnew-time"><i>13:00</i><span class="sku-end">-15:00</span></p></div>';
+				document.getElementById('zhibo_right').innerHTML='<a><img src="http://www.51niutu.com/statics/images/zhibo/xw.jpg" ><span class="zhibo_index-icon"></span><i class="player"></i></a><div class="z_name"><p><img src="statics/images/zhibo/zhuchi2.jpg" width="100" height="100"><img src="statics/images/zhibo/jiabin2.jpg" width="100" height="100"></p><p class="zc_name"><span>主持人：</span><span>嘉宾：</span></p><p class="vidnew-time"><i>13:00</i><span class="sku-end">-15:00</span></p></div>';
 			}else{
-				document.getElementById('zhibo_right').innerHTML='<a href="https://pingan.gensee.com/webcast/site/vod/play-6408b64576b346c485048a12a2f97aed?token=627109" target="_blank"><img src="http://www.51niutu.com/statics/images/zhibo/xw.jpg" ><span class="zhibo_index-icon" style="background: url(http://www.51niutu.com/statics/images/zhibo/hf_index-icon.png) no-repeat;"></span><i class="player"></i></a><div class="z_name"><p><img src="http://www.51niutu.com/statics/images/zhibo/zc2.jpg" width="100" height="100"><img src="http://www.51niutu.com/statics/images/zhibo/jb2.jpg" width="100" height="100"></p><p class="zc_name"><span>主持人：朱啸川</span><span>嘉宾：敖露</span></p><p class="vidnew-time"><i>13:00</i><span class="sku-end">-15:00</span></p></div>';
+				document.getElementById('zhibo_right').innerHTML='<a><img src="http://www.51niutu.com/statics/images/zhibo/xw.jpg" ><span class="zhibo_index-icon" style="background: url(http://www.51niutu.com/statics/images/zhibo/hf_index-icon.png) no-repeat;"></span><i class="player"></i></a><div class="z_name"><p><img src="statics/images/zhibo/zhuchi2.jpg" width="100" height="100"><img src="statics/images/zhibo/jiabin2.jpg" width="100" height="100"></p><p class="zc_name"><span>主持人：</span><span>嘉宾：</span></p><p class="vidnew-time"><i>13:00</i><span class="sku-end">-15:00</span></p></div>';
 			}
 		}
 		getTime();
@@ -368,17 +366,9 @@
 	<!--在线客服开始-->
     <div class="service">
         <div class="left">
-                <p class="title">QQ免费在线咨询</p>
-                <p class="number"><a href="http://wpa.qq.com/msgrd?v=3&uin=918595590&site=qq&menu=yes" title="点击这里给我发消息" target="_blank">课程顾问1</a><a href="http://wpa.qq.com/msgrd?v=3&uin=918595590&site=qq&menu=yes" title="点击这里给我发消息" target="_blank">课程顾问2</a><a href="http://wpa.qq.com/msgrd?v=3&uin=918595590&site=qq&menu=yes" title="点击这里给我发消息" target="_blank">课程顾问3</a></p>
-                <p class="number"><a href="http://wpa.qq.com/msgrd?v=3&uin=918595590&site=qq&menu=yes" title="点击这里给我发消息" target="_blank">课程顾问4</a><a href="http://wpa.qq.com/msgrd?v=3&uin=918595590&site=qq&menu=yes" title="点击这里给我发消息" target="_blank">课程顾问5</a><a href="http://wpa.qq.com/msgrd?v=3&uin=918595590&site=qq&menu=yes" title="点击这里给我发消息" target="_blank">课程顾问6</a></p>
-                <p class="number"><a href="http://wpa.qq.com/msgrd?v=3&uin=918595590&site=qq&menu=yes" title="点击这里给我发消息" target="_blank">课程顾问7</a><a href="http://wpa.qq.com/msgrd?v=3&uin=918595590&site=qq&menu=yes" title="点击这里给我发消息" target="_blank">课程顾问8</a><a href="http://wpa.qq.com/msgrd?v=3&uin=918595590&site=qq&menu=yes" title="点击这里给我发消息" target="_blank">课程顾问9</a></p>
-                <p class="time">在线时间：8:30-18:00（周一~周五、周日）</p>
-        </div>
-        <div class="right">
         	<p class="title">重要提示</p>
-            <p class="number"><a href="http://www.51niutu.com/index.php?m=announce&c=index&a=show&aid=9" title="展业行为规范“十禁止”">★&nbsp;&nbsp;展业行为规范“十禁止”</a></p>
-            <p class="number"><a href="http://www.51niutu.com/index.php?m=announce&c=index&a=show&aid=8" title="金融市场高危投资“十大坑”">★&nbsp;&nbsp;金融市场高危投资“十大坑”</a></p>
-            <p class="number"><a href="http://www.51niutu.com/index.php?m=announce&c=index&a=show&aid=6" title="我们做什么？">★&nbsp;&nbsp;我们做什么？</a></p>
+            <p class="number"><a href="http://www.51niutu.com/index.php?m=announce&c=index&a=show&aid=14" title="【做与不做】专注教学课程研发，传授方法技巧">★&nbsp;&nbsp;【做与不做】专注教学课程研发，传授方法技巧</a></p>
+            <p class="number"><a href="http://www.51niutu.com/index.php?m=announce&c=index&a=show&aid=13" title="【严重警示】金融市场高危投资“十大坑”">★&nbsp;&nbsp;【严重警示】金融市场高危投资“十大坑”</a></p>
         </div>
     </div>
     <!--在线客服结束-->
@@ -493,37 +483,37 @@
   	<div class="hotcourse">
     	<ul>
         	<li>
-            	<a href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=397" target="_blank">
-                	<img src="uploadfile/2016/0222/20160222100825446.jpg"/>
+            	<a href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=399&pc_hash=RRRm30" target="_blank">
+                	<img src="http://www.51niutu.com/uploadfile/2017/0512/20170512031731400.jpg"/>
                 </a>
-                <div class="course-mask"><span>课时（共16节）</span></div>
+                <div class="course-mask"><span>课时（共24节）</span></div>
                 <div class="course-detail">
-                	<h4><a href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=397" target="_blank">广发证券港股微课堂</a></h4>
-                	<p class="course-teacher">讲师：<a target="_blank" href="#">X老师</a></p>
-                </div>
-                <div class="course-price">&yen;9999</div>  
+                	<h4><a href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=399&pc_hash=RRRm30" target="_blank">【初级课】新手系统入门提高班</a></h4>
+					<p class="course-teacher">讲师：<a target="_blank" href="#"></a></p>               
+				</div>
+                <div class="course-price">&yen;7800</div>  
             </li>
             <li>
-            	<a href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=392" target="_blank">
-                	<img src="uploadfile/2016/0219/20160219025254595.jpg"/>
+            	<a href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=400&pc_hash=RRRm30" target="_blank">
+                	<img src="http://www.51niutu.com/uploadfile/2017/0512/20170512041603468.jpg"/>
                 </a>
-                <div class="course-mask"><span>课时（共14节）</span></div>
+                <div class="course-mask"><span>课时（共48节）</span></div>
                 <div class="course-detail">
-                	<h4><a href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=392" target="_blank">k线形态详解</a></h4>
-                	<p class="course-teacher">讲师：<a target="_blank" href="#">X老师</a></p>
+                	<h4><a href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=400&pc_hash=RRRm30" target="_blank">【高级课】操盘实战特训营</a></h4>
+                	<p class="course-teacher">讲师：<a target="_blank" href="#"></a></p>
                 </div>
-                <div class="course-price">&yen;99999</div>  
+                <div class="course-price">&yen;17800</div>  
             </li>
             <li>
-            	<a href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=313" target="_blank">
-                	<img src="uploadfile/2015/1027/20151027043050920.jpg"/>
+            	<a href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=401&pc_hash=RRRm30" target="_blank">
+                	<img src="http://www.51niutu.com/uploadfile/2017/0512/20170512052454791.jpg"/>
                 </a>
-                <div class="course-mask"><span>课时（共16节）</span></div>
+                <div class="course-mask"><span>课时（共96节）</span></div>
                 <div class="course-detail">
-                	<h4><a href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=313" target="_blank">力哥说理财</a></h4>
-                	<p class="course-teacher">讲师：<a target="_blank" href="#">X老师</a></p>
+                	<h4><a href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=401&pc_hash=RRRm30" target="_blank">【定制课】私人订制课程</a></h4>
+                	<p class="course-teacher">讲师：<a target="_blank" href="#"></a></p>
                 </div>
-                <div class="course-price">&yen;699</div>  
+                <div class="course-price">&yen;36800</div>  
             </li>
         </ul>
     </div>
@@ -537,7 +527,7 @@
                 	<a href="html/vip-course/course1.html" target="_blank"><span class="name">徐小明</span><span class="info">高级网络培训课程</span></a>
             	</li>
               	<li>
-                	<a href="html/vip-course/course3.html" target="_blank"><img src="http://s3.licaishi.sina.com.cn/170124/1453074738.png" width="230" height="331"/></a>
+                	<a href="html/vip-course/course3.html" target="_blank"><span class="name">徐小明</span><span class="info">高级网络培训课程</span></a>
               	</li>
                	<li>
                 	<a href="html/vip-course/course2.html" target="_blank"><img src="statics/images/teach-bg3.png" width="230" height="331"/></a>
@@ -550,35 +540,35 @@
              <div class="section-title"><p><img src="statics/images/section-icon/yugao.png" />课程预告</p></div>
             <ul>
             	<li>
-                	<a href="https://pingan.gensee.com/webcast/site/vod/play-70e6fd5ab56b4a00a10d09897cac8851?token=892469" target="_blank">
-                 		<p class="predict-time">9:15</p>
-                 		<img src="statics/images/zhibo/jb1.jpg" alt="">
-                  		<p class="predict-name">刘梦瑶 刘彪<br>大盘早“参”</p>
-                   		<div>即将直播</div>
+                	<a>
+                 		<p class="predict-time">9:30</p>
+                 		<img src="statics/images/zhibo/jiabin1.jpeg" alt="">
+                  		<p class="predict-name">主持人 嘉宾<br>大盘早“参”</p>
+                   		<div>进入直播间</div>
                    	</a>
               	</li>
                 <li>
-                	<a href="https://pingan.gensee.com/webcast/site/vod/play-6408b64576b346c485048a12a2f97aed?token=627109" target="_blank">
+                	<a>
                  		<p class="predict-time">13:00</p>
-                 		<img src="statics/images/zhibo/jb2.jpg" alt="">
-                  		<p class="predict-name">朱啸川 敖露<br>股市下午“察”</p>
-                   		<div>即将直播</div>
+                 		<img src="statics/images/zhibo/jiabin2.jpg" alt="">
+                  		<p class="predict-name">主持人 嘉宾<br>股市下午“察”</p>
+                   		<div>进入直播间</div>
                    	</a>
               	</li>
                 <li>
-                	<a href="https://pingan.gensee.com/webcast/site/vod/play-70e6fd5ab56b4a00a10d09897cac8851?token=892469" target="_blank">
-                 		<p class="predict-time">9:15</p>
-                 		<img src="statics/images/zhibo/jb1.jpg" alt="">
-                  		<p class="predict-name">刘梦瑶 刘彪<br>大盘早“参”</p>
-                   		<div>即将直播</div>
+                	<a>
+                 		<p class="predict-time">9:30</p>
+                 		<img src="statics/images/zhibo/zhuchi1.jpg" alt="">
+                  		<p class="predict-name">主持人 嘉宾<br>问答聊股</p>
+                   		<div>进入直播间</div>
                    	</a>
               	</li>
                 <li>
-                	<a href="https://pingan.gensee.com/webcast/site/vod/play-6408b64576b346c485048a12a2f97aed?token=627109" target="_blank">
+                	<a>
                  		<p class="predict-time">13:00</p>
-                 		<img src="statics/images/zhibo/jb2.jpg" alt="">
-                  		<p class="predict-name">朱啸川 敖露<br>股市下午“察”</p>
-                   		<div>即将直播</div>
+                 		<img src="statics/images/zhibo/zhuchi2.jpg" alt="">
+                  		<p class="predict-name">主持人 嘉宾<br>复盘点评</p>
+                   		<div>进入直播间</div>
                    	</a>
               	</li>
 			</ul>
@@ -596,20 +586,20 @@
 	<div class="section-title"><p><img src="statics/images/section-icon/lanmu.png" />最热栏目<span>不用转转转 火速推送随时看</span></p></div>
 	<div class="part-art">
     	<div class="clearfix">
-            <a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=290">A股新闻眼</a>
-            <a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=322">财经美女抱</a>
-            <a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=373">三分资色</a>
-            <a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=44">她汇理财</a>
-            <a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=43">财经BABALA</a>
-            <a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=367">环球辛闻社</a>
-    	</div>
+            <a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=254">炒股口诀</a>
+            <a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=297">每日一招</a>
+            <a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=345">庄股特征</a>
+            <a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=295">股市实战课</a>
+            <a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=276">炒股特训营</a>
+            <a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=213">巴菲特投资之道</a>
+		</div>
     	<ul class="aty-accordion">
-            <li class="open" style="width:290px"><a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=290"><img class="img-1" style="margin-left:-120px;" src="http://www.51niutu.com/statics/images/xwy.jpg" /></a></li>
-            <li><a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=322"><img class="img-2" src="http://www.51niutu.com/statics/images/cjmnb.jpg"></a></li>
-            <li><a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=373"><img class="img-3" src="http://www.51niutu.com/statics/images/sfzs.jpg"></a></li>
-            <li><a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=44"><img class="img-4" src="http://www.51niutu.com/statics/images/thlc.jpg"></a></li>
-            <li><a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=43"><img class="img-5" src="http://www.51niutu.com/statics/images/cjbabala.jpg"></a></li>
-            <li><a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=367"><img class="img-5" src="http://www.51niutu.com/statics/images/hqxws.jpg"></a></li>
+            <li class="open" style="width:290px"><a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=254"><img class="img-1" style="margin-left:-120px;" src="http://www.51niutu.com/statics/images/xwy.jpg" /></a></li>
+            <li><a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=297"><img class="img-2" src="http://www.51niutu.com/statics/images/cjmnb.jpg"></a></li>
+            <li><a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=345"><img class="img-3" src="http://www.51niutu.com/statics/images/sfzs.jpg"></a></li>
+            <li><a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=295"><img class="img-4" src="http://www.51niutu.com/statics/images/thlc.jpg"></a></li>
+            <li><a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=276"><img class="img-5" src="http://www.51niutu.com/statics/images/cjbabala.jpg"></a></li>
+            <li><a target="_blank" href="http://www.51niutu.com/index.php?m=album&c=index&a=album_videolist&id=213"><img class="img-5" src="http://www.51niutu.com/statics/images/hqxws.jpg"></a></li>
     	</ul>
   	</div>
 </div>
