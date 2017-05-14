@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="sogou_site_verification" content="mjUgVUUD6g"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="applicable-device"content="pc,mobile">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>{$title}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<link rel="shortcut icon" href="../../../../favicon.ico">
+<meta name="sogou_site_verification" content="rSnQqYtx5f"/>
+<link href="{CSS_PATH}reset.css" rel="stylesheet" type="text/css" />
+<link href="{CSS_PATH}default_blue.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
+<script type="text/javascript" src="{JS_PATH}jquery.sgallery.js"></script>
+<script type="text/javascript" src="{JS_PATH}search_common.js"></script>
+</head>
+<body>
+<div class="headerbg">
+<div class="body-top">
+    <div class="content">
+   
+    		<div class="announ">
+                 <ul>
+					<li><a href="{APP_PATH}" style="padding-left:0;"><img src="{IMG_PATH}VIP/v1.png" style="width:16px;height:16px;position:relative;top:-2px;right:2px;">首页</a></li>
+					<li>
+						<a href="{APP_PATH}index.php?m=search&c=index1&a=init&siteid=1&q=">
+							<img src="{IMG_PATH}VIP/v2.png" style="width:14px;height:14px;position:relative;top:-2px;right:2px;">全部课程</a>
+					</li>
+					<li style="background:url({IMG_PATH}VIP/v3.gif) no-repeat left center;margin-left:10px;"><a href="javascript:void()" class="a1">白金会员</a></li>
+					<li style="background:url({IMG_PATH}VIP/mobile.png) no-repeat left center;margin-left:10px;"><a href="javascript:void()" class="a1">移动学习</a></li>
+                 </ul>
+            </div>
+   
+
+            <div class="login lh24 blue" style="float:right;">
+				<script type="text/javascript">document.write('<iframe src="{APP_PATH}index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid={get_siteid()}" allowTransparency="true"  width="300" height="24" frameborder="0" scrolling="no"></iframe>')</script>
+			</div>
+
+    </div>
+</div>
+</div>
+<div class="bg-f0" style="margin-bottom:-106px;"></div>
+<div class="header">
+		<div class="logo">
+			<a href="{siteurl($siteid)}/"><img src="{IMG_PATH}logo3.png" /></a> 
+		</div>
+		<div class="search">
+			<div class="lanren-search-form">
+				<div id="search-bd" class="search-bd">
+					<ul>
+						<li class="selected">视频</li>
+						<li>专辑</li>
+						<li>文章</li>												
+					</ul>
+				</div>
+				<div id="search-hd" class="search-hd">
+					<div class="search-bg"></div>
+					<form action="{APP_PATH}index.php" method="get" target="_blank" id="s1" class="search-input">
+						<input type="hidden" name="m" value="search"/>
+						<input type="hidden" name="c" value="index"/ >
+						<input type="hidden" name="a" value="init"/>
+						<input type="hidden" name="typeid" value="128" id="typeid"/>
+						<input type="hidden" name="siteid" value="{$siteid}" id="siteid"/>
+						<input type="text" class="text" name="q" id="q" placeholder="请输入您想查找的视频名称">
+						<button id="submit" class="btn-search" value="搜索">搜索</button>
+					</form>
+					<form action="{APP_PATH}index.php" method="get" target="_blank" id="s2" class="search-input">
+						<input type="hidden" name="m" value="search"/>
+						<input type="hidden" name="c" value="index1"/ >
+						<input type="hidden" name="a" value="init"/>
+						<input type="hidden" name="siteid" value="{$siteid}" id="siteid"/>
+						<input type="text" class="text" name="q" id="q" placeholder="请输入您想查找的专辑名称">
+						<button id="submit" class="btn-search" value="搜索">搜索</button>
+					</form>
+					<form action="{APP_PATH}index.php" method="get" target="_blank" id="s3" class="search-input">
+						<input type="hidden" name="m" value="search"/>
+						<input type="hidden" name="c" value="index"/ >
+						<input type="hidden" name="a" value="init"/>
+						<input type="hidden" name="typeid" value="1" id="typeid"/>
+						<input type="hidden" name="siteid" value="{$siteid}" id="siteid"/>
+						<input type="text" class="text" name="q" id="q" placeholder="请输入您想查找的文章">
+						<button id="submit" class="btn-search" value="搜索">搜索</button>
+					</form>					
+				</div>
+			<script>
+				$(function(){
+					//通用头部搜索切换
+					$('#search-hd .search-input').on('input propertychange',function(){
+						var val = $(this).val();
+						if(val.length > 0){
+							$('#search-hd .pholder').hide(0);
+						}else{
+							var index = $('#search-bd li.selected').index();
+							$('#search-hd .pholder').eq(index).show().siblings('.pholder').hide(0);
+						}
+					})
+					$('#search-bd li').click(function(){
+						var index = $(this).index();
+						$('#search-hd .pholder').eq(index).show().siblings('.pholder').hide(0);
+						$('#search-hd .search-input').eq(index).show().siblings('.search-input').hide(0);
+						$(this).addClass('selected').siblings().removeClass('selected');
+						$('#search-hd .search-input').val('');
+					});
+				})
+			</script> 
+		</div>
+	</div>
+    <div class="bk3"></div>
+    <div class="nav-bar" style=";position:relative;">
+    
+    	<map>
+        	<ul class="nav-site">
+			{pc:content action="category" catid="0" num="9" siteid="$siteid" order="lister ASC"}
+			<li><a href="{siteurl($siteid)}"><span>首页</span></a></li>
+			<li style="color:#ddd;">|</li>
+			{php $n=1}
+			{loop $data $r}
+				{if $n==4}
+				<li style="color:#ddd;">|</li>
+				{/if}
+				<li {if $r[catid]==$catid} style="background:#f5f5f5;margin-top:2px;height:31px;"{/if}><a href="{$r[url]}" {if $r[catid]==$catid} style="color:#e63737;"{/if}><span>{$r[catname]}</span></a></li>
+			{/loop}	
+		    {/pc}
+			<li style="margin-left:270px;" id="nav-right"><a href="javascript:void()" target="_blank">白金会员</a></li>
+				<li class="fen">|</li>
+				<li style="padding-right:0;"><a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=103" target="_blank">互动问答</a></li>	
+            </ul>
+        </map>   
+    </div> 
+</div>
+</div>
