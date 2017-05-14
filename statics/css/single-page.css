@@ -134,11 +134,11 @@ padding-top:14px;height:38px;}
 /*股民学校结束*/
 /**********************************************/
 /*学员感言开始*/
-.student-banner{height:400px;background:url(../images/single-page/stu-banner.jpg) no-repeat;width:100%;color:#2b98d0;font-weight:600;}
+.student-banner{height:400px;background:url(../images/single-page/ban1.jpg) no-repeat;width:100%;color:#fff;font-weight:600;text-align:center;}
 .student-banner .content{width:1200px;margin:0 auto;}
-.student-banner .text1{text-indent:1em;font-size:40px;padding:90px 0px 20px;}
-.student-banner .text2{font-size:28px;text-indent:5em;}
-.student-banner .text3{font-size:32px;text-indent:7em;padding-top:20px;}
+.student-banner .text1{font-size:40px;padding:90px 0px 20px;}
+.student-banner .text2{font-size:28px;}
+.student-banner .text3{font-size:32px;padding-top:20px;}
 .stu-section{width:100%;overflow:hidden;background:url(../images/single-page/stu-bg.jpg) no-repeat;}
 .stu-section .content{width:1160px;margin:20px auto;overflow:hidden;background:#fff;padding:20px;position:relative;-moz-transition:all 0.4s ease;-o-transition:all 0.4s ease;-webkit-transition:all 0.4s ease;transition:all 0.4s ease;}
 .stu-section .content:hover{-moz-transform:translate(0,-5px);-o-transform:translate(0,-5px);-webkit-transform:translate(0,-5px);transform:translate(0,-5px);}

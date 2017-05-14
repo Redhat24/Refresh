@@ -55,6 +55,9 @@
 .specify2 div h3{text-align:center;margin:20px 0;color:#fff;}
 .specify2 div ul{padding-left:30px;font-size:18px;padding-right: 10px;line-height: 1.7;}
 .specify2 div li span{padding-right:15px;}
+	/*page2带图标非列表样式*/
+.specify2 div{width:210px;height:277px;padding:20px;}
+.specify2 div img{width:80px;margin:0 0 15px 75px;}
 /*核心知识点比较*/
 table{border-collapse:collapse;}
 .bijiao>table{width:1196px;}
@@ -80,6 +83,14 @@ table{border-collapse:collapse;}
 .course-time.page2 .btn a{background-color:#06e1e6;color:#333;}
 .course-time.page2 .btn:hover a{background-color:#36fbff;}
 .course-time.page2 .detail{border-color:#96bfc3;}
+/*经典案例*/
+.good-anli div{background:rgba(5, 31, 49, 0.64);padding:20px 0;}
+.good-anli div p{width:90%;margin:5px auto 20px;border:1px solid #5588ab;line-height:2;}
+.good-anli div img{border:1px solid #5588ab;padding: 3px;}
+.good-anli div img+img{margin-left:15px;}
+/*学员评价*/
+.stu-judge div{text-align:left;text-indent:2em;background:#167680;padding:20px;}
+.stu-judge div p{line-height:2;}
 /*私人订制部分*/
 .banner{background:url(../images/vip-course/dingzhi.gif) no-repeat top center;background-size:100% 500px;height:500px; background-color:#000;}
 .wrap{width:100%;}
