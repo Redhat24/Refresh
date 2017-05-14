@@ -6,27 +6,17 @@
 <meta name="applicable-device"content="pc,mobile">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=7" />
-<title>{$title}</title>
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
 <meta name="keywords" content="{$SEO['keyword']}">
 <meta name="description" content="{$SEO['description']}">
-<link rel="shortcut icon" href="../../../../favicon.ico">
+<meta name="baidu-tc-verification" content="bd449835a2ae9efe3742af55a15d5b30" /><!--百度手机-->
 <meta name="sogou_site_verification" content="rSnQqYtx5f"/>
+<link rel="shortcut icon" href="favicon.ico">
 <link href="{CSS_PATH}reset.css" rel="stylesheet" type="text/css" />
 <link href="{CSS_PATH}default_blue.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="{JS_PATH}jquery.min.js"></script>
 <script type="text/javascript" src="{JS_PATH}jquery.sgallery.js"></script>
 <script type="text/javascript" src="{JS_PATH}search_common.js"></script>
-<style type="text/css">
-.nav-bar{text-align:center;width:1000px;height:40px!important;line-height:40px;font-size:16px;}
-.nav-bar li{float:left;}
-.nav-bar li.home-page{width:115px;}
-.nav-bar li.nav-list{width:115px;}
-.nav-bar li.nav-seperate{margin-left:60px;}
-.nav-bar li span{color:#fff;}
-.nav-bar a{display:block;color:#FFF;}
-.nav-bar a img{width:18px;margin:0 5px 2px 0;}
-.nav-bar a:hover{color:#fef600;}
-</style>
 </head>
 <body>
 <div class="headerbg">
@@ -37,7 +27,7 @@
                  <ul>
 					<li><a href="{APP_PATH}" style="padding-left:0;"><img src="{IMG_PATH}VIP/v1.png" style="width:16px;height:16px;position:relative;top:-2px;right:2px;">首页</a></li>
 					<li>
-						<a href="{APP_PATH}index.php?m=search&c=index1&a=init&siteid=1&q=">
+						<a href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=89">
 							<img src="{IMG_PATH}VIP/v2.png" style="width:14px;height:14px;position:relative;top:-2px;right:2px;">全部课程</a>
 					</li>
 					<li style="background:url({IMG_PATH}VIP/v3.gif) no-repeat left center;margin-left:10px;"><a href="javascript:void()" class="a1">白金会员</a></li>
@@ -46,25 +36,27 @@
             </div>
    
 
-            <div class="login lh24 blue" style="float:right;">
-				<script type="text/javascript">document.write('<iframe src="{APP_PATH}index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid={get_siteid()}" allowTransparency="true"  width="300" height="24" frameborder="0" scrolling="no"></iframe>')</script>
-			</div>
+            <div class="login lh24 blue">
+			
+			<span class="rt">
+<script type="text/javascript">document.write('<iframe src="{APP_PATH}index.php?m=member&c=index&a=mini&forward='+encodeURIComponent(location.href)+'&siteid={get_siteid()}" allowTransparency="true"  width="300" height="24" frameborder="0" scrolling="no"></iframe>')</script></span>
+</div>
 
     </div>
 </div>
 </div>
-<div class="bg-f0" style="margin-bottom:-113px;height:133px"></div>
+<div class="bg-f0" style="margin-bottom:-106px;"></div>
 <div class="header">
 		<div class="logo">
-			<a href="{siteurl($siteid)}/"><img src="{IMG_PATH}logo3.png" /></a> 
+			<a href="{APP_PATH}"><img src="{IMG_PATH}logo3.png" /></a> 
 		</div>
 		<div class="search">
 			<div class="lanren-search-form">
 				<div id="search-bd" class="search-bd">
 					<ul>
 						<li class="selected">视频</li>
-						<li>专辑</li>
-						<li>文章</li>												
+						<li>课程</li>
+						<li>文章</li>						
 					</ul>
 				</div>
 				<div id="search-hd" class="search-hd">
@@ -76,15 +68,15 @@
 						<input type="hidden" name="typeid" value="128" id="typeid"/>
 						<input type="hidden" name="siteid" value="{$siteid}" id="siteid"/>
 						<input type="text" class="text" name="q" id="q" placeholder="请输入您想查找的视频名称">
-						<button id="submit" class="btn-search" value="搜索">搜索</button>
+						<button id="submit" class="btn-search search_right" value="搜索">搜索</button>
 					</form>
 					<form action="{APP_PATH}index.php" method="get" target="_blank" id="s2" class="search-input">
 						<input type="hidden" name="m" value="search"/>
 						<input type="hidden" name="c" value="index1"/ >
 						<input type="hidden" name="a" value="init"/>
 						<input type="hidden" name="siteid" value="{$siteid}" id="siteid"/>
-						<input type="text" class="text" name="q" id="q" placeholder="请输入您想查找的专辑名称">
-						<button id="submit" class="btn-search" value="搜索">搜索</button>
+						<input type="text" class="text" name="q" id="q" placeholder="请输入您想查找的课程名称">
+						<button id="submit" class="btn-search search_right" value="搜索">搜索</button>
 					</form>
 					<form action="{APP_PATH}index.php" method="get" target="_blank" id="s3" class="search-input">
 						<input type="hidden" name="m" value="search"/>
@@ -93,8 +85,9 @@
 						<input type="hidden" name="typeid" value="1" id="typeid"/>
 						<input type="hidden" name="siteid" value="{$siteid}" id="siteid"/>
 						<input type="text" class="text" name="q" id="q" placeholder="请输入您想查找的文章">
-						<button id="submit" class="btn-search" value="搜索">搜索</button>
-					</form>					
+						<button id="submit" class="btn-search search_right" value="搜索">搜索</button>
+					</form>
+					
 				</div>
 			<script>
 				$(function(){
@@ -120,18 +113,26 @@
 		</div>
 	</div>
     <div class="bk3"></div>
-    <div class="nav-bar">
-    	<ul>
-          	<li class="home-page"><a href="http://www.51niutu.com/">首&nbsp;&nbsp;&nbsp;页</a></li>
-          	<li><span>|</span></li>
-          	<li class="nav-list"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/zhibo.png"/>股市直播</a></li>
-          	<li class="nav-list"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/anli.png"/>案例精讲</a></li>
-          	<li class="nav-list"><a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=103"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/wenda.png"/>互动问答</a></li>
-          	<li class="nav-list"><a href="http://www.51niutu.com/html/ganyan/index.html"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/xueyuan.png"/>学员感言</a></li>
-          	<li class="nav-list"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/shouhou.png"/>售后服务</a></li>
-          	<li class="nav-list nav-seperate"><a href="#"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/jingpin.png"/>精品课</a></li>
-          	<li class="nav-list"><a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=54"><img src="http://www.51niutu.com/statics/images/nav-pic/headnav-pic/vip.png"/>开通VIP会员</a></li>
-    	</ul>
+    <div class="nav-bar" style=";position:relative;">
+    
+    	<map>
+        	<ul class="nav-site">
+			{pc:content action="category" catid="0" num="6" siteid="$siteid" order="lister ASC"}
+			<li><a href="{siteurl($siteid)}"><span>首页</span></a></li>
+			<li style="color:#ddd;">|</li>
+			{php $n=1}
+			{loop $data $r}
+				{if $n==4}
+				<li style="color:#ddd;">|</li>
+				{/if}
+				<li {if $r[catid]==$catid} style="background:#f5f5f5;margin-top:2px;height:31px;"{/if}><a href="{$r[url]}" {if $r[catid]==$catid} style="color:#e63737;"{/if}><span>{$r[catname]}</span></a></li>
+			{/loop}	
+		    {/pc}
+				<li style="margin-left:265px;" id="nav-right"><a href="javascript:void()" target="_blank">白金会员</a></li>
+				<li class="fen">|</li>
+				<li style="padding-right:0;"><a href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=103" target="_blank">互动问答</a></li>			
+            </ul>
+        </map>   
     </div> 
 </div>
 </div>

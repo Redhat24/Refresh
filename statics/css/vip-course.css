@@ -57,7 +57,7 @@
 .specify2 div li span{padding-right:15px;}
 	/*page2带图标非列表样式*/
 .specify2 div{width:210px;height:277px;padding:20px;}
-.specify2 div img{width:80px;margin:0 0 15px 75px;}
+.specify2 div img{width:80px;margin:0 0 15px 65px;}
 /*核心知识点比较*/
 table{border-collapse:collapse;}
 .bijiao>table{width:1196px;}
