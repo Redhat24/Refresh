@@ -52,11 +52,9 @@
 .our-honor li img{width:60px;float:left;margin-right:5px; border-radius:50%;}
 .our-honor li h3{font-size:16px;margin-bottom:5px;font-weight:500; cursor:text;}
 /*在线客服部分*/
-.import-hint{margin:15px 0;overflow:hidden;border:10px solid #614231;background:#062d0d;border-left-width:15px;border-right-width:15px;}
-.import-hint .title{background:url(../images/hint4.png) no-repeat 475px 7px;font-size:30px;font-weight:bold;color:#f20100;text-align:center;padding-bottom:10px;}
-.import-hint .hint{font-size:20px;float:left;padding:10px;width:534px;}
-.import-hint .hint a{color:#d8d6d6;}
-.import-hint .hint a:hover{color:#fff;}
+.import-hint{margin-top:20px;overflow:hidden;border:5px double #ffc6a0;background:#fff6de;border-radius:15px;}
+.import-hint .title{background:url(../images/hint4.png) no-repeat 475px 17px;font-size:30px;font-weight:bold;color:#cc0000;text-align:center;padding-top:10px;}
+.import-hint .hint{font-size:20px;float:left;padding:15px;width:534px;}
 /*热门课程部分*/
 .hotcourse{ margin-top:20px; overflow:hidden;}
 .hotcourse li{position:relative;width:354px;float:left;margin-right:18px;margin-bottom:2px;border:1px solid transparent;padding:7px;}
@@ -74,11 +72,11 @@
 .teacher-predict .teacher-list h2 span{font-size:16px;margin-left:20px;}
 .teacher-predict .teacher-list h2 a{font-size:16px;float:right;margin:16px 30px 0 0;}
 .teacher-predict .teacher-list ul{overflow: hidden;background-color:#E13529;padding:8px 0;}
-.teacher-predict .teacher-list li{float:left;margin-left:10px;background:url(../images/teach-bg.png) no-repeat top center;width: 230px;height:331px;border:2px solid #E13529;}
+.teacher-predict .teacher-list li{float:left;margin-left:10px;background:url(../images/teach-bg1.png) no-repeat top center;width: 230px;height:331px;border:2px solid #E13529;}
 .teacher-predict .teacher-list li a{display:block;width:100%;height:100%;position:relative;}
-.teacher-predict .teacher-list li a span{display:block;position:absolute;color:#EC321A;font-weight:bold;width:100%;text-align:center;font-style:italic;}
-.teacher-predict .teacher-list li a span.name{font-size:40px;top:225px;}
-.teacher-predict .teacher-list li a span.info{font-size:20px;top:275px;}
+.teacher-predict .teacher-list li a span{display:block;position:absolute;color:#EC321A;font-weight:bold;width:100%;text-align:center;font-style:italic;text-shadow: 3px 3px 3px #7b0404;}
+.teacher-predict .teacher-list li a span.name{font-size:40px;top:233px;}
+.teacher-predict .teacher-list li a span.info{font-size:20px;top:285px;}
 .teacher-predict .teacher-list li:hover{border:2px solid #9A2017;}
 .teacher-predict .predict-list{width:430px;float:right;}
 .teacher-predict .predict-list h2{margin-bottom:27px;}

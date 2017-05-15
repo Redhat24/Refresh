@@ -21,11 +21,13 @@
 <link href="http://www.51niutu.com/statics/css/default_blue.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="http://www.51niutu.com/statics/css/index.css">
 <link href="statics/css/home.css" rel="stylesheet" type="text/css" />
+<link href="http://www.51niutu.com/statics/css/niutu.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="http://www.51niutu.com/statics/js/jquery.min.js"></script>
-<script type="text/javascript" src="http://www.51niutu.com/statics/js/jquery.sgallery.js"></script>
-<script type="text/javascript" src="http://www.51niutu.com/statics/js/search_common.js"></script>
 </head>
-<body onload="mouse_hover();">
+<body>
+<!-- WPA Button Begin -->
+<script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzgwMDEzMDk5OV80NjU1MDBfODAwMTMwOTk5Xw"></script>
+<!-- WPA Button End -->
 <div class="headerbg">
 	<div class="body-top" style="width:1170px;">
     	<div class="content">
@@ -89,27 +91,6 @@
 				</form>
 			</div>
 		</div>
-		<script>
-			$(function(){
-				//通用头部搜索切换
-				$('#search-hd .search-input').on('input propertychange',function(){
-					var val = $(this).val();
-					if(val.length > 0){
-						$('#search-hd .pholder').hide(0);
-					}else{
-						var index = $('#search-bd li.selected').index();
-						$('#search-hd .pholder').eq(index).show().siblings('.pholder').hide(0);
-					}
-				})
-				$('#search-bd li').click(function(){
-					var index = $(this).index();
-					$('#search-hd .pholder').eq(index).show().siblings('.pholder').hide(0);
-					$('#search-hd .search-input').eq(index).show().siblings('.search-input').hide(0);
-					$(this).addClass('selected').siblings().removeClass('selected');
-					$('#search-hd .search-input').val('');
-				});
-			})
-		</script>    
 	</div>
     <div class="bk3"></div>
     <!--导航菜单开始-->
@@ -128,19 +109,6 @@
     </div>
     <!--导航菜单结束-->
 </div>
-<script type="text/javascript" src="http://www.51niutu.com/statics/js/jquery.tools_tabs.min.js"></script> 
-<script type="text/javascript" src="http://www.51niutu.com/statics/js/cookie.js"></script> 
-<script src="http://www.51niutu.com/statics/js/tabpic.js"></script>
-<script src="http://www.51niutu.com/statics/js/tab/jquery.index-tabs.js"></script> 
-<script src="http://www.51niutu.com/statics/js/tab/jquery.index-tabs1.js"></script> 
-<script src="http://www.51niutu.com/statics/js/tabpic.js"></script>
-<script>
-	$(function () {
-		//首页top3栏目
-		$('.mod-catalog-box__header').Tabs1();
-		$('.free-course').Tabs();
-});
-</script>
 <!--main开始-->
 <div class="main" style="width:1170px;margin-bottom:30px;"> 
 	<div class="bk10"></div>
@@ -155,7 +123,7 @@
         </ul>
     </div>
 	<!--左侧导航结束-->
-  	<!--左侧导航菜单右边上部分(焦点图)开始-->
+  	<!--焦点图部分开始-->
 	<div class="col-left" style="width:1054px;float:right;margin-right:0px;">
     	<!--焦点图开始-->
         <div class="slide" style="width:100%;height:361px;">
@@ -235,14 +203,8 @@
 			</div>
         </div>
     	<!--焦点图结束--> 
-		<script type="text/javascript"> 
-			$(function(){
-				new slide("#main-slide","cur",1054,361,1);//焦点图
-				new SwapTab(".SwapTab","span",".tab-content","ul","fb");//排行TAB
-			})
-		</script> 
 	</div>
-    <!--左侧导航菜单右边上部分(焦点图)结束-->
+    <!--焦点图部分结束-->
 	<!--焦点图下侧部分开始-->
     <div class="col-auto">
         <!--公告栏开始-->
@@ -284,7 +246,6 @@
     <!--焦点图下侧部分结束-->
   	<div class="bk10"></div>
   	<!--第一部分结束--> 
-    
 	<!--栏目部分开始-->
   	<!--直播 S-->        
     <div class="section-title"><p><img src="statics/images/section-icon/zhibo.png" />直播课程<span>资深导师面对面</span></p></div>
@@ -294,73 +255,6 @@
 			<div class="zhibo_right" id="zhibo_right"></div>
 		</div>
   	</div>
-  	<script>
-  		function getTime(){
-			var time1="9:30";	
-			var time2="11:30";	
-			var time3="13:00";	
-			var time4="15:00";	
-    		var strb = time1.split (":");
-    		var stre = time2.split (":");
-    		var strb1 = time3.split (":");
-    		var stre1 = time4.split (":");
-     		var b = new Date ();
-     		var e = new Date ();
-     		var b1 = new Date ();
-     		var e1 = new Date ();
-     		var n = new Date ();
-	 		var week=n.getDay();
-     		b.setHours (strb[0]);
-     		b.setMinutes (strb[1]);
-     		e.setHours (stre[0]);
-     		e.setMinutes (stre[1]);
-     		b1.setHours (strb1[0]);
-     		b1.setMinutes (strb1[1]);
-     		e1.setHours (stre1[0]);
-     		e1.setMinutes (stre1[1]);
-			if(n.getTime () - b.getTime () > 0 && n.getTime () - e.getTime () < 0 && week != '0' && week != '6'){
-				document.getElementById('zhibo_left').innerHTML='<a><img src="http://www.51niutu.com/statics/images/zhibo/sw.jpg"><span class="zhibo_index-icon"></span><i class="player"></i></a><div class="z_name"><p><img src="statics/images/zhibo/zhuchi1.jpg" width="100" height="100"><img src="statics/images/zhibo/jiabin1.jpeg" width="100" height="100"></p><p class="zc_name"><span>主持人：</span><span>嘉宾：</span></p><p class="vidnew-time"><i>09:30</i><span class="sku-end">-11:30</span></p></div>';
-			}else{
-				document.getElementById('zhibo_left').innerHTML='<a><img src="http://www.51niutu.com/statics/images/zhibo/sw.jpg"><span class="zhibo_index-icon" style="background: url(http://www.51niutu.com/statics/images/zhibo/hf_index-icon.png) no-repeat;"></span><i class="player"></i></a><div class="z_name"><p><img src="statics/images/zhibo/zhuchi1.jpg" width="100" height="100"><img src="statics/images/zhibo/jiabin1.jpeg" width="100" height="100"></p><p class="zc_name"><span>主持人：</span><span>嘉宾：</span></p><p class="vidnew-time"><i>09:30</i><span class="sku-end">-11:30</span></p></div>';
-			}
-			if(n.getTime () - b1.getTime () > 0 && n.getTime () - e1.getTime () < 0 && week != '0' && week != '6'){
-				document.getElementById('zhibo_right').innerHTML='<a><img src="http://www.51niutu.com/statics/images/zhibo/xw.jpg" ><span class="zhibo_index-icon"></span><i class="player"></i></a><div class="z_name"><p><img src="statics/images/zhibo/zhuchi2.jpg" width="100" height="100"><img src="statics/images/zhibo/jiabin2.jpg" width="100" height="100"></p><p class="zc_name"><span>主持人：</span><span>嘉宾：</span></p><p class="vidnew-time"><i>13:00</i><span class="sku-end">-15:00</span></p></div>';
-			}else{
-				document.getElementById('zhibo_right').innerHTML='<a><img src="http://www.51niutu.com/statics/images/zhibo/xw.jpg" ><span class="zhibo_index-icon" style="background: url(http://www.51niutu.com/statics/images/zhibo/hf_index-icon.png) no-repeat;"></span><i class="player"></i></a><div class="z_name"><p><img src="statics/images/zhibo/zhuchi2.jpg" width="100" height="100"><img src="statics/images/zhibo/jiabin2.jpg" width="100" height="100"></p><p class="zc_name"><span>主持人：</span><span>嘉宾：</span></p><p class="vidnew-time"><i>13:00</i><span class="sku-end">-15:00</span></p></div>';
-			}
-		}
-		getTime();
-		//鼠标经过直播
-		function mouse_hover(){ 	
-			$('.zhibo_main a').hover(function(){
-				$(this).find('.player').css({'display':'block'})
-			},function(){
-				$(this).find('.player').css({'display':'none'})
-			});
-		}
-		//六个图片手风琴效果
-		$(function(){
-   			var li = $(".aty-accordion li");
-     		var OPEN_W = 290;
-     		var CLOSE_W = 120;
-     		var acctimer = null;
-     		li.mouseover(function(){
-         		var _this = $(this);
-         		acctimer = setTimeout(function(){
-             		if(_this.hasClass("open")){
-                 		return;
-             		}
-             		$(".aty-accordion .open").stop().animate({"width":CLOSE_W+"px"},300).find("img").stop().animate({"margin-left":0 + "px"},300);
-             		li.removeClass("open");
-             		_this.addClass("open");
-            		_this.stop().animate({"width":OPEN_W+"px"},300).find("img").stop().animate({"margin-left":- CLOSE_W + "px"},300);
-         		},150);
-     		})
-     		li.mouseout(function(){
-         		clearTimeout(acctimer);
-     		})
-		});
-  	</script>
   	<div class="clear"></div>  
   	<!--直播 E-->
 	<!--重要提示开始-->
@@ -372,7 +266,7 @@
     <!--重要提示结束-->
   	<!--免费课程开始-->
 	<div class="section-title"><p><img src="statics/images/section-icon/free.png" />原创微课<span>浓缩精华交易策略</span></p></div>
-  <DIV class=main-wrap style="background:#fff;">
+  	<DIV class=main-wrap style="background:#fff;">
     <DIV id=slide-box> <B class=corner></B>
       <DIV id=J_slide>
         <DIV class=wrap style="width:1180px;height:230px;">
@@ -475,8 +369,7 @@
       <B class=corner></B> </DIV>
   </DIV>
     <!--免费课程结束-->
- 
-  <!--热门课程开始-->
+  	<!--热门课程开始-->
     <div class="section-title"><p><img src="statics/images/section-icon/hot.png" />精品课程<span>操盘实战训练营</span></p></div>
   	<div class="hotcourse">
     	<ul>
@@ -515,17 +408,17 @@
             </li>
         </ul>
     </div>
-  <!--热门课程结束-->
-  <!--讲师介绍和课程预告开始-->
+  	<!--热门课程结束-->
+  	<!--讲师介绍和课程预告开始-->
     <div class="teacher-predict">
     	<div class="teacher-list">
             <div class="section-title"><p><img src="statics/images/section-icon/teacher.png" />导师风采<span>资深导师教学团队  助你征战牛途</span></p></div>
             <ul>
             	<li>
-                	<a href="html/vip-course/course3.html" target="_blank"><span class="name">季度课</span><span class="info">系统有效提升实战技能</span></a>
+                	<a><span class="name">季度课</span><span class="info">新手系统入门提高课</span></a>
             	</li>
               	<li>
-                	<a><span class="name"></span><span class="info"></span></a>
+                	<a href="html/vip-course/course3.html" target="_blank"><span class="name">半年课</span><span class="info">操盘实战特训营</span></a>
               	</li>
                	<li>
                 	<a><img src="statics/images/teach-bg3.png" width="230" height="331"/></a>
@@ -540,23 +433,15 @@
             	<li>
                 	<a>
                  		<p class="predict-time">9:30</p>
-                 		<img src="statics/images/zhibo/jiabin1.jpeg" alt="">
+                 		<img src="statics/images/zhibo/zhuchi1.jpg" alt="">
                   		<p class="predict-name">主持人 嘉宾<br>大盘早“参”</p>
                    		<div>进入直播间</div>
                    	</a>
               	</li>
                 <li>
                 	<a>
-                 		<p class="predict-time">13:00</p>
-                 		<img src="statics/images/zhibo/jiabin2.jpg" alt="">
-                  		<p class="predict-name">主持人 嘉宾<br>股市下午“察”</p>
-                   		<div>进入直播间</div>
-                   	</a>
-              	</li>
-                <li>
-                	<a>
-                 		<p class="predict-time">9:30</p>
-                 		<img src="statics/images/zhibo/zhuchi1.jpg" alt="">
+                 		<p class="predict-time">11:30</p>
+                 		<img src="statics/images/zhibo/jiabin1.jpeg" alt="">
                   		<p class="predict-name">主持人 嘉宾<br>问答聊股</p>
                    		<div>进入直播间</div>
                    	</a>
@@ -565,6 +450,14 @@
                 	<a>
                  		<p class="predict-time">13:00</p>
                  		<img src="statics/images/zhibo/zhuchi2.jpg" alt="">
+                  		<p class="predict-name">主持人 嘉宾<br>股市下午“察”</p>
+                   		<div>进入直播间</div>
+                   	</a>
+              	</li>
+                <li>
+                	<a>
+                 		<p class="predict-time">15:00</p>
+                 		<img src="statics/images/zhibo/jiabin2.jpg" alt="">
                   		<p class="predict-name">主持人 嘉宾<br>复盘点评</p>
                    		<div>进入直播间</div>
                    	</a>
@@ -573,8 +466,8 @@
         </div>
         <!--课程预告结束-->
     </div>
-  <!--讲师介绍与课程预告结束-->
-  <!--栏目上方结束-->
+  	<!--讲师介绍与课程预告结束-->
+  	<!--栏目上方结束-->
 </div>
 <!--main结束-->
 <!--广告位1--->
@@ -602,12 +495,8 @@
   	</div>
 </div>
 <!--最热栏目结束-->
-
 <!--投资者教育园地开始-->
 <div class="investor-education">
-<!--	<h3 class="title-bg">
-		<div class="title"><img src="http://www.51niutu.com/statics/images/icon-t4.png" width="10%" height="10%"> 投资者教育园地</div>
-    </h3>-->
     <div class="edu-list">
 		<div class="section-title"><p><img src="statics/images/section-icon/edu.png" />投资者教育园地<span>投资者防骗手册</span><a href="http://www.51niutu.com/stock/fengxian/" target="_blank">更多专题&gt;&gt;</a></p></div>
     	<ul>
@@ -643,7 +532,6 @@
             </li>
 		</ul>
     </div>
-    
     <div class="stock-humor">
 		<div class="section-title"><p><img src="statics/images/section-icon/humor.png" />股市小幽默</p></div>
 		<ul>
@@ -682,7 +570,7 @@
 <div class="clear"></div>
 <div style="width:1170px;margin:40px auto;">
 <div style="margin-bottom:40px;"><script language="javascript" src="http://www.51niutu.com/index.php?m=poster&c=index&a=show_poster&id=20"></script></div>
-<!-- 底部四大板块 S-->
+<!--猜你喜欢开始-->
 <div class="mingjia" style="padding-top:0;">
 	<h3 class="mingjia-bg">
     	<div class="mingjia-title"><img src="http://www.51niutu.com/statics/images/msfc_icon.png" width="25" height="25"> 猜你喜欢 <a href="http://www.51niutu.com/index.php?m=content&c=index&a=lists&catid=102" target="_blank"><img src="http://www.51niutu.com/statics/images/icon-gengduo.png" width="20" height="20"></a></div>
@@ -837,8 +725,8 @@
 		</div>
 	</div> 
 </div> 
-<!-- 底部四大板块 E-->
-<!--友情链接开始-->
+<!--猜你喜欢结束-->
+<!--企业合作认证平台开始-->
 <div class="friend-link">
 	<h5><img src="statics/images/collaboration-link/renzheng.png">企业合作认证平台</h5>
     <div class="bk10"></div>
@@ -852,115 +740,10 @@
     </ul>
 </div>
 <div class="bk10"></div>
-<!--友情链接结束-->
+<!--企业合作认证平台结束-->
 </div>  
-<SCRIPT>
-	var D=YAHOO.util.Dom, E=YAHOO.util.Event;
-	KISSY().use("*", function(S) {
-		var el = D.get('J_slide'),
-			activeIndex = parseInt(el.getAttribute('data-active-index')) || 0;
-
-		var carousel = new S.Carousel(el, {
-			hasTriggers: false,
-			navCls: 'ks-switchable-nav',
-			contentCls: 'ad_body',
-			activeTriggerCls: 'current',
-			effect: "scrollx",
-			steps: 4,
-			viewSize: [1170],
-			activeIndex: activeIndex
-		});
-		E.on('J_prev', 'click', carousel.prev, carousel, true);
-		E.on('J_next', 'click', carousel.next, carousel, true);
-	});	
-/*	KISSY().use("*", function(S) {
-		var el = D.get('J_slides'),
-			activeIndex = parseInt(el.getAttribute('data-active-index')) || 0;
-
-		var carousel = new S.Carousel(el, {
-			hasTriggers: false,
-			navCls: 'ks-switchable-nav',
-			contentCls: 'ad_bodyy',
-			activeTriggerCls: 'current',
-			effect: "scrollx",
-			steps: 4,
-			viewSize: [1170],
-			activeIndex: activeIndex
-		});
-		E.on('J_prevv', 'click', carousel.prev, carousel, true);
-		E.on('J_nextt', 'click', carousel.next, carousel, true);
-	});	*/
-</SCRIPT> 
 <!--栏目上方结束-->
 <div class="bk10"></div>
-<script src="http://www.51niutu.com/statics/js/tab/jquery.animateNumber.min.js"></script>
-<script type="text/javascript" src="http://www.51niutu.com/statics/js/slides.js"></script>  
-<script>
-//数字滚动
-$(function () {
-	$('#numberscoll .item').each(function(){
-		var $obj=$(this).find('span');
-		var n=$obj.text();
-		$obj.html('');
-		for (var i=0;i<n.length;i++)
-		{
-			var $number =$('<i>'+n.charAt(i)+'</i>');
-			$obj.append($number);
-			var decimal_places = 0;
-			var decimal_factor = decimal_places === 0 ? 1 : decimal_places * 10;
-			var j=0;
-			while (j<10)
-			{
-				$number.animateNumber(
-				{
-					  number: n.charAt(i) * decimal_factor, numberStep: function(now, tween) {
-						var floored_number = Math.floor(now) / decimal_factor,
-							target = $(tween.elem);
-				 
-						if (decimal_places > 0) {
-						  floored_number = floored_number.toFixed(decimal_places);
-				 
-						  floored_number = floored_number.toString().replace('.', ',');
-						}
-				 
-						target.html(floored_number);
-					  }
-					},
-					200
-				  );
-				j++;
-			}
-			}
-	});
-	$(document).ready(function() {	
-		$('.piece').hover(function(){
-			$(this).find('.deg').css({'display':'block'})
-			$(this).find('.org').css({'display':'none'})
-		},function(){
-			$(this).find('.deg').css({'display':'none'})
-			$(this).find('.org').css({'display':'block'})
-		});
-		
-		$('#zhibo_index a').hover(function(){
-			$(this).find('.player').css({'display':'block'})
-		},function(){
-			$(this).find('.player').css({'display':'none'})
-		});
-	});
-
-});
-/* ====  imageslides ==== */
-if($.browser.msie&&($.browser.version == "6.0")&&!$.support.style){ 
-	imf.create("imageFlow", 0.78, 1, 30);
-	$(document).ready(function(){
-		$(".arrow-left").attr("style","filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src='http://www.51niutu.com/statics/images/btn_Pro_show_left.png')");
-		$(".arrow-right").attr("style","filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src='http://www.51niutu.com/statics/images/btn_Pro_show_right.png')");
-	});
-} else { 
-	imf.create("imageFlow", 0.3, 1.5, 30);
-} 
-</script> 
-<link href="http://www.51niutu.com/statics/css/niutu.css" rel="stylesheet" type="text/css">
 <div id="box-kefu">
     <div class="kefu-close"></div>
     <div class="kefu-open">
@@ -968,9 +751,7 @@ if($.browser.msie&&($.browser.version == "6.0")&&!$.support.style){
         	<ul>
             	<li><a href="http://wpa.qq.com/msgrd?v=3&uin=918595590&site=qq&menu=yes" title="点击这里给我发消息" target="_blank"><i class="qq"></i>网站导航</a></li>
             	<li><a href="http://wpa.qq.com/msgrd?v=3&uin=918662627&site=qq&menu=yes" title="点击这里给我发消息" target="_blank"><i class="qq"></i>投诉建议</a></li>
-<!--            <li><a href="http://wpa.qq.com/msgrd?v=3&uin=918570125&site=qq&menu=yes" title="点击这里给我发消息" target="_blank"><i class="qq"></i>内容合作</a></li>-->
            		<li><a href="http://wpa.qq.com/msgrd?v=3&uin=918669270&site=qq&menu=yes" title="点击这里给我发消息" target="_blank"><i class="qq"></i>售后服务</a></li>
-            <!-- <li><a href="http://wpa.qq.com/msgrd?v=3&uin=46879387&site=qq&menu=yes" title="点击这里给我发消息" target="_blank"><i class="qq"></i>名师加盟</a></li>-->
         	</ul>
         </div>
         <a href="javascript:;" class="close">关闭</a>
@@ -1030,7 +811,7 @@ if($.browser.msie&&($.browser.version == "6.0")&&!$.support.style){
 <!--footer E-->   
 <div id="top"></div>
 <script>var online= new Array();</script>
-<script src="http://webpresence.qq.com/getonline?Type=1&645481746:1712816412:645481746:"></script>
+<script src="http://webpresence.qq.com/getonline?Type=1&918595590:918662627:918669270:"></script>
 <script>
 	//在线客服 
 	(function(tt){
@@ -1044,7 +825,6 @@ if($.browser.msie&&($.browser.version == "6.0")&&!$.support.style){
 		},function(){
 			$(this).stop(true,true).animate({paddingLeft:35},200).find("i").stop(true,true).animate({left:10},200);
 		});
-
 		_close.click(function(){
 			_close.animate({width:44},200,function(){
 				_close.animate({width:0},200,function(){
@@ -1052,7 +832,6 @@ if($.browser.msie&&($.browser.version == "6.0")&&!$.support.style){
 				});
 			});
 		});
-		
 		 _open.find(".close").click(function(){
 			_open.animate({width:148},200,function(){
 				_open.animate({width:0},200,function(){
@@ -1061,49 +840,147 @@ if($.browser.msie&&($.browser.version == "6.0")&&!$.support.style){
 			});
 		});
 	})(jQuery)		
-
-	$(function(){
-		$(".picbig").each(function(i){
-			var cur = $(this).find('.img-wrap').eq(0);
-			var w = cur.width();
-			var h = cur.height();
-		   $(this).find('.img-wrap img').LoadImage(true, w, h,'http://www.51niutu.com/statics/images/msg_img/loading.gif');
-		});
-	})
-
 	var _hmt = _hmt || [];
-	(function() {
+	(function(){
 	  var hm = document.createElement("script");
 	  hm.src = "//hm.baidu.com/hm.js?9f9678e9a09f271381512358210a4c9e";
 	  var s = document.getElementsByTagName("script")[0]; 
 	  s.parentNode.insertBefore(hm, s);
 	})();
-	
-	//首页栏目鼠标经过
-	$(document).ready(function() {	
-		$('.cf li').hover(function(){
-			$(this).find('.lesson-infor').css("height","135px");
-			$(this).find('.lessonplay').css("opacity","1");
-			$(this).find('.lesson-infor p').css({'display':'block','height':'52px'})
+</script>
+<script type="text/javascript" src="http://www.51niutu.com/statics/js/search_common.js"></script>
+<script type="text/javascript" src="http://www.51niutu.com/statics/js/cookie.js"></script> 
+<script type="text/javascript" src="http://www.51niutu.com/statics/js/top.js"></script>
+<script>
+	$(function(){
+		//通用头部搜索切换
+		$('#search-hd .search-input').on('input propertychange',function(){
+			var val = $(this).val();
+			if(val.length > 0){
+				$('#search-hd .pholder').hide(0);
+			}else{
+				var index = $('#search-bd li.selected').index();
+				$('#search-hd .pholder').eq(index).show().siblings('.pholder').hide(0);
+			}
+		})
+		$('#search-bd li').click(function(){
+			var index = $(this).index();
+			$('#search-hd .pholder').eq(index).show().siblings('.pholder').hide(0);
+			$('#search-hd .search-input').eq(index).show().siblings('.search-input').hide(0);
+			$(this).addClass('selected').siblings().removeClass('selected');
+			$('#search-hd .search-input').val('');
+		});
+	})
+</script>
+<script type="text/javascript" src="http://www.51niutu.com/statics/js/jquery.sgallery.js"></script>
+<script>
+	//焦点图
+	$(function(){
+		new slide("#main-slide","cur",1054,361,1);//焦点图
+		new SwapTab(".SwapTab","span",".tab-content","ul","fb");//排行TAB
+	})
+	//直播内容
+	function getTime(){
+		var time1="9:30";	
+		var time2="11:30";	
+		var time3="13:00";	
+		var time4="15:00";	
+		var strb = time1.split (":");
+		var stre = time2.split (":");
+		var strb1 = time3.split (":");
+		var stre1 = time4.split (":");
+		var b = new Date ();
+		var e = new Date ();
+		var b1 = new Date ();
+		var e1 = new Date ();
+		var n = new Date ();
+		var week=n.getDay();
+		b.setHours (strb[0]);
+		b.setMinutes (strb[1]);
+		e.setHours (stre[0]);
+		e.setMinutes (stre[1]);
+		b1.setHours (strb1[0]);
+		b1.setMinutes (strb1[1]);
+		e1.setHours (stre1[0]);
+		e1.setMinutes (stre1[1]);
+		if(n.getTime () - b.getTime () > 0 && n.getTime () - e.getTime () < 0 && week != '0' && week != '6'){
+			document.getElementById('zhibo_left').innerHTML='<a><img src="http://www.51niutu.com/statics/images/zhibo/sw.jpg"><span class="zhibo_index-icon"></span><i class="player"></i></a><div class="z_name"><p><img src="statics/images/zhibo/zhuchi1.jpg" width="100" height="100"><img src="statics/images/zhibo/jiabin1.jpeg" width="100" height="100"></p><p class="zc_name"><span>主持人</span><span>嘉宾</span></p><p class="vidnew-time"><i>09:30</i><span class="sku-end">-11:30</span></p></div>';
+		}else{
+			document.getElementById('zhibo_left').innerHTML='<a><img src="http://www.51niutu.com/statics/images/zhibo/sw.jpg"><span class="zhibo_index-icon" style="background: url(http://www.51niutu.com/statics/images/zhibo/hf_index-icon.png) no-repeat;"></span><i class="player"></i></a><div class="z_name"><p><img src="statics/images/zhibo/zhuchi1.jpg" width="100" height="100"><img src="statics/images/zhibo/jiabin1.jpeg" width="100" height="100"></p><p class="zc_name"><span>主持人</span><span>嘉宾</span></p><p class="vidnew-time"><i>09:30</i><span class="sku-end">-11:30</span></p></div>';
+		}
+		if(n.getTime () - b1.getTime () > 0 && n.getTime () - e1.getTime () < 0 && week != '0' && week != '6'){
+			document.getElementById('zhibo_right').innerHTML='<a><img src="http://www.51niutu.com/statics/images/zhibo/xw.jpg" ><span class="zhibo_index-icon"></span><i class="player"></i></a><div class="z_name"><p><img src="statics/images/zhibo/zhuchi2.jpg" width="100" height="100"><img src="statics/images/zhibo/jiabin2.jpg" width="100" height="100"></p><p class="zc_name"><span>主持人</span><span>嘉宾</span></p><p class="vidnew-time"><i>13:00</i><span class="sku-end">-15:00</span></p></div>';
+		}else{
+			document.getElementById('zhibo_right').innerHTML='<a><img src="http://www.51niutu.com/statics/images/zhibo/xw.jpg" ><span class="zhibo_index-icon" style="background: url(http://www.51niutu.com/statics/images/zhibo/hf_index-icon.png) no-repeat;"></span><i class="player"></i></a><div class="z_name"><p><img src="statics/images/zhibo/zhuchi2.jpg" width="100" height="100"><img src="statics/images/zhibo/jiabin2.jpg" width="100" height="100"></p><p class="zc_name"><span>主持人</span><span>嘉宾</span></p><p class="vidnew-time"><i>13:00</i><span class="sku-end">-15:00</span></p></div>';
+		}
+	}
+	getTime();
+	//鼠标经过直播
+	$(document).ready(function(){	
+		$('#zhibo_index a').hover(function(){
+			$(this).find('.player').css({'display':'block'})
 		},function(){
-			$(this).find('.lesson-infor').css("height","88px");
-			$(this).find('.lessonplay').css("opacity","0");
-			$(this).find('.lesson-infor p').css({"display":"none","height":"0"})
+			$(this).find('.player').css({'display':'none'})
 		});
 	});
-	
-		$(function(){
-			$(".Page li").hover(
-				function(){
-					$(this).find('dl').css('display','block');
-				},
-				function(){
-					$(this).find('dl').css('display','none');
-				}
-				)
-			});
-
+</script>
+<script src="http://www.51niutu.com/statics/js/tabpic.js"></script>
+<script>
+	/*原创微课滚动*/
+	var D=YAHOO.util.Dom, E=YAHOO.util.Event;
+	KISSY().use("*", function(S) {
+		var el = D.get('J_slide'),
+			activeIndex = parseInt(el.getAttribute('data-active-index')) || 0;
+		var carousel = new S.Carousel(el, {
+			hasTriggers: false,
+			navCls: 'ks-switchable-nav',
+			contentCls: 'ad_body',
+			activeTriggerCls: 'current',
+			effect: "scrollx",
+			steps: 4,
+			viewSize: [1170],
+			activeIndex: activeIndex
+		});
+		E.on('J_prev', 'click', carousel.prev, carousel, true);
+		E.on('J_next', 'click', carousel.next, carousel, true);
+	});	
 </script> 
-<script type="text/javascript" src="http://www.51niutu.com/statics/js/top.js"></script>
+<script>
+	//六个图片手风琴效果
+	$(function(){
+		var li = $(".aty-accordion li");
+		var OPEN_W = 290;
+		var CLOSE_W = 120;
+		var acctimer = null;
+		li.mouseover(function(){
+			var _this = $(this);
+			acctimer = setTimeout(function(){
+				if(_this.hasClass("open")){
+					return;
+				}
+				$(".aty-accordion .open").stop().animate({"width":CLOSE_W+"px"},300).find("img").stop().animate({"margin-left":0 + "px"},300);
+				li.removeClass("open");
+				_this.addClass("open");
+				_this.stop().animate({"width":OPEN_W+"px"},300).find("img").stop().animate({"margin-left":- CLOSE_W + "px"},300);
+			},150);
+		})
+		li.mouseout(function(){
+			clearTimeout(acctimer);
+		})
+	});
+</script>
+<script type="text/javascript" src="http://www.51niutu.com/statics/js/slides.js"></script>
+<script>
+	/*猜你喜欢*/
+	if($.browser.msie&&($.browser.version == "6.0")&&!$.support.style){ 
+		imf.create("imageFlow", 0.78, 1, 30);
+		$(document).ready(function(){
+			$(".arrow-left").attr("style","filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src='http://www.51niutu.com/statics/images/btn_Pro_show_left.png')");
+			$(".arrow-right").attr("style","filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src='http://www.51niutu.com/statics/images/btn_Pro_show_right.png')");
+		});
+	} else { 
+		imf.create("imageFlow", 0.3, 1.5, 30);
+	}
+</script> 
 </body>
 </html> 
