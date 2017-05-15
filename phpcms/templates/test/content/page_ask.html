@@ -1,0 +1,145 @@
+{template "content","header1170"}
+<link rel="stylesheet" href="{CSS_PATH}ask.css" type="text/css">
+<!-- 遮罩 S -->
+	<div id="dialog-overlay" style="opacity:0.5;filter:alpha(opacity=50);"></div>
+	<div id="dialog-box" style="background:#fff;">
+		<div class="dialog-content">
+			<div id="dialog-message"><form action="{APP_PATH}index.php?m=ask&c=index&a=ask_add" name="myform" method="post" id="myform"><div class="mb_20"><label class="input_label"><b>分　类：</b></label><select name="type"><option value="1">股票</option><option value="2">理财</option><option value="3">基金</option><option value="4">港股</option><option value="5">期货</option><option value="6">外汇</option><option value="7">贵金属</option><option value="8">新三板</option><option value="9">互联网金融</option><option value="10">股权众筹</option></select></div><textarea placeholder="请输入您的问题" name="content" id="content"></textarea><br><a href="javascript:;" id="ask">我要提问</a></form></div>
+			<a href="#" class="close" style="position: absolute;top: -15px;right: -15px;"><img src="{IMG_PATH}close.png"></a>
+		</div>
+	</div>
+<!-- 遮罩 E -->
+<!--nav-->
+<div class="qa_container_spacing qa_home">
+    <div class="layout_n clearfix" style="margin: 0px auto;"> 
+        <!-- extra start -->
+        <div class="layout_w140 layout_extra"> 
+            <!-- 分类导航 start -->
+            <div class="qa_navigator">
+                <div class="qa_navigator_wrap">
+                    <ul class="nav_list">
+                        <li class="nav_item {if empty($_GET['t'])}nav_active{/if}"> <a  href="{APP_PATH}index.php?m=ask&c=index&a=ask_search" class="all">全部分类</a></li>
+                        <li class="nav_item {if $_GET['t']==1}nav_active{/if}"><a href="{APP_PATH}index.php?m=ask&c=index&a=ask_search&t=1{if isset($_GET['l'])}&l={$_GET['l']}{/if}">股票</a></li>
+                        <li class="nav_item {if $_GET['t']==2}nav_active{/if}"><a href="{APP_PATH}index.php?m=ask&c=index&a=ask_search&t=2{if isset($_GET['l'])}&l={$_GET['l']}{/if}">理财</a></li>
+                        <li class="nav_item {if $_GET['t']==3}nav_active{/if}"><a href="{APP_PATH}index.php?m=ask&c=index&a=ask_search&t=3{if isset($_GET['l'])}&l={$_GET['l']}{/if}">基金</a></li>
+                        <li class="nav_item {if $_GET['t']==4}nav_active{/if}"><a href="{APP_PATH}index.php?m=ask&c=index&a=ask_search&t=4{if isset($_GET['l'])}&l={$_GET['l']}{/if}">港股</a></li>
+                        <li class="nav_item {if $_GET['t']==5}nav_active{/if}"><a href="{APP_PATH}index.php?m=ask&c=index&a=ask_search&t=5{if isset($_GET['l'])}&l={$_GET['l']}{/if}" >期货</a></li>
+                        <li class="nav_item {if $_GET['t']==6}nav_active{/if}"><a href="{APP_PATH}index.php?m=ask&c=index&a=ask_search&t=6{if isset($_GET['l'])}&l={$_GET['l']}{/if}">外汇</a></li>
+                        <li class="nav_item {if $_GET['t']==7}nav_active{/if}"><a href="{APP_PATH}index.php?m=ask&c=index&a=ask_search&t=7{if isset($_GET['l'])}&l={$_GET['l']}{/if}">贵金属</a></li>
+                        <li class="nav_item {if $_GET['t']==8}nav_active{/if}"><a href="{APP_PATH}index.php?m=ask&c=index&a=ask_search&t=8{if isset($_GET['l'])}&l={$_GET['l']}{/if}">新三板</a></li>
+                        <li class="nav_item {if $_GET['t']==9}nav_active{/if}"><a href="{APP_PATH}index.php?m=ask&c=index&a=ask_search&t=9{if isset($_GET['l'])}&l={$_GET['l']}{/if}">互联网金融</a></li>
+                        <li class="nav_item {if $_GET['t']==10}nav_active{/if}"><a href="{APP_PATH}index.php?m=ask&c=index&a=ask_search&t=10{if isset($_GET['l'])}&l={$_GET['l']}{/if}">股权众筹</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 分类导航 end --> 
+        </div>
+        <!-- extra end --> 
+        
+        <!-- main start -->
+        <div class="layout_w740 layout_main">
+            <div class="qa_pub_content"> 
+				<div class="find">
+					<form action="{APP_PATH}index.php?m=ask&c=index&a=ask_search" method="post" name="form_search">
+					<input type="text" name="keywords" value="{$_POST['keywords']}" placeholder="请输入要查询的关键字"  class="ask_input"/>
+					<input type="submit" value="筛选" class="ask_select"/>
+					</form>
+				</div>
+                <!-- 分类 start -->
+                <div class="pub_cate">
+                    <ul class="clearfix">
+                        <li  class="item {if $_GET['l']==1  || empty($_GET['l'])}active{/if}"><a href="{APP_PATH}index.php?m=ask&c=index&a=ask_search&l=1{if isset($_GET['t'])}&t={$_GET['t']}{/if}">新问题</a></li>
+                        <li  class="item {if $_GET['l']==2}active{/if}"><a href="{APP_PATH}index.php?m=ask&c=index&a=ask_search&l=2{if isset($_GET['t'])}&t={$_GET['t']}{/if}">待解决问题</a></li>
+                        <li class="item {if $_GET['l']==3}active{/if}"><a href="{APP_PATH}index.php?m=ask&c=index&a=ask_search&l=3{if isset($_GET['t'])}&t={$_GET['t']}{/if}" >已解决问题</a></li>
+                    </ul>
+                </div>
+                <!-- 分类 end -->
+                <div class="qa_notice_box" style="display: none"> </div>
+                <div class="pub_list">
+                    <ul>
+						{loop $new_ask $v}
+							<li class="pub_item">
+								<div class="pub_item_wrap clearfix">
+									<div class="u_counter">
+										<div class="u_counter_wrap"> <span class="num"><b>{$v['ask_replies']}</b></span> <span class="txt">回答</span> </div>
+									</div>
+									<div class="pub_summary">
+										<div class="pub_title" style="cursor:pointer;"> 
+											<a title="{$v['ask_content']}" target="_blank" href="{APP_PATH}index.php?m=ask&c=index&a=ask_show&id={$v[id]}">{$v['ask_content']}</a> 
+										</div>
+										<div class="pub_meta clearfix"> <small class="meta_item time_item">
+										{if $v['ask_replies']==0}{date('Y-m-d H:i:s',$v['ask_inputtime'])}{else}{date('Y-m-d H:i:s',$v['ask_inputtime'])}添加了新答案{/if}</small> <small class="meta_item num_item"></small> </div>
+									</div>
+									
+									
+							</li>
+						{/loop}
+						{if empty($new_ask)}
+						<li style="text-align:center;height:400px;line-height:400px;">没有相关问题哦~</li>
+						{/if}
+						<div id="pages" class="text-c" style="padding:20px 0;">{$new_pages}</div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- main end --> 
+        <!-- right start -->
+        <div class="layout_w260 layout_aside">
+            <!-- 引导提问 start --> 
+            <div class="qa_guide_dir">
+                <div class="qa_guide_dir_wrap"> <a class="u_btn u_btn_big_flat" href="javascript:popup('');">免费提问</a>
+                </div>
+            </div>
+            <!-- 引导提问 end --> 
+			<div class="qa_problem_slove_stat">
+				<div class="qa_problem_slove_stat_wrap">
+					<span class="text start">已解决</span>
+					<span class="text num">{$resolved}</span>
+					<span class="text ended">问题</span>
+				</div>
+			</div>
+            <!-- 引导注册 start -->
+            <div class="qa_guide_reg">
+                <div class="qa_guide_reg_wrap">
+                    <ul>
+                        <li class="item item_01">这是一个专业的问答社区</li>
+                        <li class="item item_02">投资者可以寻求到专业解答</li>
+                        <li class="item item_03">理财顾问获得更多客户</li>
+                    </ul>
+                    <div class="qa_guide_reg_operation clearfix"> <a class="u_btn u_btn_graywhite btn_guide_signin" href="http://www.51niutu.com/index.php?m=member&c=index&a=register&siteid=1" target="_blank">注册成为用户</a> <a class="u_btn u_btn_graywhite btn_guide_signup" href="http://www.51niutu.com/index.php?m=member&c=index&a=login&forward=http%3A%2F%2Fwww.51niutu.com%2Flist-103-1.html&siteid=1" id="login" target="_blank">登录</a> </div>
+                </div>
+            </div>
+            <!-- 引导注册 end --> 
+        </div>
+        <!-- right end --> 
+    </div>
+</div>
+<script>
+//Popup dialog
+function popup(message) {
+var maskHeight = $(document).height();
+var maskWidth = $(window).width();
+var dialogTop =  (maskHeight/2) -430;
+var dialogLeft = (maskWidth/2) - ($('#dialog-box').width()/2);
+$('#dialog-overlay').css({height:maskHeight, width:maskWidth}).show();
+$('#dialog-box').css({top:dialogTop, left:dialogLeft}).show();
+}
+$(document).ready(function () {
+	$('.close').click(function () {
+	$('#dialog-overlay, #dialog-box').hide();
+	return false;
+	});
+	$(window).resize(function () {
+	if ($('#dialog-box').is(':hidden')) popup();
+	});
+        $("#ask").click(function(){
+            if($("#content").val()==''){
+                alert("不能为空");
+            }else{
+                $("#myform").submit();
+            }
+        });
+});
+
+</script>
+{template "content","footer"}
