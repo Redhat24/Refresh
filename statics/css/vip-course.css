@@ -9,34 +9,26 @@
 .full-section p{line-height:1.5;}
 .space{height:50px; clear:both;}
 .section{width:1200px;height:auto;margin:40px auto;position:relative;color:#fff;font-size:20px;overflow:hidden;}
-.section .h2{font-size:38px;margin:40px auto;background:#e4d857\9;background: -moz-linear-gradient(top,#e4d857,#fff8a9,#e4d857);background:-webkit-gradient(linear,top,from(#e4d857),color-stop(0.5,#fff8a9),to(#e4d857));background:-webkit-linear-gradient(top,#e4d857,#fff8a9,#ded357);background: -o-linear-gradient(top,#e4d857,#fff8a9,#e4d857);width:250px;height:75px;line-height:75px;border-radius:10px;text-align:center;color:#072547;}
+.section .h2{font-size:38px;margin:40px auto;background:url(../images/vip-course/title.png) no-repeat;width:311px;height:75px;line-height:75px;text-align:center;color:#072547;}
 .bg4 .h2{background: -moz-linear-gradient(top,#289ba3,#26dfe3,#289ba3);background:-webkit-gradient(linear,top,from(#289ba3),color-stop(0.5,#26dfe3),to(#289ba3));background: -webkit-linear-gradient(top,#289ba3,#26dfe3,#289aa2);background: -o-linear-gradient(top,#289ba3,#26dfe3,#289ba3);}
 .bg3 .h2{background: -moz-linear-gradient(top,#24b2b5,#58fbff,#24b3b5);background:-webkit-gradient(linear,top,from(#24b2b5),color-stop(0.5,#58fbff),to(#24b2b5));background: -webkit-linear-gradient(top,#24b2b5,#58fbff,#24b3b5);background: -o-linear-gradient(top,#24b2b5,#58fbff,#24b3b5);}
-.section .h2.wider{width:350px;}
+.section .h2.wider{width:472px;background:url(../images/vip-course/title-wild.png) no-repeat;}
 .section .h2 b{display:block;position:absolute;top:-80px;}
 /*顶部banner*/
-.teach-pic{height:532px;background:url(http://sf.yxcps.cn/sy/images/duyehuagjk/03/bann1.jpg) no-repeat top center;position: relative;}
-.teach-pic{height:532px;background:url(../images/vip-course/teach-banner.png) no-repeat top center;}
-.teach-pic .section{margin:0 auto;}
-.teach-pic .teach-info{position:relative;width:400px;float:left;padding-top:400px;padding-left:20px;}
-.teach-pic .teach-info h3{font-size:22px;font-weight:400;padding-bottom:5px;}
-.teach-pic .teach-info p{color:#000;font-size:18px;background:rgba(255,255,255,0.37);background:#819fb4\9;padding-left:8px;width:284px;line-height:1.5;}
-.teach-pic .cours-info{position:relative;margin-left:400px;height:532px;}
-.teach-pic .cours-info h1{position:absolute;top:150px;font-size:80px;text-shadow:10px 5px 5px #585822;color:#ffc721;}
-.teach-pic .cours-info h2{position:absolute;top:280px;font-size:48px;left:170px;text-shadow:5px 10px 10px #271515;}
-.teach-pic .cours-info h3{position:absolute;font-size:30px;color:#1b304d;top:89px;left:10px;}
-.teach-pic .cours-info p{position:absolute;font-size:28px;font-weight:400;color:#1b304d;top:381px;left:115px;}
-.teach-pic .cours-info p span{position:absolute;width:60px;}
-.teach-pic .cours-info p span.label2{left:90px;}
-.teach-pic .cours-info p span.label3{left:180px;}
-.teach-pic .cours-info p span.label4{left:270px;}
-.teach-pic .cours-info p span.label5{left:360px;}
+.teach-pic{height:530px;}
+.teach-pic.page1 .course1-banner1{height:179px;background:url(../images/vip-course/course1-banner1.png) no-repeat center center;}
+.teach-pic.page1 .course1-banner2{height:178px;background:url(../images/vip-course/course1-banner2.png) no-repeat center center;}
+.teach-pic.page1 .course1-banner3{height:173px;background:url(../images/vip-course/course1-banner3.png) no-repeat center center;}
+.teach-pic.page2 .course2-banner1{height:179px;background:url(../images/vip-course/course2-banner1.png) no-repeat center center;}
+.teach-pic.page2 .course2-banner2{height:178px;background:url(../images/vip-course/course2-banner2.png) no-repeat center center;}
+.teach-pic.page2 .course2-banner3{height:173px;background:url(../images/vip-course/course2-banner3.png) no-repeat center center;}
 /*讲师介绍*/
 .teach-intro{border:2px solid #fff;}
 .teach-intro div{overflow:hidden;padding:30px 0;}
 .teach-intro h2{color:#E4D857;}
-.teach-intro p{width:470px;float:left;margin:30px 0 0 70px;padding:25px 0;text-align:left;}
-.teach-intro .p1{margin-left:90px;background:rgba(255,255,255,0.09);background:#2e2d76\9;padding:25px;}
+.teach-intro p{margin:30px 70px;padding:25px;background:rgba(255,255,255,0.09);background:#2e2d76\9;text-align:left;text-indent:2em;line-height:1.8;}
+.teach-intro.page1 p{float:left;width:470px;margin-right:0;}
+.teach-intro.page1 .p2{background:none;margin-left:50px;}
 /*导航*/
 .fixed-nav{height:70px;width:1200px;margin:0px auto;position:relative;}
 .fixed-nav .content{z-index:2;position:absolute;top:0;width:1200px;height:70px;line-height:70px;background:#069;}
@@ -66,6 +58,13 @@ table{border-collapse:collapse;}
 .bijiao th{background:#E4D857;height:50px;font-size:25px;color:#072547;border:2px solid #E4D857;}
 .bijiao td{border:2px solid #E4D857;vertical-align:top;}
 .bijiao table table td{border:none;}
+	/*page1*/
+.bijiao .page1-tab .gongkai{width:150px;}
+.bijiao .page1-tab ul{list-style:none;padding:15px;}
+.bijiao .page1-tab li{font-size:14px;padding-bottom:10px;}
+.bijiao .page1-tab td th{background:none;font-size:16px;color:#fff;border:none;}
+.bijiao .page1-tab table th+th,.bijiao .page1-tab table td+td{border-left:1px dashed #E4D857;}
+.bijiao .page1-tab table ul{padding-top:0;padding-bottom:70px;}
 	/*page2*/
 .bijiao.page2 th{background:#34bec7;border-color:#34bec7;}
 .bijiao.page2 td{border-color:#34bec7;}
@@ -74,13 +73,16 @@ table{border-collapse:collapse;}
 .course-time .info{float:left;margin-left:120px;text-align:left;margin-bottom:20px;}
 .course-time .info p{line-height:2.5;}
 .course-time .info img{width:30px;vertical-align:middle;padding-right:10px;}
-.course-time .detail{clear:both;border:1px solid #21446b;padding:20px 40px;font-size:25px;}
-.course-time .btn{width:216px;height:62px;position:absolute;top:200px;left:814px;border:4px solid #a0983b;}
-.course-time .btn a{display:block;width:216px;height:62px;font-size:26px;font-weight:600;background-color:#E4D857;line-height:62px;}
+.course-time .detail{clear:both;border:1px solid #21446b;padding:20px 40px;font-size:24px;}
+.course-time .btn{width:216px;height:62px;position:absolute;top:230px;left:840px;border:4px solid #a0983b;}
+.course-time .btn a{display:block;width:216px;height:62px;font-size:26px;font-weight:600;background-color:#E4D857;line-height:62px;color:#333;}
+	/*page1*/
+.course-time.page1 .btn:hover{border-color:#c7bc45;}
+.course-time.page1 .btn:hover a{background-color:#fff375;}
 	/*page2*/
 .course-time.page2 .btn{border-color:#1cb2b5;}
 .course-time.page2 .btn:hover{border-color:#18c6ca;}
-.course-time.page2 .btn a{background-color:#06e1e6;color:#333;}
+.course-time.page2 .btn a{background-color:#06e1e6;}
 .course-time.page2 .btn:hover a{background-color:#36fbff;}
 .course-time.page2 .detail{border-color:#96bfc3;}
 /*经典案例*/
@@ -88,9 +90,14 @@ table{border-collapse:collapse;}
 .good-anli div p{width:90%;margin:5px auto 20px;border:1px solid #5588ab;line-height:2;}
 .good-anli div img{border:1px solid #5588ab;padding: 3px;}
 .good-anli div img+img{margin-left:15px;}
+.good-anli.page1 div{background:rgba(63,43,123,0.37);}
+.good-anli.page1 div p,.good-anli.page1 div img{border-color:#5d3cd4;}
+
 /*学员评价*/
 .stu-judge div{text-align:left;text-indent:2em;background:#167680;padding:20px;}
 .stu-judge div p{line-height:2;}
+.stu-judge.page1 div{background:#2e295d;}
+
 /*私人订制部分*/
 .banner{background:url(../images/vip-course/dingzhi.gif) no-repeat top center;background-size:100% 500px;height:500px; background-color:#000;}
 .wrap{width:100%;}

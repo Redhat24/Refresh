@@ -30,7 +30,7 @@
 .banner-card{background: url(../images/star-pic.jpg) no-repeat;float:right;width:308px;height:360px;overflow:hidden;text-align:center;color:#fff;font-family:"微软雅黑";position:relative;}
 .banner-card .plan-type{margin:25px 10px 0;font-size:18px;display:inline-block;}
 .banner-card .plan-title{margin:15px;font-size:16px;font-weight:600;}
-.banner-card .plan-intro{text-align:left;font-size:14px;padding:0 5px;height:60px;overflow:hidden;}
+.banner-card .plan-intro{text-align:left;font-size:14px;padding:0 5px;height:80px;overflow:hidden;}
 .banner-card .plan-teacher,.banner-card .plan-time{width:30%;display:inline-block;float:left;position:absolute;bottom:105px;}
 .banner-card .plan-teacher{left:50px;}
 .banner-card .plan-time{left:165px;}

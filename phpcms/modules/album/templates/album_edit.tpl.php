@@ -77,7 +77,7 @@ include $this->admin_tpl('header', 'admin');
 	<table width="100%" class="table_form">
 		<tr>
 			<th align="right" valign="top" width="200"><?php echo L('default_readpoint');?></th>
-			<td><input type="text" name="album[price]" value="<?php echo $info['price']?>" size="4" maxlength="4" style="text-align:center" />元</td>
+			<td><input type="text" name="album[price]" value="<?php echo $info['price']?>" size="5" maxlength="5" style="text-align:center" />元</td>
 		</tr>
 		<tr>
       <th><?php echo L('repeatchargedays');?></th>

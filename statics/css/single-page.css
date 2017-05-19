@@ -90,7 +90,7 @@
 .item2 li img{width:318px;height:163px;overflow:hidden;}
 .item2 li span{white-space:nowrap;text-overflow:ellipsis;overflow:hidden;width:100%;font-size:18px;display:inline-block;
 padding-top:14px;height:38px;}
-.item2 li p{color:#666;font-size:14px;line-height: 24px;}
+.item2 li p{color:#666;font-size:14px;line-height: 24px;overflow:hidden;text-overflow:-o-ellipsis-lastline;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;}
 .item2 li:hover{box-shadow:0 8px 16px #b1abab;}
 .item2::after{background: url(../images/single-page/school-icon2.png) no-repeat;}
 /*入门课程*/
